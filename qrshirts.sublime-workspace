@@ -1,0 +1,1564 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"j",
+				"jhw-cache"
+			],
+			[
+				"secon",
+				"secondaryColor"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"main",
+				"mainHeader"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"jquery",
+				"jquery	<script> (jQuery google ajax api)"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"a",
+				"ass: assert_select"
+			],
+			[
+				"table",
+				"table: <table>"
+			],
+			[
+				"to",
+				"to_json  (function)"
+			],
+			[
+				"nil",
+				"nil  (function)"
+			],
+			[
+				"def",
+				"def: def … end"
+			],
+			[
+				"de",
+				"destroy  (function)"
+			],
+			[
+				"PAYM",
+				"PAYMENT_TYPES  (variable)"
+			],
+			[
+				"cr",
+				"create  (function)"
+			],
+			[
+				"ass",
+				"ass: assert_select"
+			],
+			[
+				"attri",
+				"attributes  (argument)"
+			],
+			[
+				"render",
+				"render  (function)"
+			],
+			[
+				"numb",
+				"number_to_currency  (function)"
+			],
+			[
+				"numbe",
+				"number_to_currency  (function)"
+			],
+			[
+				"Reco",
+				"RecordNotFound  (class)"
+			],
+			[
+				"cre",
+				"create  (function)"
+			],
+			[
+				"pro",
+				"proc  (function)"
+			],
+			[
+				"plu",
+				"pluralize  (function)"
+			],
+			[
+				"ul",
+				"ul: <ul>"
+			],
+			[
+				"find",
+				"find  (function)"
+			],
+			[
+				"cl",
+				"class=  (attribute)"
+			],
+			[
+				"nav",
+				"nav: <nav>"
+			],
+			[
+				"cla",
+				"class=  (attribute)"
+			],
+			[
+				"title",
+				"extend_with_included_modules_from  (function)"
+			],
+			[
+				"error",
+				"errors  (function)"
+			],
+			[
+				"each",
+				"each  (function)"
+			],
+			[
+				"val",
+				"validate  (function)"
+			],
+			[
+				"back",
+				"background:   (property)"
+			],
+			[
+				"text-al",
+				"text-align:   (property)"
+			],
+			[
+				"font-si",
+				"font-size:   (property)"
+			],
+			[
+				"marg",
+				"margin:   (property)"
+			],
+			[
+				"font-s",
+				"font-size:   (property)"
+			],
+			[
+				"font-w",
+				"font-weight:   (property)"
+			],
+			[
+				"top",
+				"top  (value)"
+			],
+			[
+				"vertica",
+				"vertical-align:   (property)"
+			],
+			[
+				"border-cola",
+				"border-collapse:   (property)"
+			],
+			[
+				"self",
+				"self  (function)"
+			],
+			[
+				"batches",
+				"batches  (variable)"
+			],
+			[
+				"rescue",
+				"rescue  (function)"
+			],
+			[
+				"batche",
+				"batches  (variable)"
+			],
+			[
+				"sold",
+				"save_without_validation  (function)"
+			],
+			[
+				"set",
+				"set_inheritance_column  (function)"
+			],
+			[
+				"gender",
+				"right_gender?  (function)"
+			],
+			[
+				"elsif",
+				"elsif: elsif ..."
+			],
+			[
+				"amount",
+				"private_methods  (function)"
+			],
+			[
+				"blo",
+				"block  (value)"
+			],
+			[
+				"form",
+				"form: form - Placeholder"
+			],
+			[
+				"puts",
+				"puts  (function)"
+			],
+			[
+				"compa",
+				"compact  (function)"
+			],
+			[
+				"validates",
+				"validates_associated  (function)"
+			],
+			[
+				"face",
+				"facebook  (argument)"
+			],
+			[
+				"tran",
+				"transparent  (value)"
+			],
+			[
+				"img",
+				"img: img"
+			],
+			[
+				"event",
+				"event_data  (variable)"
+			],
+			[
+				"cur",
+				"current_page  (argument)"
+			],
+			[
+				"facebook",
+				"facebook  (argument)"
+			],
+			[
+				"even",
+				"events_data  (variable)"
+			],
+			[
+				"events",
+				"events_data  (variable)"
+			],
+			[
+				"border-top-c",
+				"border-top-color"
+			],
+			[
+				"border-to",
+				"border-top"
+			],
+			[
+				"id",
+				"id	@id"
+			],
+			[
+				"helper",
+				"helper_method  (function)"
+			],
+			[
+				"ses",
+				"session  (function)"
+			],
+			[
+				"oauth",
+				"oauth_token  (argument)"
+			],
+			[
+				"page_",
+				"page_object  (variable)"
+			],
+			[
+				"page",
+				"page_object  (variable)"
+			],
+			[
+				"fil",
+				"filter_education_with_year  (function)"
+			],
+			[
+				"format",
+				"format_work"
+			],
+			[
+				"birth",
+				"birthday  (argument)"
+			],
+			[
+				"real_name",
+				"pluralize_table_names  (function)"
+			],
+			[
+				"user_info",
+				"user_info  (variable)"
+			],
+			[
+				"to_s",
+				"to_s  (function)"
+			],
+			[
+				"joi",
+				"join  (function)"
+			],
+			[
+				"sort",
+				"sort  (function)"
+			],
+			[
+				"join",
+				"join  (function)"
+			],
+			[
+				"Array",
+				"Array: Array.new(10) { |i| .. }"
+			],
+			[
+				"user",
+				"user_info  (variable)"
+			],
+			[
+				"fac",
+				"facebook  (function)"
+			],
+			[
+				"before",
+				"before_create  (function)"
+			],
+			[
+				"sa",
+				"save-history  (module)"
+			],
+			[
+				"h",
+				"history  (module)"
+			],
+			[
+				"ext",
+				"ext  (directory)"
+			],
+			[
+				"show",
+				"show  (function)"
+			],
+			[
+				"hi",
+				"hide  (function)"
+			],
+			[
+				"RegExp",
+				"RegExp  (class)"
+			],
+			[
+				"ea",
+				"each  (function)"
+			],
+			[
+				"va",
+				"val  (function)"
+			],
+			[
+				"key",
+				"keyup  (function)"
+			],
+			[
+				"eq",
+				"eq  (function)"
+			],
+			[
+				"rev",
+				"rev  (argument)"
+			],
+			[
+				"round",
+				"round  (function)"
+			],
+			[
+				"pos",
+				"pos  (argument)"
+			],
+			[
+				"class",
+				"class	@class"
+			],
+			[
+				"app",
+				"append  (function)"
+			],
+			[
+				"el",
+				"bindAsEventListener  (function)"
+			],
+			[
+				"off",
+				"offset  (function)"
+			],
+			[
+				"the_da",
+				"theme_date  (function)"
+			],
+			[
+				"href",
+				"_fetch_remote_file"
+			],
+			[
+				"value",
+				"value_1  (variable)"
+			],
+			[
+				"link",
+				"link: link - alternate"
+			],
+			[
+				"html",
+				"html: html"
+			],
+			[
+				"get_blo",
+				"get_bloginfo  (function)"
+			],
+			[
+				"getWeatherIma",
+				"getWeatherImage  (function)"
+			],
+			[
+				"arr",
+				"array: $… = array (…)"
+			],
+			[
+				"shuffle",
+				"shuffle  (function)"
+			],
+			[
+				"margin-le",
+				"margin-left:   (property)"
+			],
+			[
+				"padding-le",
+				"padding-left"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"input",
+				"input: input - text"
+			],
+			[
+				"background",
+				"background-clip:   (property)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 209.0,
+		"selected_items":
+		[
+			[
+				"clos",
+				"Project: Close"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"sniwor",
+				"Snippet: wordpress-project-settings"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"sniwo",
+				"Snippet: wordpress-project-settings"
+			],
+			[
+				"edi",
+				"Project: Edit"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"sni",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"Snippet: h",
+				"Snippet: html"
+			],
+			[
+				"fe",
+				"Fetch"
+			],
+			[
+				"fet",
+				"Fetch"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"show",
+				"Show TODOs: Project and open files"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"settin",
+				"Preferences: Default File Settings"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"rail",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			],
+			[
+				"use",
+				"Preferences: User Global Settings"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 115.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Guga/Sites/qrshirts/.git/config",
+		"/Users/Guga/Sites/qrshirts/qrshirts.sublime-project",
+		"/Users/Guga/Sites/qrshirts/README.md",
+		"/Users/Guga/Sites/qrshirts/.gitignore",
+		"/Users/Guga/Sites/qrshirts/.rspec",
+		"/Users/Guga/Sites/qrshirts/Gemfile",
+		"/Users/Guga/Sites/qrshirts/.rvmrc",
+		"/Users/Guga/Sites/qrshirts/config/environments/production.rb",
+		"/Users/Guga/Sites/qrshirts/config/application.rb",
+		"/Users/Guga/.bash_profile",
+		"/Users/Guga/Sites/qrshirts/config/environments/development.rb",
+		"/Users/Guga/Sites/qrshirts/public/assets/admin/address_states-4ec911a10f522d0d74ed77292befdf6c.js",
+		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/store/all.css",
+		"/Users/Guga/Sites/qrshirts/config/routes.rb",
+		"/Users/Guga/Sites/qrshirts/config/database.yml",
+		"/Users/Guga/Sites/qrshirts/.rmrvc",
+		"/Users/Guga/Sites/qrshirts/README.rdoc",
+		"/Users/Guga/Sites/samba/wp-content/themes/Samba/sass/screen.scss",
+		"/Users/Guga/Sites/samba/wp-content/themes/Samba/sass/_base.scss",
+		"/Users/Guga/Sites/samba/wp-content/themes/Samba/functions.php",
+		"/Users/Guga/Sites/samba/.gitignore",
+		"/Users/Guga/Sublime Projects/samba.sublime-project",
+		"/Users/Guga/Sites/samba/.git-ftp-ignore",
+		"/Users/Guga/Sites/samba/wp-config.php",
+		"/Users/Guga/Sites/samba/wp-content/themes/Samba/apresenta.php",
+		"/Users/Guga/Sites/sim/js/main.js",
+		"/Users/Guga/Sites/engage/rsonrails/app/controllers/homepage_controller.rb",
+		"/Users/Guga/Sites/engage/rsonrails/app/assets/stylesheets/partials/_colors.css.sass",
+		"/Users/Guga/Sites/engage/rsonrails/.sass-cache/74518e254e60df34cb54593a6f104cdfff05209e/_colors.scssc",
+		"/Users/Guga/Sites/sim/sass/_settings.scss",
+		"/Users/Guga/Sites/sim/js/main.js.coffee",
+		"/Users/Guga/Sites/sim/js/jquery.min.js",
+		"/Users/Guga/Sites/engage/rsonrails/app/assets/javascripts/application.js",
+		"/Users/Guga/Sites/engage/rsonrails/app/views/homepage/index.html.slim",
+		"/Users/Guga/Sites/engage/mineo/app/assets/stylesheets/miv/generic_classes.css.sass",
+		"/Users/Guga/Sites/engage/mineo/app/assets/stylesheets/header.css.sass",
+		"/Users/Guga/Sites/engage/mineo/app/views/layouts/application.html.slim",
+		"/Users/Guga/Sites/engage/mineo/app/views/shared/_footer.html.slim",
+		"/Users/Guga/Sites/engage/mineo/app/assets/stylesheets/miv/colors.css.sass",
+		"/Users/Guga/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Guga/Sites/engage/mineo/app/assets/stylesheets/settings.css.sass",
+		"/Users/Guga/Sites/pinaculo/wp-content/themes/Pinaculo/footer.php",
+		"/Users/Guga/Sites/pinaculo/wp-content/themes/Pinaculo/css/media.css",
+		"/Users/Guga/Sites/pinaculo/wp-content/themes/Pinaculo/homepage.php",
+		"/Users/Guga/Sites/engage/mineo/app/assets/stylesheets/miv/generic_tags.css.sass",
+		"/Users/Guga/Sites/engage/mineo/app/assets/stylesheets/application.sass",
+		"/Users/Guga/Sites/engage/mineo/app/assets/stylesheets/miv/fonts.css.sass",
+		"/Users/Guga/Sites/engage/mineo/app/assets/stylesheets/miv/.generic_tags.css.scss.swp",
+		"/Users/Guga/Sites/engage/mineo/app/views/projects/new.html.slim",
+		"/Users/Guga/Sites/engage/mineo/app/views/projects/_form.html.slim",
+		"/Users/Guga/Sites/engage/mineo/app/assets/javascripts/app/views/projects/form.js.coffee",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/products/_form.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/orders/_form.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/lib/templates/erb/scaffold/_form.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/models/line_item.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/controllers/line_items_controller.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/carts/_cart.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/store/index.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/controllers/carts_controller.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/models/order.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/controllers/store_controller.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/products/index.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/products/who_bought.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/controllers/application_controller.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/controllers/products_controller.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/order_notifier/received.text.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/line_items/_line_item.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/controllers/orders_controller.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/mailers/order_notifier.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/functional/orders_controller_test.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/functional/order_notifier_test.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/integration/user_stories_test.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/order_notifier/shipped.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/line_items/_line_item.text.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/order_notifier/shipped.text.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/order_notifier/_line_item.text.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/config/environments/production.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/config/environment.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/config/initializers/setup_mail.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/products/who_bought.atom.builder",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/models/product.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/orders/index.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/assets/stylesheets/bootstrap_and_overrides.css.less",
+		"/Users/Guga/Sites/rails_projects/ecommerce/config/routes.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/script/load_orders.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/Gemfile",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/assets/stylesheets/products.css.scss",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/fixtures/line_items.yml",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/fixtures/orders.yml",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/orders/new.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/line_items/create.js.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/line_items/destroy.js.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/db/migrate/20120720153306_add_order_id_to_line_item.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/functional/line_items_controller_test.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/carts/destroy.js.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/application/_sidebar.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/functional/store_controller_test.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/functional/carts_controller_test.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/helpers/application_helper.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/assets/javascripts/store.js.coffee",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/layouts/application.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/assets/javascripts/application.js",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/line_items/_cart.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/models/cart.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/carts/show.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/line_items/show.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/application/_flash.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/application/_header.html.erb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/db/migrate/20120719234107_combine_items_in_cart.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/db/migrate/20120719233106_add_quantity_to_line_items.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/functional/products_controller_test.rb",
+		"/Users/Guga/Sites/facebookapps/quiet-day-1905/Procfile",
+		"/Users/Guga/Sites/rails_projects/ecommerce/app/views/products/show.html.erb",
+		"/Users/Guga/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/Guga/Library/Application Support/Sublime Text 2/Packages/Default/Global.sublime-settings",
+		"/Users/Guga/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/fixtures/products.yml",
+		"/Users/Guga/Sites/rails_projects/ecommerce/test/unit/product_test.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/.gitignore",
+		"/Users/Guga/Sites/rails_projects/ecommerce/config/application.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/db/seeds.rb",
+		"/Users/Guga/Sites/rails_projects/ecommerce/db/migrate/20120719115351_create_products.rb",
+		"/Users/Guga/Sites/facebookapps/Bilheteria/app/views/tickets/_form.html.erb",
+		"/Users/Guga/Sites/facebookapps/Bilheteria/app/views/line_tickets/_form.html.erb",
+		"/Users/Guga/Sites/facebookapps/Bilheteria/config/routes.rb",
+		"/Users/Guga/Sites/facebookapps/Bilheteria/app/controllers/events_controller.rb",
+		"/Users/Guga/Sites/facebookapps/Bilheteria/db/schema.rb",
+		"/Users/Guga/Sites/facebookapps/Bilheteria/app/models/user.rb"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"serve",
+			"false",
+			"\", \"",
+			"auto",
+			"height: auto",
+			"height:auto",
+			"taxo",
+			"sprite",
+			"after",
+			"sprit",
+			"sprite",
+			"strong",
+			"#",
+			"h2",
+			"h3",
+			"spac",
+			"font-size",
+			"why",
+			"about",
+			";",
+			"6B6A5E",
+			"td",
+			"horario",
+			";",
+			"link",
+			"<section id=\"",
+			"<h1>Pronta para",
+			"href=\"\"",
+			"=\"\"",
+			"burnin",
+			";",
+			"url",
+			"label",
+			"=>",
+			"cart",
+			"@cart",
+			"item",
+			"\"tab\"",
+			"tab",
+			"alt+enter",
+			"zen",
+			"row",
+			"assets",
+			"jpg",
+			"batch",
+			"sal",
+			"hidden_field",
+			"value:",
+			"'",
+			"id",
+			"column  \"",
+			"umn \"",
+			"column   \"",
+			"t.",
+			"where",
+			", :integer",
+			", :bigint",
+			"_id",
+			"id_",
+			"updated",
+			"@obj",
+			"@event",
+			"Ticket",
+			"Event",
+			"event",
+			"facebook-button",
+			"apprequests",
+			"path",
+			"page",
+			"uid",
+			"start",
+			" #eaebeb)",
+			"facebook",
+			"picture",
+			"sampl",
+			"fb",
+			"#picture",
+			"<li>",
+			"flight",
+			"number",
+			"language",
+			"integer",
+			"puts",
+			"compile",
+			"asse",
+			"ssl",
+			"rooth_url",
+			"rooth_path",
+			"authenticator",
+			"url_for_oauth_code",
+			"font-fami",
+			"Hybrea",
+			"span",
+			"hid",
+			"filter-count",
+			"folio_con",
+			"folio",
+			"dra",
+			"drag",
+			"draga",
+			"dragao",
+			"margin-top",
+			"drag",
+			"margin-bottom",
+			"folio_con",
+			"-ms-animation:",
+			"animation:",
+			"-webkit-animation:",
+			"-webkit-animation: medusa-moving 40s linear infinite;",
+			"top",
+			"margin-top",
+			"webkit",
+			"yeti",
+			"colinas",
+			"_left",
+			"<img id=\"",
+			"\"",
+			"Astronauta",
+			"newPos(",
+			"newPos(windowHeight",
+			"windowHeight",
+			"copyri",
+			"\"tab\"",
+			"tab",
+			"contro",
+			"tab",
+			"zen",
+			"twentyten"
+		],
+		"highlight": true,
+		"in_selection": true,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"devel",
+				"config/environments/development.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"appl",
+				"config/application.rb"
+			],
+			[
+				"de",
+				"config/environments/development.rb"
+			],
+			[
+				"pro",
+				"config/environments/production.rb"
+			],
+			[
+				"allcs",
+				"app/assets/stylesheets/store/all.css"
+			],
+			[
+				"applr",
+				"config/application.rb"
+			],
+			[
+				"data",
+				"config/database.yml"
+			],
+			[
+				"git",
+				"samba/.gitignore"
+			],
+			[
+				"func",
+				"Samba/functions.php"
+			],
+			[
+				"scrscss",
+				"Samba/sass/screen.scss"
+			],
+			[
+				"scss",
+				"Samba/sass/_base.scss"
+			],
+			[
+				".scss",
+				"Samba/sass/_base.scss"
+			],
+			[
+				"wp-con",
+				"samba/wp-config.php"
+			],
+			[
+				"scr",
+				"sass/screen.scss"
+			],
+			[
+				"screesc",
+				"sass/screen.scss"
+			],
+			[
+				"bas",
+				"sass/_base.scss"
+			],
+			[
+				"sass",
+				"sass/screen.scss"
+			],
+			[
+				"ba",
+				"sass/_base.scss"
+			],
+			[
+				"se",
+				"sass/_settings.scss"
+			],
+			[
+				"sa",
+				"sass/screen.sass"
+			],
+			[
+				"mai",
+				"js/main.js"
+			],
+			[
+				"main",
+				"js/main.js"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"coff",
+				"js/main.coffee"
+			],
+			[
+				"cont",
+				"app/controllers/homepage_controller.rb"
+			],
+			[
+				"colo",
+				"app/assets/stylesheets/partials/_colors.css.sass"
+			],
+			[
+				"js",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"home",
+				"app/views/homepage/index.html.slim"
+			],
+			[
+				"hea",
+				"app/assets/stylesheets/header.css.sass"
+			],
+			[
+				"generic",
+				"app/assets/stylesheets/miv/generic_classes.css.sass"
+			],
+			[
+				"app",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"sett",
+				"app/assets/stylesheets/settings.css.sass"
+			],
+			[
+				"col",
+				"app/assets/stylesheets/miv/colors.css.sass"
+			],
+			[
+				"foot",
+				"app/views/shared/_footer.html.slim"
+			],
+			[
+				"gener",
+				"app/assets/stylesheets/miv/generic_classes.css.sass"
+			],
+			[
+				"me",
+				"css/media.css"
+			],
+			[
+				"mei",
+				"css/media.css"
+			],
+			[
+				"foo",
+				"footer.php"
+			],
+			[
+				"hom",
+				"homepage.php"
+			],
+			[
+				"generi",
+				"app/assets/stylesheets/miv/generic_tags.css.sass"
+			],
+			[
+				"setti",
+				"app/assets/stylesheets/settings.css.sass"
+			],
+			[
+				"form",
+				"app/assets/javascripts/app/views/projects/form.js.coffee"
+			],
+			[
+				"ne",
+				"app/views/projects/new.html.slim"
+			],
+			[
+				"_form",
+				"app/views/products/_form.html.erb"
+			],
+			[
+				"_for",
+				"app/views/orders/_form.html.erb"
+			],
+			[
+				"fo",
+				"lib/templates/erb/scaffold/_form.html.erb"
+			],
+			[
+				"cart",
+				"app/models/cart.rb"
+			],
+			[
+				"li",
+				"app/models/line_item.rb"
+			],
+			[
+				"lic",
+				"app/controllers/line_items_controller.rb"
+			],
+			[
+				"lin",
+				"app/controllers/line_items_controller.rb"
+			],
+			[
+				"des",
+				"app/views/carts/destroy.js.erb"
+			],
+			[
+				"lini",
+				"app/views/line_items/_line_item.html.erb"
+			],
+			[
+				"ca",
+				"app/views/carts/_cart.html.erb"
+			],
+			[
+				"views",
+				"app/views/store/index.html.erb"
+			],
+			[
+				"or",
+				"app/models/order.rb"
+			],
+			[
+				"carts",
+				"app/controllers/carts_controller.rb"
+			],
+			[
+				"car",
+				"app/controllers/carts_controller.rb"
+			],
+			[
+				"ind",
+				"app/views/products/index.html.erb"
+			],
+			[
+				"ship",
+				"app/views/order_notifier/shipped.html.erb"
+			],
+			[
+				"orders_co",
+				"test/functional/orders_controller_test.rb"
+			],
+			[
+				"_lin",
+				"app/views/line_items/_line_item.html.erb"
+			],
+			[
+				"_line",
+				"app/views/line_items/_line_item.html.erb"
+			],
+			[
+				"order_no",
+				"test/functional/order_notifier_test.rb"
+			],
+			[
+				"orders",
+				"app/controllers/orders_controller.rb"
+			],
+			[
+				"recei",
+				"app/views/order_notifier/received.text.erb"
+			],
+			[
+				"orde",
+				"app/mailers/order_notifier.rb"
+			],
+			[
+				"enb",
+				"config/environment.rb"
+			],
+			[
+				"who",
+				"app/views/products/who_bought.atom.builder"
+			],
+			[
+				"order",
+				"app/controllers/orders_controller.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"produ",
+				"app/models/product.rb"
+			],
+			[
+				"product",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"orders_",
+				"app/controllers/orders_controller.rb"
+			],
+			[
+				"line",
+				"test/fixtures/line_items.yml"
+			],
+			[
+				"new",
+				"app/views/orders/new.html.erb"
+			],
+			[
+				"_ca",
+				"app/views/carts/_cart.html.erb"
+			],
+			[
+				"cre",
+				"app/views/line_items/create.js.erb"
+			],
+			[
+				"side",
+				"app/views/application/_sidebar.html.erb"
+			],
+			[
+				"line_items_co",
+				"test/functional/line_items_controller_test.rb"
+			],
+			[
+				"store_con",
+				"test/functional/store_controller_test.rb"
+			],
+			[
+				"store",
+				"app/assets/javascripts/store.js.coffee"
+			],
+			[
+				"appli",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"sto",
+				"app/controllers/store_controller.rb"
+			],
+			[
+				"i",
+				"app/views/store/index.html.erb"
+			],
+			[
+				"sho",
+				"app/views/carts/show.html.erb"
+			],
+			[
+				"carts_co",
+				"test/functional/carts_controller_test.rb"
+			],
+			[
+				"stor",
+				"app/controllers/store_controller.rb"
+			],
+			[
+				"products_co",
+				"test/functional/products_controller_test.rb"
+			],
+			[
+				"over",
+				"app/assets/stylesheets/bootstrap_and_overrides.css.less"
+			],
+			[
+				"_fo",
+				"app/views/products/_form.html.erb"
+			],
+			[
+				"boot",
+				"app/assets/stylesheets/bootstrap_and_overrides.css.less"
+			],
+			[
+				"a",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"product_co",
+				"test/functional/products_controller_test.rb"
+			],
+			[
+				"product_",
+				"test/unit/product_test.rb"
+			],
+			[
+				"products_con",
+				"test/functional/products_controller_test.rb"
+			],
+			[
+				"index",
+				"app/views/products/index.html.erb"
+			],
+			[
+				"see",
+				"db/seeds.rb"
+			],
+			[
+				"migr",
+				"db/migrate/20120719115351_create_products.rb"
+			],
+			[
+				"even",
+				"app/controllers/events_controller.rb"
+			],
+			[
+				"_batc",
+				"app/views/tickets/_batch_fields.html.erb"
+			],
+			[
+				"eve",
+				"app/models/event.rb"
+			],
+			[
+				"us",
+				"app/models/user.rb"
+			],
+			[
+				"schem",
+				"db/schema.rb"
+			],
+			[
+				"bat",
+				"app/models/batch.rb"
+			],
+			[
+				"tick",
+				"app/models/ticket.rb"
+			],
+			[
+				"patch",
+				"app/views/tickets/_batch_fields.html.erb"
+			],
+			[
+				"ticke",
+				"app/controllers/tickets_controller.rb"
+			],
+			[
+				"sch",
+				"db/schema.rb"
+			],
+			[
+				"tic",
+				"app/models/ticket.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"batc",
+				"app/models/batch.rb"
+			],
+			[
+				"schm",
+				"db/schema.rb"
+			],
+			[
+				"edi",
+				"app/views/line_tickets/edit.html.erb"
+			],
+			[
+				"show",
+				"app/views/carts/show.html.erb"
+			],
+			[
+				"ev",
+				"app/models/event.rb"
+			],
+			[
+				"ap",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"ro",
+				"config/routes.rb"
+			],
+			[
+				"sal",
+				"app/models/sale.rb"
+			],
+			[
+				"pag",
+				"app/models/page.rb"
+			],
+			[
+				"sale",
+				"app/controllers/sales_controller.rb"
+			],
+			[
+				"use",
+				"app/models/user.rb"
+			],
+			[
+				"contro",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"controll",
+				"app/controllers/sales_controller.rb"
+			],
+			[
+				"pages",
+				"app/controllers/pages_controller.rb"
+			],
+			[
+				"pa",
+				"app/models/page.rb"
+			],
+			[
+				"vi",
+				"app/views/events/index.html.erb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"sim",
+				"/Users/Guga/Sublime Projects/sim.sublime-project"
+			],
+			[
+				"cri",
+				"/Users/Guga/Sublime Projects/criaideias.sublime-project"
+			],
+			[
+				"mangu",
+				"/Users/Guga/Sublime Projects/manguezal.sublime-project"
+			],
+			[
+				"bil",
+				"/Users/Guga/Sublime Projects/bilheteria.sublime-project"
+			],
+			[
+				"",
+				"/Users/Guga/Sublime Projects/bilheteria.sublime-project"
+			],
+			[
+				"sam",
+				"/Users/Guga/Library/Application Support/Sublime Text 2/Packages/sambaestudio.sublime-project"
+			],
+			[
+				"gus",
+				"/Users/Guga/Sublime Projects/gustavoguichard.sublime-project"
+			],
+			[
+				"sa",
+				"/Users/Guga/Library/Application Support/Sublime Text 2/Packages/sambaestudio.sublime-project"
+			],
+			[
+				"br",
+				"/Users/Guga/Sublime Projects/brasilian.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 162.0,
+	"status_bar_visible": true
+}
