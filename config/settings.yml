@@ -10,7 +10,7 @@
 # end
 # after "deploy:update_code", :copy_config_files
 
-encryption_key: someRandomBINARYKEY
+encryption_key: 94c1ffad6626c93ab10c0cde9e79e4d8fd7548a3d7d28af9cd14724c3e38665110fe3229a3ecb8ec1ce6a1d78f30078eb4b892a8874cd877b4383e0820878123
 mailer:
   server: mail.example.com
   username: someLOGIN
