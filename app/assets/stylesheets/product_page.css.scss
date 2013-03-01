@@ -1,5 +1,3 @@
-@import "site/app_mixins";
-
 $hadean_black            : #242729;
 $hadean_gray_background  : #e8e8e8;
 $hadean_orange            : #c6481a;
@@ -175,7 +173,6 @@ ul { margin: 0 0.5em 0.15em 0; list-style-type:none; }
 .error-border {
   border: 2px solid $error_border;
   color: $inline_error;
-  @include rounded(4px);
 }
 hr {
   background-color:#eee;

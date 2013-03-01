@@ -1,17 +1,12 @@
  @import "compass";
  @import "blueprint";
- @import "app_mixins";
 
 .pretty_table table {
-  @include rounded(6px);
   width:95%;
   border-top:1px solid #e5eff8;
   border-right:1px solid #e5eff8;
   margin:1em auto;
   border-collapse:collapse;
-  thead {
-    @include rounded(6px);
-  }
 }
 
 .pretty_table td {
