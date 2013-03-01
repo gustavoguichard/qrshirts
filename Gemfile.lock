@@ -337,7 +337,8 @@ DEPENDENCIES
   rspec-mocks (~> 2.8.0)
   rspec-rails (~> 2.8.0)
   rspec-rails-mocha
-  sass-rails (~> 3.2.3)
+  sass (>= 3.2.3)
+  sass-rails (>= 3.2.4)
   semantic-mixins
   slim
   slim-rails
