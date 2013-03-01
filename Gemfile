@@ -47,6 +47,10 @@ gem 'will_paginate', '~> 3.0.4'
 
 #gem 'memcache-client', '~> 1.8.5'
 
+# Template language
+gem 'slim'
+gem 'slim-rails'
+
 group :development do
   gem 'awesome_print'
   #gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
