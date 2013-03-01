@@ -294,6 +294,6 @@ describe Variant, "#admin_grid(product, params = {})" do
     variant2 = create(:variant, :product => product)
     admin_grid = Variant.admin_grid(product)
     admin_grid.size.should == 2
-    admin_grid.should == [variant1, variant2]
+    admin_grid.should == [variant2, variant1]
   end
 end

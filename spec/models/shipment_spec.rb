@@ -82,7 +82,7 @@ describe Shipment, 'instance method from build' do
     # order.user.shipping_addresses
     it 'should return all the shipping addresses for the user' do
       shipment = Shipment.find(@shipment.id)
-      shipment.shipping_addresses.collect{|a| a.id }.should == [@address1.id, @address2.id]
+      shipment.shipping_addresses.collect{|a| a.id }.should == [@address2.id, @address1.id]
     end
   end
 end
