@@ -37,6 +37,7 @@
   all_products: 'Todos os Produtos'
   countries: "Países"
   coupons: "Coupons"
+  create: "Criar"
   credits: 'Créditos'
   credit_cards: 'Cartões de Crédito'
   deals: "Ofertas"
@@ -47,10 +48,12 @@
   products: 'Produtos'
   profile: 'Perfil'
   sales: "Liquidação"
+  search: "Buscar"
   shipments: "Entregas"
   shipping_methods: "Formas de Envio"
   shipping_rates: "Taxas de Transporte"
   shipping_zones: "Regiões de Envio"
+  update: "Atualizar"
   your_account: 'Sua Conta'
   your_cart: 'Seu Carrinho'
   your_cart_empty: 'Seu carrinho está vazio!'
@@ -80,6 +83,12 @@
     shipping_categories: "Categorias de entrega"
     suppliers: "Fornecedores"
     tax_rates: "Taxas Fiscais"
+    user:
+      edit_username: "Editar %{name}"
+      email: "E-mail"
+      first_name: "Nome"
+      last_name: "Sobrenome"
+      new_user: "Novo Usuário"
     users: "Usuários"
     overview:
       welcome: "Bem vindo à %{company}"

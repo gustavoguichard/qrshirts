@@ -1,0 +1,31 @@
+h3= t 'admin.users'
+- content_for :sidemenu do
+  div style="text-align:right"
+    = link_to "New User", new_admin_user_path, :class => "button", :id => "new_user_button"
+  .admin_filters
+    = form_tag admin_users_path, :method => 'get', :id => "users_search" do
+      label= t 'admin.user.first_name'
+      = text_field_tag :first_name, params[:first_name]
+      label= t 'admin.user.last_name'
+      = text_field_tag :last_name, params[:last_name]
+      label= t 'admin.user.email'
+      = text_field_tag :email, params[:email]
+      div style="text-align:center"
+        = submit_tag t(:search), :name => nil, :class => "button"
+      #users
+        = render 'users'
+.admin_users
+  table
+    thead
+      tr.odd
+        th.column1_header= sortable "first_name"
+        th= sortable "last_name"
+        th= sortable "email"
+        th Status
+    - @users.each do |user|
+      tr class=cycle("odd", "")
+        td= link_to user.first_name, edit_admin_user_path(user)
+        td= user.last_name
+        td= user.email
+        td= user.state
+  = will_paginate @users

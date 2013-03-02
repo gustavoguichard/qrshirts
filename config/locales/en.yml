@@ -37,6 +37,7 @@ en:
   all_products: "All Products"
   countries: "Countries"
   coupons: "Coupons"
+  create: "Create"
   credits: "Credits"
   credit_cards: "Credit Cards"
   deals: "Deals"
@@ -47,10 +48,12 @@ en:
   products: "Products"
   profile: "Profile"
   sales: "Sales"
+  # search: "Search"
   shipments: "Shipments"
   shipping_methods: "Shipping Methods"
   shipping_rates: "Shipping Rates"
   shipping_zones: "Shipping Zones"
+  update: "Update"
   your_account: "Your Account"
   your_cart: "Your Cart"
   your_cart_empty: "Your cart is Empty!"
@@ -80,8 +83,13 @@ en:
     shipping_categories: "Shipping Categories"
     suppliers: "Suppliers"
     tax_rates: "Tax Rates"
+    user:
+      edit_username: "Edit %{name}"
+      email: "Email"
+      first_name: "First Name"
+      last_name: "Last Name"
+      new_user: "New User"
     users: "Users"
-
     overview:
       welcome: "Welcome to %{company}"
       first_time:
