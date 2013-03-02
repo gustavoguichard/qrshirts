@@ -41,8 +41,10 @@
   credits: 'Créditos'
   credit_cards: 'Cartões de Crédito'
   deals: "Ofertas"
+  email: "E-mail"
   invoices: "Faturas"
   my_account: 'Minha Conta'
+  name: "Nome"
   orders: 'Pedidos'
   product: "Produto"
   products: 'Produtos'

@@ -1,7 +1,7 @@
 h3= t 'admin.users'
 - content_for :sidemenu do
   div style="text-align:right"
-    = link_to "New User", new_admin_user_path, :class => "button", :id => "new_user_button"
+    = link_to t('admin.user.new_user'), new_admin_user_path, :class => "button", :id => "new_user_button"
   .admin_filters
     = form_tag admin_users_path, :method => 'get', :id => "users_search" do
       label= t 'admin.user.first_name'
@@ -18,8 +18,8 @@ h3= t 'admin.users'
   table
     thead
       tr.odd
-        th.column1_header= sortable "first_name"
-        th= sortable "last_name"
+        th.column1_header= sortable "first_name", "Nome"
+        th= sortable "last_name", "Sobrenome"
         th= sortable "email"
         th Status
     - @users.each do |user|

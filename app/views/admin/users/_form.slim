@@ -6,25 +6,25 @@ fieldset
       = form.text_field :first_name
       label= t 'admin.user.email'
       = form.text_field :email
-      label State
+      label Estado
       = form.select :state, @states
     .six.columns
       label= t 'admin.user.last_name'
       = form.text_field :last_name
-      label Birthday
+      label Data de Nascimento
       = form.text_field :form_birth_date, :class => "eleven columns ui-yearpicker"
 - if current_user.super_admin?
   fieldset#admin-password.span-12
-    p Leave blank if you don't want to change the password.
+    p Deixe em branco se você não quer mudar sua senha.
     ul
       li
-        = form.label :password
+        = form.label 'Senha'
         = form.password_field :password
       li
-        = form.label :password_confirmation
+        = form.label 'Confirmar Senha'
         = form.password_field :password_confirmation
 fieldset
-  legend User Roles
+  legend Permissões do usuário
   - @all_roles.each do |role|
     .property_form.left.span-9.last
       - checked = @user.id && @user.roles.include?(role)

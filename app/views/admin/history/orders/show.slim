@@ -1,0 +1,75 @@
+p#notice= notice
+.ten.column
+  b Informações do pedido:
+  #order-items.panel
+    ul.vertical-list
+      li
+        label Número do pedido:
+        = @order.number
+      li
+        label Cliente:
+        = @order.name
+      li
+        label E-mail:
+        = @order.email
+      li
+        label Completado em:
+        = @order.completed_at ? I18n.localize(@order.completed_at) : ''
+      li
+        label Entregue:
+        = @order.has_shipment? ? 'Sim' : 'Não'
+- if @order.order_items.size > 0
+  .six.column
+    b Ítems
+    #order-items.panel
+      - @order.order_items.each do |item|
+        = item.variant.product_name
+        = number_to_currency item.total
+        br/
+.six.column
+  b Endereço de entrega
+  #order-address.panel
+    = render partial: '/shared/compact_address', locals: {shopping_address: @order.ship_address}
+    br
+      p
+        = link_to 'Mudar Endereço', admin_history_order_addresses_path(@order), class: 'button green'
+        br
+        | (This will not change the shipments that have already been placed)
+.six.column
+  b Shipments:
+  - @order.shipments.each do |shipment|
+    #order-shipment-items.panel
+      | Estado: #{shipment.state.humanize}
+      br/
+      | Forma de envio: #{shipment.shipping_method.name}
+      br/
+      | Entrega #: #{shipment.number} Tracking:#{shipment.tracking}
+  - if @order.shipments.empty?
+    #order-shipment-items.panel
+      | Nenhuma entrega foi feita para esse pedido.
+.span-7.six.column
+  b Faturas:
+  - @order.invoices.each do |invoice|
+    #order-invoices.panel
+      ul.vertical-list
+        li
+          label Número:
+          = invoice.number
+        li
+          label Estado:
+          = invoice.state
+          | at: #{I18n.localize(invoice.updated_at, format: :us_time)}
+        li
+          label Quantidade:
+          = number_to_currency invoice.amount
+.six.column
+  b Return Merchandise Authorization:
+  .panel
+    - if @order.return_authorizations.size > 0
+      = link_to 'Ver RMAs', admin_rma_order_return_authorizations_path(@order), \
+       class: 'button '                                                      |:
+      br/
+      br/
+    - else
+      = link_to 'Criar RMA', new_admin_rma_order_return_authorization_path(@order), \
+       class: 'button '                                                          |:

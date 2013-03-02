@@ -1,0 +1,17 @@
+h3= t :orders
+.history_orders
+  table
+    thead
+      tr.odd
+        th.column1_header Número
+        th= t :name
+        th= t :email
+        th Completado em
+        th Entregue
+    - @orders.each do |order|
+      tr class=cycle("odd", "")
+        td= link_to order.number, admin_history_order_path(order)
+        td= order.name
+        td= order.email
+        td= order.completed_at
+        td= order.has_shipment?.to_s
