@@ -1,0 +1,21 @@
+h2 style="text-align:center" = t 'admin.overviews.welcome', company: t(:company)
+- if @password
+  p = t 'admin.overviews.first_time.welcome_super_admin'
+  p = t 'admin.overviews.first_time.your_login', email: @user.email
+  p = t 'admin.overviews.first_time.your_password', password: @password
+  p = t 'admin.overviews.first_time.write_info'
+- if @no_roles
+  p
+    b = t 'admin.overviews.first_time.run_dbseed'
+- else
+  ol
+    li = raw t 'admin.overviews.change_password', link: link_to(t('admin.admin_users'), admin_users_path, 'data-popup' => true)
+    li = raw t 'admin.overviews.every_config', link: link_to(t('admin.config'), admin_config_overviews_path, 'data-popup' => true)
+    li = raw t 'admin.overviews.create_properties', link: link_to(t('admin.properties'), admin_merchandise_properties_path, 'data-popup' => true)
+    li = raw t 'admin.overviews.pruduct_types', link: link_to(t('admin.product_type'), admin_merchandise_product_types_path, 'data-popup' => true)
+    li = raw t 'admin.overviews.prototype', link: link_to(t('admin.prototype'), admin_merchandise_prototypes_path, 'data-popup' => true)
+    li = raw t 'admin.overviews.shipping_categories', link: link_to(t('admin.shipping_categories'), admin_config_shipping_categories_path, 'data-popup' => true)
+    li = raw t 'admin.overviews.create_product', link: link_to(t('admin.product'), admin_merchandise_products_path, 'data-popup' => true)
+    li = t 'admin.overviews.create_variant'
+    li = t 'admin.overviews.upload_images'
+    li = raw t 'admin.overviews.inventory', link: link_to(t('admin.inventory'), admin_inventory_overviews_path, 'data-popup' => true)

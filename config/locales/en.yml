@@ -2,7 +2,7 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  company:              'RoR Ecommerce'
+  company:              'QR Shirts'
   hello:                'Hello'
   out_of_stock_notice:  'Sorry this item is out of stock.'
   item_saved_for_later: 'The item will be saved for later.'
@@ -32,6 +32,34 @@ en:
   do_not_have_anything_in_your_cart:      "You don't have anything in your cart"
 
   no_addresses_saved:                     'Currently no addresses saved.'
+
+  admin:
+    overviews:
+      welcome: "Welcome to %{company}"
+      first_time:
+        welcome_super_admin: "Welcome, You are the Super Admin user."
+        your_login: "Your email and login is: %{email}"
+        your_password: "Your password is: %{password}"
+        write_info: "PLEASE WRITE THIS INFORMATION DOWN."
+        run_dbseed: "You need to run rake db:seed"
+      change_password: "It would be best to go to %{link} and change your password and email to something more personal."
+      every_config: "Go to %{link} and click on every option in the sub-header."
+      create_properties: "Then create %{link}. A property is just a characteristic that your products have."
+      pruduct_types: "Add %{link}."
+      prototype: "Next create a %{link}. A prototype is the building block of a product. The prototype is used to inherit the types of properties that your products will have."
+      shipping_categories: "You should create a shipping category by going to %{link}."
+      create_product: "Next create a %{link}."
+      create_variant: "Next create a Variant.  A variant is a specific type of product. If Diet Gatorade is your product, Fruit Punch Gatorage might be your variant. To do this click to edit your product and then click add variant."
+      upload_images: "Next you need to upload Images. To do this click to edit your product and then click add image."
+      inventory: "You need inventory. To do this click %{link}. Then click purchase order and follow the step to create a purchase order. Once the purchase order is complete, you need to click receive for the inventory to be in stock."
+    admin_users: "Admin Users"
+    config: 'Config'
+    properties: 'Properties'
+    product_type: 'Product Type'
+    prototype: 'Prototype'
+    shipping_categories: 'Shipping Categories'
+    product: 'Product'
+    inventory: 'Inventory'
 
   date:
     formats:

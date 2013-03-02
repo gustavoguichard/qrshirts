@@ -1,0 +1,262 @@
+# encoding: UTF-8
+# pt-BR translations for Ruby on Rails
+"pt-BR":
+
+  company:              'QR Shirts'
+  hello:                'Olá'
+  out_of_stock_notice:  'Desculpe-nos mas esse item está fora de estoque.'
+  item_saved_for_later: 'O item será salvo para mais tarde.'
+  reset_password_title: 'Confirme sua identidade para trocar a senha'
+  reset_password_text:  'Coloque seu e-mail abaixo e clique no botão "Continue".'
+  something_went_wrong: 'Desculpe-nos, alguma coisa deu errado.'
+  item_failed_update:   'A atualização do item falhou.'
+  item_passed_update:   'Item atualizado com sucesso.'
+  could_not_process:    "Não foi possível provessar"
+  the_credit_card:      "o Cartão de Crédito."
+  credit_card:          "Cartão de Crédito"
+  the_order:            "o pedido."
+  the_order_purchased:  "O pedido foi efetuado."
+  is_not_valid:         'não é válido.'
+  login_successful:     "Login efetuado com sucesso!"
+  login_failure:        "E-mail ou senha inválidos."
+  logout_successful:    "Logout efetuado com sucesso!"
+
+  nothing_in_cart:       "Você não tem nada no seu carrinho."
+  only_items_saved_for_later: "Você apenas tem compras salvas para depois."
+  add_items_saved_for_later: "Mova as compras para o carrinho para efetuar a compra."
+
+  select_address_before_shipping_method:  'Selecione um endereço antes de selecionar um tipo de entrega.'
+  shipping_method_created:                'Tipo de entrega foi criado com sucesso.'
+  shipping_method_updated:                'Tipo de entrega foi atualizado com sucesso.'
+  all_shipping_methods_must_be_selected:  'Todos os tipos de entrega precisam ser selecionados'
+  do_not_have_anything_in_your_cart:      "Você não tem compras no seu carrinho"
+
+  no_addresses_saved:                     'Ainda não há endereços salvos.'
+
+
+  # Admin
+
+  admin:
+    overviews:
+      welcome: "Bem vindo à %{company}"
+      first_time:
+        welcome_super_admin: "Welcome, You are the Super Admin user."
+        your_login: "Your email and login is: %{email}"
+        your_password: "Your password is: %{password}"
+        write_info: "PLEASE WRITE THIS INFORMATION DOWN."
+        run_dbseed: "You need to run rake db:seed"
+      change_password: "É aconselhável ir a %{link} e mudar seu e-mail e senha para algo mais pessoal."
+      every_config: "Vá para %{link} e clique em cada opção do sub-menu."
+      create_properties: "Então crie %{link}. Uma propriedade é simplesmente uma característica que seus produtos podem possuir."
+      pruduct_types: "Adicione %{link}."
+      prototype: "Em seguida crie um %{link}. Um protótipo é um modelo de produto. O protótipo é usado para herdar os tipos de propriedades que seus produtos terão."
+      shipping_categories: "Você deve criar uma categoria de entrega indo à %{link}."
+      create_product: "Depois crie um %{link}."
+      create_variant: "Depois crie uma variação. Uma variação é um tipo de produto específico. Se seu produto é uma determinada camisa, o tamanho P pode ser uma variação dela. Para fazer isso clique para editar seu produto e em seguida clique em adicionar variantes."
+      upload_images: "Em seguida você deve fazer upload de imagens. Para fazer isso clique para editar seu produto e em seguida clique em adicionar imagens."
+      inventory: "Você precisa controlar seu estoque. Para fazer isso clique em %{link}. Então clique em purchase order and follow the step to create a purchase order. Once the purchase order is complete, you need to click receive for the inventory to be in stock."
+    admin_users: "Usuários Administradores"
+    config: 'Configurações'
+    properties: 'Propriedades'
+    product_type: 'Tipo de produto'
+    prototype: 'Protótipo'
+    shipping_categories: 'Categorias de entrega'
+    product: 'Produto'
+    inventory: 'Estoque'
+
+
+  # formatos de data e hora
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d de %B"
+      long: "%d de %B de %Y"
+
+    day_names:
+      - Domingo
+      - Segunda
+      - Terça
+      - Quarta
+      - Quinta
+      - Sexta
+      - Sábado
+    abbr_day_names:
+      - Dom
+      - Seg
+      - Ter
+      - Qua
+      - Qui
+      - Sex
+      - Sáb
+
+    month_names:
+      - ~
+      - Janeiro
+      - Fevereiro
+      - Março
+      - Abril
+      - Maio
+      - Junho
+      - Julho
+      - Agosto
+      - Setembro
+      - Outubro
+      - Novembro
+      - Dezembro
+    abbr_month_names:
+      - ~
+      - Jan
+      - Fev
+      - Mar
+      - Abr
+      - Mai
+      - Jun
+      - Jul
+      - Ago
+      - Set
+      - Out
+      - Nov
+      - Dez
+    order:
+      - :day
+      - :month
+      - :year
+
+  time:
+    formats:
+      default: "%A, %d de %B de %Y, %H:%M h"
+      very_short: "%d de %B de %Y"
+      short: "%d/%m, %H:%M h"
+      long: "%A, %d de %B de %Y, %H:%M h"
+      widget: "%d <span class='month'>%B</span>"
+    am: ''
+    pm: ''
+
+  # Usado no Array.to_sentence
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "
+
+    select:
+      prompt: "Por favor selecione"
+
+  number:
+    format:
+      separator: ','
+      delimiter: '.'
+      precision: 3
+      significant: false
+      strip_insignificant_zeros: false
+
+    currency:
+      format:
+        format: '%u %n'
+        unit: 'R$'
+        separator: ','
+        delimiter: '.'
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+
+    percentage:
+      format:
+        delimiter: '.'
+
+    precision:
+      format:
+        delimiter: '.'
+
+    human:
+      format:
+        delimiter: '.'
+        precision: 2
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      # number_to_human()
+      # new in rails 3: please add to other locales
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "mil"
+          million:
+            one: milhão
+            other: milhões
+          billion:
+            one: bilhão
+            other: bilhões
+          trillion:
+            one: trilhão
+            other: trilhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+
+  # distancia do tempo em palavras
+  datetime:
+    distance_in_words:
+      half_a_minute: 'meio minuto'
+      less_than_x_seconds:
+        one: 'menos de 1 segundo'
+        other: 'menos de %{count} segundos'
+      x_seconds:
+        one: '1 segundo'
+        other: '%{count} segundos'
+      less_than_x_minutes:
+        one: 'menos de um minuto'
+        other: 'menos de %{count} minutos'
+      x_minutes:
+        one: '1 minuto'
+        other: '%{count} minutos'
+      about_x_hours:
+        one: '1 hora atrás'
+        other: '%{count} horas atrás'
+      x_days:
+        one: '1 dia'
+        other: '%{count} dias'
+      about_x_months:
+        one: '1 mês atrás'
+        other: '%{count} meses atrás'
+      x_months:
+        one: '1 mês'
+        other: '%{count} meses'
+      about_x_years:
+        one: '1 ano atrás'
+        other: '%{count} anos atrás'
+      over_x_years:
+        one: 'mais de 1 ano'
+        other: 'mais de %{count} anos'
+      almost_x_years:
+        one: 'quase 1 ano'
+        other: 'quase %{count} anos'
+    prompts:
+      year:   "Ano"
+      month:  "Mês"
+      day:    "Dia"
+      hour:   "Hora"
+      minute: "Minuto"
+      second: "Segundo"
+
+  helpers:
+    select:
+      prompt: "Por favor selecione"
+
+    submit:
+      create: 'Criar %{model}'
+      update: 'Atualizar %{model}'
+      submit: 'Salvar %{model}'
+
+  errors:
+    format: "%{attribute} %{message}"
