@@ -1,0 +1,42 @@
+doctype
+html
+  head
+    title
+      = site_name
+    / link href="/assets/favicon.ico" rel="shortcut icon"
+    = stylesheet_link_tag 'sprite.css'
+    = stylesheet_link_tag "admin/foundation"
+    = stylesheet_link_tag "admin/app"
+    = stylesheet_link_tag "admin/cart"
+    = csrf_meta_tag
+    = javascript_include_tag 'application'
+    = javascript_include_tag "admin/app"
+    = javascript_include_tag "admin/jquery.customforms"
+    = javascript_include_tag "admin/jquery.placeholder.min"
+    = javascript_include_tag "admin/jquery.reveal"
+    = javascript_include_tag "admin/jquery.tooltips"
+    = javascript_include_tag "admin/modernizr.foundation"
+    = yield :head
+
+  body.bp
+    .container.row
+      .flash_messages
+        = raw "<div class='alert-box warning'> #{notice} <a href='' class='close'>×</a>" if notice
+        = raw "<div class='alert-box alert'> #{alert} <a href='' class='close'>×</a>" if alert
+      = render partial: 'shared/admin/header_bar'
+      - if nil
+        #header_sub_bar
+          = render partial: '/admin/shopping/sub_header'
+      .admin_main_content.eight.columns
+        = yield
+      #cart-right-side-panel.four.columns.last.float-right
+        = render partial: '/admin/shopping/right_panel_summary'
+        = yield :right_side_bar
+    = yield :bottom
+    javascript:
+      jQuery(window).ready(
+        function() {
+          jQuery('.flash_notice').delay(6000).slideUp( 'slow');
+          jQuery('.flash_error').delay(6000).slideUp( 'slow');
+        }
+      );

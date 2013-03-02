@@ -6,7 +6,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   def index
     params[:page] ||= 1
     @products = Product.admin_grid(params).order(sort_column + " " + sort_direction).
-                                              paginate(:page => pagination_page, :per_page => pagination_rows)
+                                              paginate(page: pagination_page, per_page: pagination_rows)
   end
 
   def show
@@ -20,8 +20,8 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
       flash[:notice] = "You must create a prototype before you create a product."
       redirect_to new_admin_merchandise_prototype_url
     else
-      @product            = Product.new
-      @product.prototype  = Prototype.new
+      @product = Product.new
+      @product.prototype = Prototype.new
     end
   end
 
@@ -34,14 +34,14 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
     else
       form_info
       flash[:error] = "The product could not be saved"
-      render :action => :new
+      render action: :new
     end
   rescue
-    render :text => "Please make sure you have solr started... Run this in the command line => bundle exec rake sunspot:solr:start"
+    render text: "Please make sure you have solr started... Run this in the command line => bundle exec rake sunspot:solr:start"
   end
 
   def edit
-    @product        = Product.includes(:properties,:product_properties, {:prototype => :properties}).find(params[:id])
+    @product = Product.includes(:properties,:product_properties, {prototype: :properties}).find(params[:id])
     form_info
   end
 
@@ -52,7 +52,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
       redirect_to admin_merchandise_product_url(@product)
     else
       form_info
-      render :action => :edit#, :layout => 'admin_markup'
+      render action: :edit
     end
   end
 
@@ -61,7 +61,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
     @properties = prototype.properties
     all_properties = Property.all
 
-    @properties_hash = all_properties.inject({:active => [], :inactive => []}) do |h, property|
+    @properties_hash = all_properties.inject({active: [], inactive: []}) do |h, property|
       if  @properties.detect{|p| (p.id == property.id) }
         h[:active] << property.id
       else
@@ -71,7 +71,7 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
     end
     respond_to do |format|
       format.html
-      format.json { render :json => @properties_hash.to_json }
+      format.json { render json: @properties_hash.to_json }
     end
   end
 
@@ -97,10 +97,10 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   private
 
     def form_info
-      @prototypes               = Prototype.all.collect{|pt| [pt.name, pt.id]}
-      @all_properties           = Property.all
+      @prototypes = Prototype.all.collect{|pt| [pt.name, pt.id]}
+      @all_properties = Property.all
       @select_shipping_category = ShippingCategory.all.collect {|sc| [sc.name, sc.id]}
-      @brands        = Brand.order(:name).all.collect {|ts| [ts.name, ts.id]}
+      @brands = Brand.order(:name).all.collect {|ts| [ts.name, ts.id]}
     end
 
     def product_types

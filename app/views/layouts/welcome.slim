@@ -12,18 +12,16 @@ html
     = yield :head
   body
     #body_wrapper
-      .row
-        - if notice
-          p.flash_notice = notice
-        - if alert
-          p.flash_error = alert
+      - if notice || alert
+        .row
+          - if notice
+            p.flash_notice = notice
+          - if alert
+            p.flash_error = alert
       = render partial: '/shared/welcome_header'
-      #content_wrapper class="row #{"myaccount" if myaccount_tab}"
-        - if myaccount_tab
-          hr.first_double_hr
-            hr.second_double_hr
-              = render partial: '/shared/myaccount_subheader'
+      #content_wrapper.row
         = yield
+
       #prefooter_wrapper  
     = render 'shared/main_footer'
     = yield :bottom

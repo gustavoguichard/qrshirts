@@ -1,0 +1,47 @@
+doctype
+html
+  head
+    title
+      = site_name
+    / link href="/assets/favicon.ico" rel="shortcut icon"
+    = stylesheet_link_tag 'sprite.css'
+    = stylesheet_link_tag "admin/foundation"
+    = stylesheet_link_tag "admin/app"
+    = csrf_meta_tag
+    = javascript_include_tag 'application'
+    = javascript_include_tag "admin/app"
+    = javascript_include_tag "admin/jquery.customforms"
+    = javascript_include_tag "admin/jquery.placeholder.min"
+    = javascript_include_tag "admin/jquery.reveal"
+    = javascript_include_tag "admin/jquery.tooltips"
+    = javascript_include_tag "admin/modernizr.foundation"
+    = yield :head
+
+  body.bp
+    .bp
+      - if notice
+        p.flash_notice = notice
+      - if alert
+        p.flash_error = alert
+    .container.row
+      = render partial: 'shared/admin/header_bar'
+    .container.bp
+      - if  content_for? :header_sub_bar
+        #header_sub_bar
+          = yield :header_sub_bar
+    .container style="width:1080px;"
+      .content.span-24.last style="width:1080px;"
+        .column style="#{'width:530px;' if  content_for? :sidebar}"
+          = yield
+        - if  content_for? :sidebar
+          = yield :sidebar
+    = yield :bottom
+    javascript:
+      jQuery(window).ready(
+        function() {
+          jQuery('.flash_notice').delay(6000).slideUp( 'slow');
+          jQuery('.flash_error').delay(6000).slideUp( 'slow');
+        }
+      );
+
+  = yield :below_body
