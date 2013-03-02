@@ -5,6 +5,6 @@ jQuery(document).ready(function ($) {
     selected = $countries_select.val();
     var $link = $('#activate-link');
     var url = $link.attr('href').replace(/(\/+[0-9]{1,9})$/, "/"+selected);
-    $link.attr('href', url);
+    $link.attr('href', url).click();
   })
 });
