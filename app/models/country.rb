@@ -4,6 +4,9 @@ class Country < ActiveRecord::Base
 
   belongs_to :shipping_zone
 
+  scope :active_countries, where(:active => true)
+  scope :inactive_countries, where(:active => false)
+
   validates :name,  :presence => true,       :length => { :maximum => 200 }
   validates :abbreviation,  :presence => true,       :length => { :maximum => 10 }
 
