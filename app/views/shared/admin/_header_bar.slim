@@ -1,0 +1,7 @@
+.admin-login
+  span= current_user.name
+  br/
+  = link_to 'Logout', logout_path, id: 'admin-logout-button'
+
+ul.nav-bar
+	= render partial: "/shared/admin/header_buttons"

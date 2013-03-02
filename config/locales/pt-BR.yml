@@ -33,11 +33,55 @@
 
   no_addresses_saved:                     'Ainda não há endereços salvos.'
 
+  addresses: 'Endereços'
+  all_products: 'Todos os Produtos'
+  countries: "Países"
+  coupons: "Coupons"
+  credits: 'Créditos'
+  credit_cards: 'Cartões de Crédito'
+  deals: "Ofertas"
+  invoices: "Faturas"
+  my_account: 'Minha Conta'
+  orders: 'Pedidos'
+  product: "Produto"
+  products: 'Produtos'
+  profile: 'Perfil'
+  sales: "Liquidação"
+  shipments: "Entregas"
+  shipping_methods: "Formas de Envio"
+  shipping_rates: "Taxas de Transporte"
+  shipping_zones: "Regiões de Envio"
+  your_account: 'Sua Conta'
+  your_cart: 'Seu Carrinho'
+  your_cart_empty: 'Seu carrinho está vazio!'
 
   # Admin
 
   admin:
-    overviews:
+    accounts: "Contas"
+    adjustments: "Ajustes"
+    admin_users: "Usuários Administradores"
+    brand: "Coleção"
+    brands: "Coleções"
+    config: "Configurações"
+    coupons_deals: "Promoções"
+    fulfillment: "Desempenho"
+    history: "Histórico"
+    inventory: "Estoque"
+    merchandise: "Mercadoria"
+    overviews: "Visão Geral"
+    product_type: "Tipo de produto"
+    product_types: "Tipos de produto"
+    properties: "Propriedades"
+    prototype: "Protótipo"
+    prototypes: "Protótipos"
+    purchase_orders: "Ordens de Compra"
+    receive_purchase_order: "Receber Ordens de Compra"
+    shipping_categories: "Categorias de entrega"
+    suppliers: "Fornecedores"
+    tax_rates: "Taxas Fiscais"
+    users: "Usuários"
+    overview:
       welcome: "Bem vindo à %{company}"
       first_time:
         welcome_super_admin: "Welcome, You are the Super Admin user."
@@ -55,14 +99,6 @@
       create_variant: "Depois crie uma variação. Uma variação é um tipo de produto específico. Se seu produto é uma determinada camisa, o tamanho P pode ser uma variação dela. Para fazer isso clique para editar seu produto e em seguida clique em adicionar variantes."
       upload_images: "Em seguida você deve fazer upload de imagens. Para fazer isso clique para editar seu produto e em seguida clique em adicionar imagens."
       inventory: "Você precisa controlar seu estoque. Para fazer isso clique em %{link}. Então clique em purchase order and follow the step to create a purchase order. Once the purchase order is complete, you need to click receive for the inventory to be in stock."
-    admin_users: "Usuários Administradores"
-    config: 'Configurações'
-    properties: 'Propriedades'
-    product_type: 'Tipo de produto'
-    prototype: 'Protótipo'
-    shipping_categories: 'Categorias de entrega'
-    product: 'Produto'
-    inventory: 'Estoque'
 
 
   # formatos de data e hora

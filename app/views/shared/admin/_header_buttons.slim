@@ -1,0 +1,52 @@
+li.active
+li= link_to t('admin.history'), admin_history_orders_path
+li= link_to t(:orders), admin_shopping_carts_path
+li.has-flyout
+  = link_to t('admin.merchandise'), admin_merchandise_products_path
+  a.flyout-toggle href="#"
+    span
+  ul.flyout
+    li= link_to t(:products), admin_merchandise_products_path
+    li= link_to t('admin.properties'), admin_merchandise_properties_path
+    li= link_to t('admin.product_types'), admin_merchandise_product_types_path
+    li= link_to t('admin.prototypes'), admin_merchandise_prototypes_path
+    li= link_to t('admin.brands'), admin_merchandise_brands_path
+li.has-flyout
+  = link_to t("admin.inventory"), admin_inventory_overviews_path
+  a.flyout-toggle href="#"
+    span
+  ul.flyout
+    li= link_to t('admin.overviews'), admin_inventory_overviews_path
+    li= link_to t('admin.suppliers'), admin_inventory_suppliers_path
+    li= link_to t('admin.receive_purchase_order'), admin_inventory_receivings_path
+    li= link_to t('admin.purchase_orders'), admin_inventory_purchase_orders_path
+    li= link_to t('admin.adjustments'), admin_inventory_adjustments_path
+li= link_to t("admin.users"), admin_users_path
+li.has-flyout
+  = link_to t("admin.config"), admin_config_accounts_path
+  a.flyout-toggle href="#"
+    span
+  ul.flyout
+    li= link_to t('admin.accounts'), admin_config_accounts_path
+    li= link_to t(:countries), admin_config_countries_path
+    li= link_to t(:shipping_zones), admin_config_shipping_zones_path
+    li= link_to t(:shipping_methods), admin_config_shipping_methods_path
+    li= link_to t(:shipping_rates), admin_config_shipping_rates_path
+    li= link_to t('admin.tax_rates'), admin_config_tax_rates_path
+    li= link_to t('admin.shipping_categories'), admin_config_shipping_categories_path
+li.has-flyout
+  = link_to t("admin.coupons_deals"), admin_generic_coupons_path
+  a.flyout-toggle href="#"
+    span
+  ul.flyout
+    li= link_to t(:coupons), admin_generic_coupons_path
+    li= link_to t(:deals), admin_generic_deals_path
+    li= link_to t(:sales), admin_generic_sales_path
+li.has-flyout
+  = link_to t("admin.fulfillment"), admin_fulfillment_orders_path
+  a.flyout-toggle href="#"
+    span
+  ul.flyout
+    li= link_to t(:invoices), admin_document_invoices_path
+    li= link_to t(:orders), admin_fulfillment_orders_path
+    li= link_to t(:shipments), admin_fulfillment_shipments_path

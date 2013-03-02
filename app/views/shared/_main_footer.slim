@@ -1,7 +1,7 @@
-- loop_footer_tabs = {'Terms & Conditions'  => terms_path, 'About'               => about_path}
 #footer_wrapper.row
   .nine.columns
     ul#main-footer-tabs.inline-list
-      - loop_footer_tabs.each_pair do |tab_name, tab_path|
-        li
-          = link_to_unless_current tab_name, tab_path
+      li
+        = link_to_unless_current 'Termos & Condições', terms_path
+      li
+        = link_to_unless_current 'Sobre', about_path

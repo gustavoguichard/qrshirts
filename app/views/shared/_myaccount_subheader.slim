@@ -1,0 +1,15 @@
+.three.columns
+  - if content_for? :account_title
+    h3= yield :account_title
+  - else
+    h3= t(:your_account)
+  #myaccount-header-menu
+    ul.side-nav
+      li class="#{selected_myaccount_tab('address') ? 'class=active' : ''}"
+        = link_to t(:addresses), myaccount_addresses_path
+      li class="#{selected_myaccount_tab('credit_cards') ? 'class=active' : ''}"
+        = link_to t(:credit_cards), myaccount_credit_cards_path
+      li class="#{selected_myaccount_tab('orders') ? 'class=active' : ''}"
+        = link_to t(:orders), myaccount_orders_path
+      li class="#{selected_myaccount_tab('profile') ? 'class=active' : ''}"
+        = link_to t(:profile), myaccount_overview_path
