@@ -1,6 +1,5 @@
 var Hadean = window.Hadean || {};
 
-
 Hadean.Utility = {
   registerOnLoadHandler : function(callback) {
     jQuery(window).ready(callback);

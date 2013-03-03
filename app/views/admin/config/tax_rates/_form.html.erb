@@ -1,3 +1,6 @@
+<% content_for :head do %>
+  <%= javascript_include_tag 'admin/config_tax_rate' %>
+<% end %>
 <% if @tax_rate.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@tax_rate.errors.count, "error") %> prohibited this tax_rate from being saved:</h2>

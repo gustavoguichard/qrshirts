@@ -12,10 +12,11 @@ class Country < ActiveRecord::Base
 
   USA_ID    = 214
   CANADA_ID = 35
+  BRAZIL_ID = 28
 
   after_save :expire_cache
 
-  ACTIVE_COUNTRY_IDS = [CANADA_ID, USA_ID]
+  ACTIVE_COUNTRY_IDS = [CANADA_ID, USA_ID, BRAZIL_ID]
 
   # Call this method to display the country_abbreviation - country with and appending name
   #

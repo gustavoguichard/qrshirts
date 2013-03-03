@@ -3,7 +3,7 @@ html
   head
     title
       = "#{site_name}: #{yield :title}"
-    / link href="/assets/favicon.ico" rel="shortcut icon"
+    link href="favicon.ico" rel="shortcut icon"
     = stylesheet_link_tag "foundation.css"
     = stylesheet_link_tag 'site/app.css'
     = csrf_meta_tag

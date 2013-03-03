@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 ## Bundle rails:
 gem 'rails', '3.2.11'
 gem 'pg'
+gem 'thin'
 
 group :assets do
   gem 'sass',         '>= 3.2.3'
@@ -90,5 +91,5 @@ group :test do
 
   gem "autotest-growl"
   #gem "redgreen"
-  gem "ZenTest", '4.6.2'
+  # gem "ZenTest", '4.6.2'
 end

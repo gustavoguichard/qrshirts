@@ -9,7 +9,7 @@
 class State < ActiveRecord::Base
   belongs_to :country
   has_many   :addresses
-  has_many   :tax_rates
+  has_many   :tax_rates, dependent: :destroy
   belongs_to :shipping_zone
 
   validates :name,              :presence => true,       :length => { :maximum => 150 }
