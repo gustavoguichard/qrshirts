@@ -24,7 +24,7 @@ Hadean.TaxRateForm = {
          '/states',
          { country_id : id },
         function(json) {
-           Hadean.TaxRateForm.refreshStates(json);
+          Hadean.TaxRateForm.refreshStates(json);
          }
       );
     }
