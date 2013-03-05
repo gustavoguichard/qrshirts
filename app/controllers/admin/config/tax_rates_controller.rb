@@ -50,7 +50,8 @@ class Admin::Config::TaxRatesController < Admin::Config::BaseController
   # DELETE /admin/config/tax_rates/1
   def destroy
     @tax_rate = TaxRate.find(params[:id])
-    @tax_rate.inactivate!
+    # @tax_rate.inactivate!
+    @tax_rate.destroy
     redirect_to(admin_config_tax_rates_url)
   end
 

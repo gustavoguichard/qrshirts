@@ -20,9 +20,9 @@ paypal:
   login:      someLOGIN.yahoo.com
   password:   somePASSWORD
   signature:  someSIGNATURE
-authnet:
-  login:      <%= ENV['AUTHNET_LOGIN'] %>
-  password:   <%= ENV['AUTHNET_PASSWORD'] %>
+# authnet:
+#   login:      <%= ENV['AUTHNET_LOGIN'] %>
+#   password:   <%= ENV['AUTHNET_PASSWORD'] %>
 vat: false
 require_state_in_address: true
 

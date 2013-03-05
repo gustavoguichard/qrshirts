@@ -14,7 +14,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem "activemerchant", '~> 1.29.3'#, :lib => 'active_merchant'
 gem "american_date"
 gem 'authlogic'#, "3.2.0"
 gem "asset_sync"
@@ -40,6 +39,10 @@ gem 'prawn', '~> 0.12.0'
 gem "rails3-generators", :git => "https://github.com/neocoin/rails3-generators.git"
 gem "rails_config"
 gem 'rmagick',    :require => 'RMagick'
+
+# Payment
+gem "activemerchant", '~> 1.29.3'#, :lib => 'active_merchant'
+gem 'paypal-express'
 
 gem 'rake', '~> 0.9.2'
 gem 'state_machine', '~> 1.1.2'
@@ -91,5 +94,5 @@ group :test do
 
   gem "autotest-growl"
   #gem "redgreen"
-  # gem "ZenTest", '4.6.2'
+  gem "ZenTest", '4.6.2'
 end
