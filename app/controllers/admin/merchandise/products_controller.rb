@@ -20,8 +20,8 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
       flash[:notice] = "You must create a prototype before you create a product."
       redirect_to new_admin_merchandise_prototype_url
     else
-      @product = Product.new
-      @product.prototype = Prototype.new
+      @product            = Product.new
+      @product.prototype  = Prototype.new
     end
   end
 
@@ -97,10 +97,10 @@ class Admin::Merchandise::ProductsController < Admin::BaseController
   private
 
     def form_info
-      @prototypes = Prototype.all.collect{|pt| [pt.name, pt.id]}
-      @all_properties = Property.all
+      @prototypes               = Prototype.all.collect{|pt| [pt.name, pt.id]}
+      @all_properties           = Property.all
       @select_shipping_category = ShippingCategory.all.collect {|sc| [sc.name, sc.id]}
-      @brands = Brand.order(:name).all.collect {|ts| [ts.name, ts.id]}
+      @brands        = Brand.order(:name).all.collect {|ts| [ts.name, ts.id]}
     end
 
     def product_types

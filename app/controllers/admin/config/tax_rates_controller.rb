@@ -50,8 +50,7 @@ class Admin::Config::TaxRatesController < Admin::Config::BaseController
   # DELETE /admin/config/tax_rates/1
   def destroy
     @tax_rate = TaxRate.find(params[:id])
-    # @tax_rate.inactivate!
-    @tax_rate.destroy
+    @tax_rate.inactivate!
     redirect_to(admin_config_tax_rates_url)
   end
 
@@ -62,7 +61,7 @@ class Admin::Config::TaxRatesController < Admin::Config::BaseController
   end
 
   def form_info
-    @states = State.all_with_country_id(@tax_rate.state.country_id) if  @tax_rate.state_id
-    @states ||= []
+    @states       = State.all_with_country_id(@tax_rate.state.country_id) if  @tax_rate.state_id
+    @states       ||= []
   end
 end

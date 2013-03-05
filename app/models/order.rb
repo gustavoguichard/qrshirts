@@ -362,7 +362,6 @@ class Order < ActiveRecord::Base
   def shipping_rates(items = nil)
     items ||= OrderItem.order_items_in_cart(self.id)
     rates = items.inject([]) do |rates, item|
-      puts item.inspect
       rates << item.shipping_rate if item.shipping_rate.individual? || !rates.include?(item.shipping_rate)
       rates
     end

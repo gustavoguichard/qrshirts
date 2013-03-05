@@ -112,6 +112,7 @@ Hadean::Application.configure do
     )
 
     Paperclip::Attachment.default_options[:storage] = :s3
+
   end
   PAPERCLIP_STORAGE_OPTS = {  :styles => {:mini => '48x48>',
                                           :small => '100x100>',

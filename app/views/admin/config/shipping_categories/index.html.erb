@@ -16,7 +16,6 @@
     <tr class='<%= cycle("odd", "")%>'>
       <td><%= shipping_category.name %></td>
       <td><%= link_to 'Edit', edit_admin_config_shipping_category_path(shipping_category) %></td>
-      <td><%= link_to 'Destroy', admin_config_shipping_category_path(shipping_category), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
   </table>

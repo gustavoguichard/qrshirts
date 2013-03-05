@@ -37,7 +37,7 @@ class Product < ActiveRecord::Base
   belongs_to :shipping_category
 
   has_many :product_properties
-  has_many :properties, :through => :product_properties
+  has_many :properties,          :through => :product_properties
 
   has_many :variants
   has_many :images, :as         => :imageable,

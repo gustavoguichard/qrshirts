@@ -1,5 +1,6 @@
 var Hadean = window.Hadean || {};
 
+
 Hadean.Utility = {
   registerOnLoadHandler : function(callback) {
     jQuery(window).ready(callback);
@@ -24,7 +25,7 @@ Hadean.TaxRateForm = {
          '/states',
          { country_id : id },
         function(json) {
-          Hadean.TaxRateForm.refreshStates(json);
+           Hadean.TaxRateForm.refreshStates(json);
          }
       );
     }

@@ -38,8 +38,17 @@ class Admin::Shopping::BaseController < Admin::BaseController
       return admin_shopping_users_url
     elsif !session_admin_cart.shopping_cart_items
       return admin_shopping_products_url()
+    #elsif session_admin_cart[:shipping_address].nil?
+    #  return admin_shopping_shipping_addresses_url
+    #elsif session_admin_cart[:billing_address].nil?
+    #  return admin_shopping_billing_addresses_url()
+    #elsif session_admin_cart[:shipping_rate].nil?
+    #  return admin_shopping_shipping_methods_url()
     else
       return admin_shopping_products_url()
+    #  return nil#admin_shopping_carts_url()
+#    elsif session_admin_cart[:coupon].nil?
+#      return admin_shopping_coupons_url()
     end
   end
 

@@ -42,14 +42,14 @@ class Admin::Config::ShippingCategoriesController < Admin::Config::BaseControlle
   end
 
   # DELETE /admin/merchandise/shipping_categories/1
-  def destroy
-    @shipping_category = ShippingCategory.find(params[:id])
-    @shipping_category.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(admin_merchandise_shipping_categories_path()) }
-    end
-  end
+  #def destroy
+  #  @shipping_category = ShippingCategory.find(params[:id])
+  # # @shipping_category.destroy
+  #
+  #  respond_to do |format|
+  #    format.html { redirect_to(admin_merchandise_shipping_categories_url) }
+  #  end
+  #end
 
   private
 
