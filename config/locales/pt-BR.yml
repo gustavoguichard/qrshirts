@@ -11,7 +11,7 @@
   something_went_wrong: 'Desculpe-nos, alguma coisa deu errado.'
   item_failed_update:   'A atualização do item falhou.'
   item_passed_update:   'Item atualizado com sucesso.'
-  could_not_process:    "Não foi possível provessar"
+  could_not_process:    "Não foi possível processar"
   the_credit_card:      "o Cartão de Crédito."
   credit_card:          "Cartão de Crédito"
   the_order:            "o pedido."
