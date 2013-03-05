@@ -4,13 +4,14 @@ class ShippingZone < ActiveRecord::Base
   #has_many :state_shipping_zones
   has_many :states#, :through => :state_shipping_zones
 
-  USA48         = 'USA'
-  ALASKA_HAWAII = 'Alaska and Hawaii'
-  CANADA        = 'Canada'
-  USA_TERRITORY = 'USA Territory'
-  #OTHER_STATE   = 'Other States'
+  # USA48         = 'USA'
+  # ALASKA_HAWAII = 'Alaska and Hawaii'
+  # CANADA        = 'Canada'
+  # USA_TERRITORY = 'USA Territory'
+  # OTHER_STATE   = 'Other'
+  BRASIL_TERRITORY = 'Brasil'
 
-  LOCATIONS     = [USA48, ALASKA_HAWAII, CANADA, USA_TERRITORY]#, OTHER_STATE]
+  LOCATIONS     = [BRASIL_TERRITORY]
 
   validates :name,            :presence => true,       :length => { :maximum => 255 }
 

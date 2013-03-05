@@ -4,7 +4,7 @@ class Country < ActiveRecord::Base
 
   belongs_to :shipping_zone
 
-  scope :active_countries, where(:active => true)
+  scope :active, where(:active => true)
   scope :inactive_countries, where(:active => false)
 
   validates :name,  :presence => true,       :length => { :maximum => 200 }
@@ -40,16 +40,13 @@ class Country < ActiveRecord::Base
     abbreviation_name
   end
 
-  def self.active
-    where(:active => true)
-  end
   # Finds all the countries for a form select .
   #
   # @param none
   # @return [Array] an array of arrays with [string, country.id]
   def self.form_selector
     Rails.cache.fetch("Country-form_selector") do
-      data = Country.where(:active => true).order('abbreviation ASC').all().map { |c| [c.abbrev_and_name, c.id] }
+      data = Country.active.order('abbreviation ASC').all().map { |c| [c.abbrev_and_name, c.id] }
       data.blank? ? [[]] : data
     end
   end

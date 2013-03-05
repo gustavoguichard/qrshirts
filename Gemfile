@@ -68,6 +68,9 @@ group :development do
   # YARD AND REDCLOTH are for generating yardocs
   gem 'yard'
   gem 'RedCloth'
+
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 group :test, :development do
   gem "rspec-rails", "~> 2.8.0"
@@ -94,5 +97,5 @@ group :test do
 
   gem "autotest-growl"
   #gem "redgreen"
-  gem "ZenTest", '4.6.2'
+  gem "ZenTest"
 end

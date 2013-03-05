@@ -43,7 +43,7 @@ class Payment < ActiveRecord::Base
 #   Transaction
 #
 #       * :type — The type of transaction. Can be either :auth_only, :capture_only, or :auth_capture. (REQUIRED)
-#       * :amount — The amount for the tranaction. Formatted with a decimal. For example "4.95" (REQUIRED)
+#       * :amount — The amount for the transaction. Formatted with a decimal. For example "4.95" (REQUIRED)
 #       * :customer_profile_id — The Customer Profile ID of the customer to use in this transaction. (REQUIRED)
 #       * :customer_payment_profile_id — The Customer Payment Profile ID of the Customer Payment Profile to use in this transaction. (REQUIRED)
 

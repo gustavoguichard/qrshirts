@@ -3,7 +3,7 @@ c_0001:
     name: Acre
     abbreviation: AC
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0002:
@@ -11,7 +11,7 @@ c_0002:
     name: Alagoas
     abbreviation: AL
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0003:
@@ -19,7 +19,7 @@ c_0003:
     name: Amapá
     abbreviation: AP
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0004:
@@ -27,7 +27,7 @@ c_0004:
     name: Amazonas
     abbreviation: AM
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0005:
@@ -35,7 +35,7 @@ c_0005:
     name: Bahia
     abbreviation: BA
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0006:
@@ -43,7 +43,7 @@ c_0006:
     name: Brasília
     abbreviation: DF
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0007:
@@ -51,7 +51,7 @@ c_0007:
     name: Ceará
     abbreviation: CE
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0008:
@@ -59,7 +59,7 @@ c_0008:
     name: Distrito Federal
     abbreviation: DF
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0009:
@@ -67,7 +67,7 @@ c_0009:
     name: Espírito Santo
     abbreviation: ES
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0010:
@@ -75,7 +75,7 @@ c_0010:
     name: Goiás
     abbreviation: GO
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0011:
@@ -83,7 +83,7 @@ c_0011:
     name: Mato Grosso
     abbreviation: MT
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0012:
@@ -91,7 +91,7 @@ c_0012:
     name: Mato Grosso do Sul
     abbreviation: MS
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0013:
@@ -99,7 +99,7 @@ c_0013:
     name: Maranhão
     abbreviation: MA
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0014:
@@ -107,7 +107,7 @@ c_0014:
     name: Minas Gerais
     abbreviation: MG
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0015:
@@ -115,7 +115,7 @@ c_0015:
     name: Pará
     abbreviation: PA
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0016:
@@ -123,7 +123,7 @@ c_0016:
     name: Paraná
     abbreviation: PR
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0017:
@@ -131,7 +131,7 @@ c_0017:
     name: Paraíba
     abbreviation: PB
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0018:
@@ -139,7 +139,7 @@ c_0018:
     name: Pernambuco
     abbreviation: PE
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0019:
@@ -147,7 +147,7 @@ c_0019:
     name: Piauí
     abbreviation: PI
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0020:
@@ -155,7 +155,7 @@ c_0020:
     name: Rio de Janeiro
     abbreviation: RJ
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0021:
@@ -163,7 +163,7 @@ c_0021:
     name: Rio Grande do Norte
     abbreviation: RN
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0022:
@@ -171,7 +171,7 @@ c_0022:
     name: Rio Grande do Sul
     abbreviation: RS
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0023:
@@ -179,7 +179,7 @@ c_0023:
     name: Rondônia
     abbreviation: RO
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0024:
@@ -187,7 +187,7 @@ c_0024:
     name: Roraima
     abbreviation: RR
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0025:
@@ -195,7 +195,7 @@ c_0025:
     name: Santa Catarina
     abbreviation: SC
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0026:
@@ -203,7 +203,7 @@ c_0026:
     name: São Paulo
     abbreviation: SP
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0027:
@@ -211,7 +211,7 @@ c_0027:
     name: Sergipe
     abbreviation: SE
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
 
 c_0028:
@@ -219,5 +219,5 @@ c_0028:
     name: Tocantins
     abbreviation: TO
     country_id: 28
-    shipping_zone_id: 5
+    shipping_zone_id: 1
     described_as: State
