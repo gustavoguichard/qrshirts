@@ -1,5 +1,13 @@
 # Load the rails application
 require File.expand_path('../application', __FILE__)
+# Load global configurations
+unless Rails.env.production?
+  APP_CONFIG = YAML.load_file(File.join(Rails.root, "config", "config.yml"))[Rails.env]
+  ENV['PAYPAL_LOGIN']        = APP_CONFIG['PAYPAL_LOGIN']
+  ENV['PAYPAL_PASSWORD']    = APP_CONFIG['PAYPAL_PASSWORD']
+  ENV['PAYPAL_SIGNATURE']  = APP_CONFIG['PAYPAL_SIGNATURE']
+end
+
 require File.expand_path('../../lib/printing/invoice_printer', __FILE__)
 
 # Initialize the rails application

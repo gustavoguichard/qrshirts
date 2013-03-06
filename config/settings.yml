@@ -17,9 +17,9 @@ mailer:
   password: s0meth1ngs3cr3t
 paypal:
   ip:         192.168.0.1
-  login:      someLOGIN.yahoo.com
-  password:   somePASSWORD
-  signature:  someSIGNATURE
+  login:      <%= ENV['PAYPAL_LOGIN'] %>
+  password:   <%= ENV['PAYPAL_PASSWORD'] %>
+  signature:  <%= ENV['PAYPAL_SIGNATURE'] %>
 # authnet:
 #   login:      <%= ENV['AUTHNET_LOGIN'] %>
 #   password:   <%= ENV['AUTHNET_PASSWORD'] %>

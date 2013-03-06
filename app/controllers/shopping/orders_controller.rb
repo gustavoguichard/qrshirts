@@ -49,6 +49,7 @@ class Shopping::OrdersController < Shopping::BaseController
           session_cart.mark_items_purchased(@order)
           redirect_to( myaccount_order_path(@order) ) and return
         else
+          raise @order
           flash[:alert] =  [I18n.t('could_not_process'), I18n.t('the_order')].join(' ')
         end
       else
