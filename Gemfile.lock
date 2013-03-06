@@ -329,7 +329,6 @@ DEPENDENCIES
   cancan (~> 1.6.8)
   capybara (~> 1.1)
   coffee-rails (~> 3.2.1)
-  compass (~> 0.12.0)
   compass-rails
   database_cleaner
   debugger

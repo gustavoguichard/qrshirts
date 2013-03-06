@@ -20,8 +20,6 @@ gem "asset_sync"
 gem 'aws-sdk'
 gem 'bluecloth',     '~> 2.1.0'
 gem 'cancan', '~> 1.6.8'
-gem 'compass', '~> 0.12.0'
-gem 'compass-rails'
 #  gem 'dalli', '~> 1.0.2'
 
 gem 'dynamic_form'
