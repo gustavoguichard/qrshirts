@@ -1,6 +1,6 @@
 # encoding: UTF-8
 # pt-BR translations for Ruby on Rails
-"pt-BR":
+pt-BR:
 
   company:              'QR Shirts'
   hello:                'Olá'
@@ -176,6 +176,9 @@
       short: "%d/%m, %H:%M h"
       long: "%A, %d de %B de %Y, %H:%M h"
       widget: "%d <span class='month'>%B</span>"
+      us_date: "%d/%m/%Y"
+      us_time: "%d/%m/%Y as %I:%M %p"
+      long_date: "%d de %B de %Y"
     am: ''
     pm: ''
 

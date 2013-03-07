@@ -50,3 +50,10 @@ li.has-flyout
     li= link_to t(:invoices), admin_document_invoices_path
     li= link_to t(:orders), admin_fulfillment_orders_path
     li= link_to t(:shipments), admin_fulfillment_shipments_path
+/ li.has-flyout
+  = link_to "Reports", admin_reports_overview_path
+  a.flyout-toggle href="#"
+    span
+  ul.flyout
+    li= link_to 'Orders', admin_reports_orders_path
+    li= link_to 'Help', admin_help_path

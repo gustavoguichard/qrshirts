@@ -5,6 +5,9 @@ gem 'rails', '3.2.11'
 gem 'pg'
 gem 'thin'
 
+# I18n
+gem 'rails-i18n'
+
 group :assets do
   gem 'sass',         '>= 3.2.3'
   gem 'sass-rails',   '>= 3.2.4'
