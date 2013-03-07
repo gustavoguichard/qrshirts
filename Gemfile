@@ -20,6 +20,7 @@ gem "asset_sync"
 gem 'aws-sdk'
 gem 'bluecloth',     '~> 2.1.0'
 gem 'cancan', '~> 1.6.8'
+gem 'chronic'
 #  gem 'dalli', '~> 1.0.2'
 
 gem 'dynamic_form'
@@ -29,7 +30,7 @@ gem "jquery-rails"
 gem 'json', '~>1.7.7'
 
 gem 'nested_set', '~> 1.7.0'
-#gem "nifty-generators", :git => 'git://github.com/drhenner/nifty-generators.git'
+gem "nifty-generators", :git => 'git://github.com/drhenner/nifty-generators.git'
 gem 'nokogiri', '~> 1.5.0'
 gem 'paperclip', '~> 3.0'
 gem 'prawn', '~> 0.12.0'
@@ -71,7 +72,6 @@ group :development do
   gem 'binding_of_caller'
 end
 group :test, :development do
-  gem "rspec-rails", "~> 2.8.0"
   gem 'capybara', "~> 1.1"#, :git => 'git://github.com/jnicklas/capybara.git'
   gem 'launchy'
   gem 'database_cleaner'
@@ -82,11 +82,8 @@ group :test do
   gem 'factory_girl_rails', "~> 3.3.0"
   gem 'mocha', '~> 0.10.0', :require => false
   gem 'rspec-rails-mocha'
-  gem "rspec",        "~> 2.8.0"
+  gem 'rspec-rails', '~> 2.12.2'
 
-  gem "rspec-core",         "~> 2.8.0"
-  gem "rspec-expectations", "~> 2.8.0"
-  gem "rspec-mocks",        "~> 2.8.0"
   gem 'email_spec'
 
   gem "faker"
