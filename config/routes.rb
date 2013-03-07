@@ -1,37 +1,33 @@
 Hadean::Application.routes.draw do
 
-
-
-  get "payment_notifications/create"
-
-  resources :user_sessions, :only => [:new, :create, :destroy]
+  resources :user_sessions, only: [:new, :create, :destroy]
 
   match 'admin'   => 'admin/overviews#index'
   match 'login'   => 'user_sessions#new'
   match 'logout'  => 'user_sessions#destroy'
   match 'signup'  => 'customer/registrations#new'
   match 'admin/merchandise' => 'admin/merchandise/summary#index'
-  resources :products, :only => [:index, :show, :create]
+  resources :products, only: [:index, :show, :create]
 
-  resources :wish_items,  :only => [:index, :destroy]
-  resources :states,      :only => [:index]
-  resource :about,        :only => [:show]
-  resources :terms,       :only => [:index]
+  resources :wish_items,  only: [:index, :destroy]
+  resources :states,      only: [:index]
+  resource :about,        only: [:show]
+  resources :terms,       only: [:index]
 
-  root :to => "welcome#index"
+  root to: "welcome#index"
 
   namespace :customer do
-    resources :registrations,   :only => [:new, :create]
-    resource  :password_reset,  :only => [:new, :create, :edit, :update]
-    resource  :activation,      :only => [:show]
+    resources :registrations,   only: [:new, :create]
+    resource  :password_reset,  only: [:new, :create, :edit, :update]
+    resource  :activation,      only: [:show]
   end
 
   namespace :myaccount do
-    resources :orders, :only => [:index, :show]
+    resources :orders, only: [:index, :show]
     resources :addresses
     resources :credit_cards
-    resource  :store_credit, :only => [:show]
-    resource  :overview, :only => [:show, :edit, :update]
+    resource  :store_credit, only: [:show]
+    resource  :overview, only: [:show, :edit, :update]
   end
 
   namespace :shopping do
@@ -40,7 +36,7 @@ Hadean::Application.routes.draw do
         put :move_to
       end
     end
-    resource  :coupon, :only => [:show, :create]
+    resource  :coupon, only: [:show, :create]
     resources  :orders do
       member do
         get :checkout
@@ -52,17 +48,17 @@ Hadean::Application.routes.draw do
         put :select_address
       end
     end
-
+    resources :payment_notifications, only: [:create]
   end
 
   namespace :admin do
     resources :users
-    resources :overviews, :only => [:index]
+    resources :overviews, only: [:index]
 
     match "help" => "help#index"
 
     namespace :reports do
-      resource :overview, :only => [:show]
+      resource :overview, only: [:show]
     end
     namespace :rma do
       resources  :orders do
@@ -76,8 +72,8 @@ Hadean::Application.routes.draw do
     end
 
     namespace :history do
-      resources  :orders, :only => [:index, :show] do
-        resources  :addresses, :only => [:index, :show, :edit, :update, :new, :create]
+      resources  :orders, only: [:index, :show] do
+        resources  :addresses, only: [:index, :show, :edit, :update, :new, :create]
       end
     end
 
@@ -92,7 +88,7 @@ Hadean::Application.routes.draw do
         member do
           put :ship
         end
-        resources  :addresses , :only => [:edit, :update]# This is for editing the shipment address
+        resources  :addresses , only: [:edit, :update]# This is for editing the shipment address
       end
     end
     namespace :shopping do
@@ -100,28 +96,28 @@ Hadean::Application.routes.draw do
       resources :products
       resources :users
       namespace :checkout do
-        resources :billing_addresses, :only => [:index, :update, :new, :create, :select_address] do
+        resources :billing_addresses, only: [:index, :update, :new, :create, :select_address] do
           member do
             put :select_address
           end
         end
         resources :credit_cards
-        resource  :order, :only => [:show, :update, :start_checkout_process] do
+        resource  :order, only: [:show, :update, :start_checkout_process] do
           member do
             post :start_checkout_process
           end
         end
-        resources :shipping_addresses, :only => [:index, :update, :new, :create, :select_address] do
+        resources :shipping_addresses, only: [:index, :update, :new, :create, :select_address] do
           member do
             put :select_address
           end
         end
-        resources :shipping_methods, :only => [:index, :update]
+        resources :shipping_methods, only: [:index, :update]
       end
     end
     namespace :config do
       resources :accounts
-      resources :countries, :only => [:index, :update, :destroy]
+      resources :countries, only: [:index, :update, :destroy]
       resources :overviews
       resources :shipping_categories
       resources :shipping_rates
@@ -156,23 +152,23 @@ Hadean::Application.routes.draw do
 
       namespace :changes do
         resources :products do
-          resource :property,          :only => [:edit, :update]
+          resource :property,          only: [:edit, :update]
         end
       end
 
       namespace :wizards do
-        resources :brands,              :only => [:index, :create, :update]
-        resources :products,            :only => [:new, :create]
-        resources :properties,          :only => [:index, :create, :update]
-        resources :prototypes,          :only => [:update]
-        resources :tax_categories,        :only => [:index, :create, :update]
-        resources :shipping_categories, :only => [:index, :create, :update]
-        resources :product_types,       :only => [:index, :create, :update]
+        resources :brands,              only: [:index, :create, :update]
+        resources :products,            only: [:new, :create]
+        resources :properties,          only: [:index, :create, :update]
+        resources :prototypes,          only: [:update]
+        resources :tax_categories,      only: [:index, :create, :update]
+        resources :shipping_categories, only: [:index, :create, :update]
+        resources :product_types,       only: [:index, :create, :update]
       end
 
       namespace :multi do
         resources :products do
-          resource :variant,      :only => [:edit, :update]
+          resource :variant, only: [:edit, :update]
         end
       end
       resources :products do
@@ -183,7 +179,7 @@ Hadean::Application.routes.draw do
         resources :variants
       end
       namespace :products do
-        resources :descriptions, :only => [:edit, :update]
+        resources :descriptions, only: [:edit, :update]
       end
     end
     namespace :document do

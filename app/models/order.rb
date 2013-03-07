@@ -203,6 +203,7 @@ class Order < ActiveRecord::Base
   def order_complete!
     self.state = 'complete'
     self.completed_at = Time.zone.now
+    self.save
     update_inventory
   end
 
@@ -493,13 +494,16 @@ class Order < ActiveRecord::Base
     grid
   end
 
-  def paypal_url(return_url)
+  def paypal_url(return_url, notify_url)
     values = {
-      business: 'foobar_1362597192_biz@gmail.com',
-      cmd:      '_cart',
-      upload:   1,
-      return:   return_url,
-      invoice:  id
+      business:       ENV['PAYPAL_LOGIN'],
+      cmd:            '_cart',
+      currency_code:  'BRL',
+      lc:             'BR',
+      upload:         1,
+      return:         return_url,
+      invoice:        id,
+      notify_url:     notify_url
     }
     order_items.each_with_index do |item, index|
       values.merge!({
@@ -509,7 +513,7 @@ class Order < ActiveRecord::Base
         "quantity_#{index+1}"     => 1
       })
     end
-    paypal_payment_url+values.map {|k,v| "#{k}=#{v}"}.join("&")
+    paypal_payment_url+values.to_query
   end
 
   private
