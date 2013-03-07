@@ -99,7 +99,6 @@ Hadean::Application.routes.draw do
             put :select_address
           end
         end
-        resources :credit_cards
         resource  :order, only: [:show, :update, :start_checkout_process] do
           member do
             post :start_checkout_process
