@@ -25,8 +25,6 @@ Hadean::Application.routes.draw do
   namespace :myaccount do
     resources :orders, only: [:index, :show]
     resources :addresses
-    resources :credit_cards
-    resource  :store_credit, only: [:show]
     resource  :overview, only: [:show, :edit, :update]
   end
 

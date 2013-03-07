@@ -7,8 +7,6 @@
     ul.side-nav
       li class="#{selected_myaccount_tab('address') ? 'class=active' : ''}"
         = link_to t(:addresses), myaccount_addresses_path
-      li class="#{selected_myaccount_tab('credit_cards') ? 'class=active' : ''}"
-        = link_to t(:credit_cards), myaccount_credit_cards_path
       li class="#{selected_myaccount_tab('orders') ? 'class=active' : ''}"
         = link_to t(:orders), myaccount_orders_path
       li class="#{selected_myaccount_tab('profile') ? 'class=active' : ''}"
