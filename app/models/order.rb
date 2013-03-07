@@ -188,7 +188,6 @@ class Order < ActiveRecord::Base
     transaction do
       new_invoice = create_invoice_transaction(credit_card, charge_amount, args, credited_amount)
       if new_invoice.succeeded?
-        remove_user_store_credits
         Notifier.order_confirmation(@order, new_invoice).deliver rescue puts( 'do nothing...  dont blow up over an email')
       end
       new_invoice
@@ -336,12 +335,9 @@ class Order < ActiveRecord::Base
   #
   # @param [none]
   # @return [Float] amount to remove from store credit
+  # TODO
   def amount_to_credit
-    [find_total, user.store_credit.amount].min.to_f.round_at( 2 )
-  end
-
-  def remove_user_store_credits
-    user.store_credit.remove_credit(amount_to_credit) if amount_to_credit > 0.0
+    [find_total, 0].min.to_f.round_at( 2 )
   end
 
   # calculates the total shipping charges for all the items in the cart

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307182922) do
+ActiveRecord::Schema.define(:version => 20130307212805) do
 
   create_table "accounting_adjustments", :force => true do |t|
     t.integer  "adjustable_id",                                 :null => false
@@ -560,15 +560,6 @@ ActiveRecord::Schema.define(:version => 20130307182922) do
   add_index "states", ["abbreviation"], :name => "index_states_on_abbreviation"
   add_index "states", ["country_id"], :name => "index_states_on_country_id"
   add_index "states", ["name"], :name => "index_states_on_name"
-
-  create_table "store_credits", :force => true do |t|
-    t.decimal  "amount",     :precision => 8, :scale => 2, :default => 0.0
-    t.integer  "user_id",                                                   :null => false
-    t.datetime "created_at",                                                :null => false
-    t.datetime "updated_at",                                                :null => false
-  end
-
-  add_index "store_credits", ["user_id"], :name => "index_store_credits_on_user_id"
 
   create_table "suppliers", :force => true do |t|
     t.string   "name",       :null => false

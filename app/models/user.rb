@@ -51,7 +51,6 @@ class User < ActiveRecord::Base
   end
 
   before_validation :sanitize_data, :before_validation_on_create
-  before_create :start_store_credits
   attr_accessible :email,
                   :password,
                   :password_confirmation,
@@ -65,7 +64,6 @@ class User < ActiveRecord::Base
 
   belongs_to :account
 
-  has_one     :store_credit
   has_many    :orders
   has_many    :finished_orders,          :class_name => 'Order',
                                           :conditions => {:orders => { :state => ['complete', 'paid']}}
@@ -398,31 +396,9 @@ class User < ActiveRecord::Base
     birth_date.age
   end
 
-  def start_store_credits
-    self.store_credit = StoreCredit.new(:amount => 0.0, :user => self)
-  end
-
   def password_required?
     self.crypted_password.blank?
   end
-
-  #def create_cim_profile
-  #  return true if customer_cim_id
-  #  #Login to the gateway using your credentials in environment.rb
-  #  @gateway = GATEWAY
-  #
-  #  #setup the user object to save
-  #  @user = {:profile => user_profile}
-  #
-  #  #send the create message to the gateway API
-  #  response = @gateway.create_customer_profile(@user)
-  #
-  #  if response.success? and response.authorization
-  #    update_attributes({:customer_cim_id => response.authorization})
-  #    return true
-  #  end
-  #  return false
-  #end
 
   def user_profile
     return {:merchant_customer_id => id, :email => email, :description => merchant_description}
