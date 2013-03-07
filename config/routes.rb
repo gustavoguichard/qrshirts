@@ -2,6 +2,8 @@ Hadean::Application.routes.draw do
 
 
 
+  get "payment_notifications/create"
+
   resources :user_sessions, :only => [:new, :create, :destroy]
 
   match 'admin'   => 'admin/overviews#index'
