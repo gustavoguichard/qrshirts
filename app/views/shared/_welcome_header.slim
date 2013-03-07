@@ -12,13 +12,6 @@ div
         li.has-dropdown
           = link_to t(:products), products_path, :class => 'active'
           ul.dropdown
-            li.has-dropdown
-              a href="#" Level 1 &rarr;
-              ul.dropdown
-                li
-                  a href="#" Add Link here
-                li
-                  a href="#" Add Link 2 here
             - product_types.each do |pt_tab|
               li
                 = link_to_unless_current pt_tab.name.capitalize, products_path(:product_type_id => pt_tab.id)
