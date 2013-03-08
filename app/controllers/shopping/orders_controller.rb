@@ -39,36 +39,13 @@ class Shopping::OrdersController < Shopping::BaseController
       session_cart.mark_items_purchased(@order)
       flash[:error] = I18n.t('the_order_purchased')
       redirect_to myaccount_order_url(@order)
-    elsif @credit_card.valid?
-      if response = @order.create_invoice(@credit_card,
-                                          @order.credited_total,
-                                          {:email => @order.email, :billing_address=> address, :ip=> @order.ip_address },
-                                          @order.amount_to_credit)
-        if response.succeeded?
-          ##  MARK items as purchased
-          session_cart.mark_items_purchased(@order)
-          redirect_to( myaccount_order_path(@order) ) and return
-        else
-          raise @order
-          flash[:alert] =  [I18n.t('could_not_process'), I18n.t('the_order')].join(' ')
-        end
-      else
-        flash[:alert] = [I18n.t('could_not_process'), I18n.t('the_credit_card')].join(' ')
-      end
-      form_info
-      render :action => 'index'
-    else
-      form_info
-      flash[:alert] = [I18n.t('credit_card'), I18n.t('is_not_valid')].join(' ')
-      render :action => 'index'
     end
   end
 
   private
 
   def form_info
-    @credit_card ||= ActiveMerchant::Billing::CreditCard.new()
-    @order.credited_total
+    @order.find_total
   end
   def require_login
     if !current_user

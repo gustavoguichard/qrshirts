@@ -70,7 +70,7 @@
         <td></td><td>Total:</td><td></td>
         <td><em>
           <% if session_admin_order.ready_to_checkout? %>
-            <%= number_to_currency session_admin_order.credited_total %>
+            <%#= number_to_currency session_admin_order.credited_total %>
           <% end %>
         </em></td>
       </tr>

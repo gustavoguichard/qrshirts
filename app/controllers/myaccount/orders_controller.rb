@@ -2,7 +2,7 @@ class Myaccount::OrdersController < Myaccount::BaseController
   # GET /myaccount/orders
   # GET /myaccount/orders.xml
   def index
-    @orders = current_user.finished_orders.find_myaccount_details
+    @orders = current_user.finished_orders
   end
 
   # GET /myaccount/orders/1

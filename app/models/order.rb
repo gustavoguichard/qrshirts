@@ -51,11 +51,6 @@ class Order < ActiveRecord::Base
 
   has_many   :order_items, :dependent => :destroy
   has_many   :shipments
-  has_many   :invoices
-  has_many   :completed_invoices,  :class_name => 'Invoice', :conditions => ['state = ? OR state = ?', 'authorized', 'paid']
-  has_many   :authorized_invoices, :class_name => 'Invoice', :conditions => ['state = ?', 'authorized']
-  has_many   :paid_invoices      , :class_name => 'Invoice', :conditions => ['state = ?', 'paid']
-  has_many   :return_authorizations
   has_many   :comments, :as => :commentable
 
   belongs_to :user
@@ -121,31 +116,21 @@ class Order < ActiveRecord::Base
     completed_at ? I18n.localize(completed_at, :format => format) : 'Not Finished.'
   end
 
-  # how much you initially charged the customer
-  #
-  # @param [none]
-  # @return [String] amount in dollars as decimal or a blank string
-  def first_invoice_amount
-    return '' if completed_invoices.empty?
-    completed_invoices.first.amount
-  end
-
   # cancel the order and payment
   # => sets the order inactive and cancels the authorized payments
   #
   # @param [Invoice]
   # @return [none]
-  def cancel_unshipped_order(invoice)
-    transaction do
-      self.update_attributes(:active => false)
-      invoice.cancel_authorized_payment
-    end
-  end
+  # def cancel_unshipped_order(invoice)
+  #   transaction do
+  #     self.update_attributes(:active => false)
+  #     invoice.cancel_authorized_payment
+  #   end
+  # end
 
-  # status of the invoice
+  # status of the order
   #
   # @param [none]
-  # @return [String] state of the latest invoice or 'not processed' if there aren't any invoices
   def status
     return 'Aguardando envio' if shipments.where('state = ? OR state = ?', 'pending', 'ready_to_ship').nil?
     state
@@ -153,10 +138,6 @@ class Order < ActiveRecord::Base
 
   def self.finished
     where({:orders => { :state => ['complete', 'paid']}})
-  end
-
-  def self.find_myaccount_details
-    includes([:completed_invoices, :invoices])
   end
 
   def add_cart_item( item, state_id = nil)
@@ -169,28 +150,6 @@ class Order < ActiveRecord::Base
           :price        => item.variant.price,
           :tax_rate_id  => tax_rate_id)
       self.order_items.push(oi)
-    end
-  end
-
-  # captures the payment of the invoice by the payment processor
-  #
-  # @param [Invoice]
-  # @return [Payment] payment object
-  def capture_invoice(invoice)
-    payment = invoice.capture_payment({})
-    self.pay! if payment.success
-    payment
-  end
-
-
-  ## This method creates the invoice and payment method.  If the payment is not authorized the whole transaction is roled back
-  def create_invoice(credit_card, charge_amount, args, credited_amount = 0.0)
-    transaction do
-      new_invoice = create_invoice_transaction(credit_card, charge_amount, args, credited_amount)
-      if new_invoice.succeeded?
-        Notifier.order_confirmation(@order, new_invoice).deliver rescue puts( 'do nothing...  dont blow up over an email')
-      end
-      new_invoice
     end
   end
 
@@ -321,14 +280,6 @@ class Order < ActiveRecord::Base
   # @return [Float] amount the coupon reduces the value of the order
   def coupon_amount
     coupon_id ? coupon.value(item_prices, self) : 0.0
-  end
-
-  # called when creating the invoice.  This does not change the store_credit amount
-  #
-  # @param [none]
-  # @return [Float] amount that the order is charged after store credit is applyed
-  def credited_total
-    (find_total - amount_to_credit).round_at( 2 )
   end
 
   # amount to credit based off the user store credit
@@ -603,20 +554,4 @@ class Order < ActiveRecord::Base
     end
   end
 
-  def create_invoice_transaction(credit_card, charge_amount, args, credited_amount = 0.0)
-    invoice_statement = Invoice.generate(self.id, charge_amount, credited_amount)
-    invoice_statement.save
-    invoice_statement.authorize_payment(credit_card, args)#, options = {})
-    invoices.push(invoice_statement)
-    if invoice_statement.succeeded?
-      self.order_complete! #complete!
-      self.save
-    else
-      #role_back
-      invoice_statement.errors.add(:base, 'Payment denied!!!')
-      invoice_statement.save
-
-    end
-    invoice_statement
-  end
 end

@@ -39,31 +39,6 @@ class Admin::Shopping::Checkout::OrdersController < Admin::Shopping::Checkout::B
     @credit_card ||= ActiveMerchant::Billing::CreditCard.new(cc_params)
 
     address = @order.bill_address.cc_params
-
-    if @order.complete?
-      session_admin_cart.mark_items_purchased(@order)
-      flash[:alert] = I18n.t('the_order_purchased')
-      redirect_to admin_history_order_url(@order)
-    elsif @credit_card.valid?
-      if response = @order.create_invoice(@credit_card,
-                                          @order.credited_total,
-                                          {:email => @order.email, :billing_address=> address, :ip=> @order.ip_address },
-                                          @order.amount_to_credit)
-        if response.succeeded?
-          order_completed!(@order)
-          redirect_to admin_history_order_url(@order)
-        else
-          flash[:alert] =  [I18n.t('could_not_process'), I18n.t('the_order')].join(' ')
-          render :action => "show"
-        end
-      else
-        flash[:alert] = [I18n.t('could_not_process'), I18n.t('the_credit_card')].join(' ')
-        render :action => 'show'
-      end
-    else
-      flash[:alert] = [I18n.t('credit_card'), I18n.t('is_not_valid')].join(' ')
-      render :action => 'show'
-    end
   end
 
   private

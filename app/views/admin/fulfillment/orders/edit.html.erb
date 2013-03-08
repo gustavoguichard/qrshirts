@@ -1,4 +1,3 @@
-
 <h2>New shipment for Order # <%= @order.number %>  </h2>
 <div class='' >
   Shipment for <%= @order.user.name %>
@@ -29,15 +28,6 @@
 </div>
 <div class='clear'></div>
 <p> Ask if you want to authorize full amount of partial with reason </p>
-<div class='span-16 last' style='text-align:left;'>
-  <% @order.invoices.each do |invoice| %>
-    <div id='invoice-line-<%= invoice.id %>'>
-      <% if @order.invoices.last.id == invoice.id %>
-          <%= render :partial => 'invoice_details', :locals => { :invoice => @order.invoices.last } %>
-      <% end %>
-    </div>
-  <% end %>
-</div>
 
 <div id="dialog" title="Cancel Invoice">
   <div id='dialog-message'>
@@ -48,13 +38,3 @@
 <% content_for :head do -%>
   <%= stylesheet_link_tag "cupertino/jquery-ui-1.8.12.custom" %>
 <% end %>
-
-<% content_for :bottom do -%>
-  <%= javascript_include_tag "admin/fulfillment" %>
-  <script>
-    <% @order.invoices.each do |invoice| %>
-      Hadean.Utility.registerOnLoadHandler(Hadean.Fulfillment.initialize(<%= invoice.id %>, <%= @order.id %> ));
-    <% end %>
-  </script>
-<% end %>
-
