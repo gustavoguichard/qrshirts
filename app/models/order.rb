@@ -147,8 +147,8 @@ class Order < ActiveRecord::Base
   # @param [none]
   # @return [String] state of the latest invoice or 'not processed' if there aren't any invoices
   def status
-    return 'not processed' if invoices.empty?
-    invoices.last.state
+    return 'Aguardando envio' if shipments.where('state = ? OR state = ?', 'pending', 'ready_to_ship').nil?
+    state
   end
 
   def self.finished
