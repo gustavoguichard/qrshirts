@@ -16,9 +16,9 @@
 #
 
 class Shipment < ActiveRecord::Base
-  belongs_to :order, :counter_cache => true
+  belongs_to :order
   belongs_to :shipping_method
-  belongs_to :address#, :polymorphic => true
+  belongs_to :address
 
   has_many   :order_items
 

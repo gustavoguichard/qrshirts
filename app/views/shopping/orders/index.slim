@@ -13,9 +13,6 @@
       h5 Shipping Address
       = render partial: '/shared/compact_address', locals: {shopping_address: @order.ship_address}
       = link_to 'Change address', shopping_addresses_path, class: 'button tiny green'
-    #final-order-shipping-address.panel.four.columns.radius.last
-      h5 Billing Address
-      = render partial: '/shared/compact_address', locals: {shopping_address: @order.bill_address}
   .pretty_table.five.columns.last
     table
       thead

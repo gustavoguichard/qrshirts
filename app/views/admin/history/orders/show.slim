@@ -37,13 +37,9 @@ p#notice= notice
         | (This will not change the shipments that have already been placed)
 .six.column
   b Shipments:
-  - @order.shipments.each do |shipment|
-    #order-shipment-items.panel
-      | Estado: #{shipment.state.humanize}
-      br/
-      | Forma de envio: #{shipment.shipping_method.name}
-      br/
-      | Entrega #: #{shipment.number} Tracking:#{shipment.tracking}
-  - if @order.shipments.empty?
-    #order-shipment-items.panel
-      | Nenhuma entrega foi feita para esse pedido.
+  #order-shipment-items.panel
+    | Estado: #{@order.shipment.state.humanize}
+    br/
+    | Forma de envio: #{@order.shipment.shipping_method.name}
+    br/
+    | Entrega #: #{@order.shipment.number} Tracking:#{@order.shipment.tracking}

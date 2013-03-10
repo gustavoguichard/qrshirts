@@ -38,19 +38,19 @@
 #  coupon_id       :integer(4)
 #  active          :boolean(1)      default(TRUE), not null
 #  shipped         :boolean(1)      default(FALSE), not null
-#  shipments_count :integer(4)      default(0)
 #  calculated_at   :datetime
 #  completed_at    :datetime
 #  created_at      :datetime
 #  updated_at      :datetime
 #  credited_amount :decimal(8, 2)   default(0.0)
+#  shipment_id     :integer(4)
 #
 
 class Order < ActiveRecord::Base
   has_friendly_id :number, :use_slug => false
 
   has_many   :order_items, :dependent => :destroy
-  has_many   :shipments
+  has_one   :shipment
   has_many   :comments, :as => :commentable
 
   belongs_to :user
@@ -132,8 +132,7 @@ class Order < ActiveRecord::Base
   #
   # @param [none]
   def status
-    return 'Aguardando envio' if shipments.where('state = ? OR state = ?', 'pending', 'ready_to_ship').nil?
-    state
+    shipment.state
   end
 
   def self.finished
@@ -159,7 +158,7 @@ class Order < ActiveRecord::Base
   # @param [none]
   # @return [Payment] payment object
   def order_complete!
-    self.state = 'complete'
+    self.state = 'paid'
     self.completed_at = Time.zone.now
     self.save
     update_inventory
@@ -411,7 +410,7 @@ class Order < ActiveRecord::Base
   # @param [none]
   # @return [Boolean]
   def has_shipment?
-    shipments_count > 0
+    !shipment_id.nil?
   end
 
   # paginated results from the admin orders that are completed grid
@@ -421,8 +420,8 @@ class Order < ActiveRecord::Base
   def self.find_finished_order_grid(params = {})
     grid = Order.includes([:user]).where("orders.completed_at IS NOT NULL")
     grid = grid.where({:active => true })                     unless  params[:show_all].present?   && params[:show_all] == 'true'
-    grid = grid.where("orders.shipment_counter = ?", 0)               if params[:shipped].present? && params[:shipped] == 'true'
-    grid = grid.where("orders.shipment_counter > ?", 0)               if params[:shipped].present? && params[:shipped] == 'false'
+    # grid = grid.where("orders.shipment_counter = ?", 0)               if params[:shipped].present? && params[:shipped] == 'true'
+    # grid = grid.where("orders.shipment_counter > ?", 0)               if params[:shipped].present? && params[:shipped] == 'false'
     grid = grid.where("orders.number LIKE ?", "#{params[:number]}%")  if params[:number].present?
     grid = grid.where("orders.email LIKE ?", "#{params[:email]}%")    if params[:email].present?
     grid = grid.order("#{params[:sidx]} #{params[:sord]}")

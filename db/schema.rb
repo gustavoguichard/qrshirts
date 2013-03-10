@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307212805) do
+ActiveRecord::Schema.define(:version => 20130308224649) do
 
   create_table "accounting_adjustments", :force => true do |t|
     t.integer  "adjustable_id",                                 :null => false
@@ -244,12 +244,12 @@ ActiveRecord::Schema.define(:version => 20130307212805) do
     t.integer  "coupon_id"
     t.boolean  "active",                                        :default => true,  :null => false
     t.boolean  "shipped",                                       :default => false, :null => false
-    t.integer  "shipments_count",                               :default => 0
     t.datetime "calculated_at"
     t.datetime "completed_at"
     t.datetime "created_at",                                                       :null => false
     t.datetime "updated_at",                                                       :null => false
     t.decimal  "credited_amount", :precision => 8, :scale => 2, :default => 0.0
+    t.integer  "shipment_id"
   end
 
   add_index "orders", ["bill_address_id"], :name => "index_orders_on_bill_address_id"
@@ -257,6 +257,7 @@ ActiveRecord::Schema.define(:version => 20130307212805) do
   add_index "orders", ["email"], :name => "index_orders_on_email"
   add_index "orders", ["number"], :name => "index_orders_on_number"
   add_index "orders", ["ship_address_id"], :name => "index_orders_on_ship_address_id"
+  add_index "orders", ["shipment_id"], :name => "index_orders_on_shipment_id"
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
 
   create_table "payment_notifications", :force => true do |t|
@@ -419,51 +420,6 @@ ActiveRecord::Schema.define(:version => 20130307212805) do
 
   add_index "purchase_orders", ["supplier_id"], :name => "index_purchase_orders_on_supplier_id"
   add_index "purchase_orders", ["tracking_number"], :name => "index_purchase_orders_on_tracking_number"
-
-  create_table "return_authorizations", :force => true do |t|
-    t.string   "number"
-    t.decimal  "amount",         :precision => 8, :scale => 2,                   :null => false
-    t.decimal  "restocking_fee", :precision => 8, :scale => 2, :default => 0.0
-    t.integer  "order_id",                                                       :null => false
-    t.integer  "user_id",                                                        :null => false
-    t.string   "state",                                                          :null => false
-    t.integer  "created_by"
-    t.boolean  "active",                                       :default => true
-    t.datetime "created_at",                                                     :null => false
-    t.datetime "updated_at",                                                     :null => false
-  end
-
-  add_index "return_authorizations", ["created_by"], :name => "index_return_authorizations_on_created_by"
-  add_index "return_authorizations", ["number"], :name => "index_return_authorizations_on_number"
-  add_index "return_authorizations", ["order_id"], :name => "index_return_authorizations_on_order_id"
-  add_index "return_authorizations", ["user_id"], :name => "index_return_authorizations_on_user_id"
-
-  create_table "return_conditions", :force => true do |t|
-    t.string "label"
-    t.string "description"
-  end
-
-  create_table "return_items", :force => true do |t|
-    t.integer  "return_authorization_id",                    :null => false
-    t.integer  "order_item_id",                              :null => false
-    t.integer  "return_condition_id"
-    t.integer  "return_reason_id"
-    t.boolean  "returned",                :default => false
-    t.integer  "updated_by"
-    t.datetime "created_at",                                 :null => false
-    t.datetime "updated_at",                                 :null => false
-  end
-
-  add_index "return_items", ["order_item_id"], :name => "index_return_items_on_order_item_id"
-  add_index "return_items", ["return_authorization_id"], :name => "index_return_items_on_return_authorization_id"
-  add_index "return_items", ["return_condition_id"], :name => "index_return_items_on_return_condition_id"
-  add_index "return_items", ["return_reason_id"], :name => "index_return_items_on_return_reason_id"
-  add_index "return_items", ["updated_by"], :name => "index_return_items_on_updated_by"
-
-  create_table "return_reasons", :force => true do |t|
-    t.string "label"
-    t.string "description"
-  end
 
   create_table "roles", :force => true do |t|
     t.string "name", :limit => 30, :null => false

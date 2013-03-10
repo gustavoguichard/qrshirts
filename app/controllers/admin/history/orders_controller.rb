@@ -7,7 +7,7 @@ class Admin::History::OrdersController < Admin::BaseController
   # GET /admin/history/orders/1
   def show
     @order = Order.includes([:ship_address,
-                             {:shipments => :shipping_method},
+                             {:shipment => :shipping_method},
                              {:order_items => [
                                                 {:variant => [:product, :variant_properties]}]
                               }]).find_by_number(params[:id])
