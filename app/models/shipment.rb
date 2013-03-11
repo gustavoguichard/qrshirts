@@ -61,6 +61,10 @@ class Shipment < ActiveRecord::Base
     order_items.size > 0
   end
 
+  def shipped?
+    state == 'shipped'
+  end
+
   # when the order has been shipped the inventory must be updated
   #
   # @param [none]
@@ -102,7 +106,7 @@ class Shipment < ActiveRecord::Base
       order_items.each do |item|
         shipment.order_items.push(item)
       end
-      shipment.prepare!
+      shipment.save!
     end
   end
 

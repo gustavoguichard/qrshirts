@@ -2,7 +2,8 @@ class Admin::Fulfillment::ShipmentsController < Admin::Fulfillment::BaseControll
   # GET /admin/fulfillment/shipments
   # GET /admin/fulfillment/shipments.xml
   def index
-    @shipments = Shipment.includes([:order, {:order_items => {:variant => :product} }])
+    # orders = Order.where("state = ?", 'in_progress')
+    @shipments = Shipment.joins(:order).where("orders.state != ?", 'in_progress').includes([:order, {:order_items => {:variant => :product} }])
     if params[:order_id].present?
       @order = Order.find_by_number(params[:order_id])
       @shipments = @shipments.where(['shipments.order_id = ?', @order.id])
@@ -94,7 +95,7 @@ class Admin::Fulfillment::ShipmentsController < Admin::Fulfillment::BaseControll
   private
 
   def load_info
-    @order = Order.includes([:shipments, {:order_items => [:shipment, {:variant => :product}]}]).find_by_number(params[:order_id])
+    @order = Order.includes([:shipment, {:order_items => [:shipment, {:variant => :product}]}]).find_by_number(params[:order_id])
   end
 
   def form_info

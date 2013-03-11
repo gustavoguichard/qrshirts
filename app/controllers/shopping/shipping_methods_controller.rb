@@ -32,6 +32,7 @@ class Shopping::ShippingMethodsController < Shopping::BaseController
       end
     end
     if all_selected
+      session_order.initialize_shipment params[:id]
       redirect_to(shopping_orders_url, :notice => I18n.t('shipping_method_updated'))
     else
       redirect_to( shopping_shipping_methods_url, :notice => I18n.t('all_shipping_methods_must_be_selected'))

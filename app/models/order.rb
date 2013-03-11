@@ -160,6 +160,7 @@ class Order < ActiveRecord::Base
   def order_complete!
     self.state = 'paid'
     self.completed_at = Time.zone.now
+    self.shipment.prepare!
     self.save
     update_inventory
   end
@@ -182,6 +183,14 @@ class Order < ActiveRecord::Base
       self.total = total + shipping_charges
       self.calculated_at = Time.zone.now
       save
+    end
+  end
+
+  def initialize_shipment(shipping_method_id)
+    if shipment.nil?
+      Shipment.create_shipments_with_items(self)
+    else
+      shipment.update_attributes(shipping_method_id: shipping_method_id)
     end
   end
 
@@ -404,15 +413,6 @@ class Order < ActiveRecord::Base
     order_items.collect{|oi| oi.variant_id }
   end
 
-
-  # if the order has a shipment this is true... else false
-  #
-  # @param [none]
-  # @return [Boolean]
-  def has_shipment?
-    !shipment_id.nil?
-  end
-
   # paginated results from the admin orders that are completed grid
   #
   # @param [Optional params]
@@ -451,6 +451,7 @@ class Order < ActiveRecord::Base
       invoice:        id,
       notify_url:     notify_url
     }
+    i = 0
     order_items.each_with_index do |item, index|
       values.merge!({
         "amount_#{index+1}"       => item.price,
@@ -458,7 +459,21 @@ class Order < ActiveRecord::Base
         "item_number_#{index+1}"  => item.variant.id,
         "quantity_#{index+1}"     => 1
       })
+      i += 1
     end
+    values.merge!({
+      "amount_#{i+1}"       => taxed_amount,
+      "item_name_#{i+1}"    => "Taxas",
+      "item_number_#{i+1}"  => id,
+      "quantity_#{i+1}"     => 1
+    })
+    i += 1
+    values.merge!({
+      "amount_#{i+1}"       => shipping_charges,
+      "item_name_#{i+1}"    => "Entrega",
+      "item_number_#{i+1}"  => id,
+      "quantity_#{i+1}"     => 1
+    })
     paypal_payment_url+values.to_query
   end
 

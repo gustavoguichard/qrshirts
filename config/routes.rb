@@ -58,16 +58,6 @@ Hadean::Application.routes.draw do
     namespace :reports do
       resource :overview, only: [:show]
     end
-    namespace :rma do
-      resources  :orders do
-        resources  :return_authorizations do
-          member do
-            put :complete
-          end
-        end
-      end
-      #resources  :shipments
-    end
 
     namespace :history do
       resources  :orders, only: [:index, :show] do
@@ -87,29 +77,6 @@ Hadean::Application.routes.draw do
           put :ship
         end
         resources  :addresses , only: [:edit, :update]# This is for editing the shipment address
-      end
-    end
-    namespace :shopping do
-      resources :carts
-      resources :products
-      resources :users
-      namespace :checkout do
-        resources :billing_addresses, only: [:index, :update, :new, :create, :select_address] do
-          member do
-            put :select_address
-          end
-        end
-        resource  :order, only: [:show, :update, :start_checkout_process] do
-          member do
-            post :start_checkout_process
-          end
-        end
-        resources :shipping_addresses, only: [:index, :update, :new, :create, :select_address] do
-          member do
-            put :select_address
-          end
-        end
-        resources :shipping_methods, only: [:index, :update]
       end
     end
     namespace :config do
