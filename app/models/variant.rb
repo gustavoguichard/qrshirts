@@ -31,9 +31,6 @@ class Variant < ActiveRecord::Base
   has_many :variant_properties
   has_many :properties,          :through => :variant_properties
 
-  has_many   :purchase_order_variants
-  has_many   :purchase_orders, :through => :purchase_order_variants
-
   belongs_to :product
   belongs_to :brand
   belongs_to :inventory
@@ -56,16 +53,15 @@ class Variant < ActiveRecord::Base
             :count_pending_to_customer=,
             :count_pending_from_supplier=, :to => :inventory, :allow_nil => false
 
-  ADMIN_OUT_OF_STOCK_QTY  = 0
-  OUT_OF_STOCK_QTY        = 2
+  OUT_OF_STOCK_QTY        = 1
   LOW_STOCK_QTY           = 6
 
   # returns quantity available to purchase
   #
   # @param [none]
   # @return [Boolean]
-  def quantity_purchaseable(admin_purchase = false)
-    admin_purchase ? (quantity_available - ADMIN_OUT_OF_STOCK_QTY) : (quantity_available - OUT_OF_STOCK_QTY)
+  def quantity_purchaseable
+    quantity_available - OUT_OF_STOCK_QTY
   end
 
   # returns quantity available in stock
