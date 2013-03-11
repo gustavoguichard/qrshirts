@@ -24,10 +24,6 @@
 
 class Variant < ActiveRecord::Base
 
-
-  has_many :variant_suppliers
-  has_many :suppliers,         :through => :variant_suppliers
-
   has_many :variant_properties
   has_many :properties,          :through => :variant_properties
 
@@ -48,10 +44,8 @@ class Variant < ActiveRecord::Base
 
   delegate  :count_on_hand,
             :count_pending_to_customer,
-            :count_pending_from_supplier,
             :count_on_hand=,
-            :count_pending_to_customer=,
-            :count_pending_from_supplier=, :to => :inventory, :allow_nil => false
+            :count_pending_to_customer=, :to => :inventory, :allow_nil => false
 
   OUT_OF_STOCK_QTY        = 1
   LOW_STOCK_QTY           = 6
@@ -317,6 +311,6 @@ class Variant < ActiveRecord::Base
   private
 
     def create_inventory
-      self.inventory = Inventory.create({:count_on_hand => 0, :count_pending_to_customer => 0, :count_pending_from_supplier => 0}) unless inventory
+      self.inventory = Inventory.create({:count_on_hand => 0, :count_pending_to_customer => 0}) unless inventory
     end
 end

@@ -10,7 +10,6 @@
 #  id                          :integer          not null, primary key
 #  count_on_hand               :integer          default(0)
 #  count_pending_to_customer   :integer          default(0)
-#  count_pending_from_supplier :integer          default(0)
 #
 
 class Inventory < ActiveRecord::Base

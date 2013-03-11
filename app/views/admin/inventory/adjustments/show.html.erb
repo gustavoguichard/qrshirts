@@ -7,7 +7,6 @@
         <th>SKU</th>
         <th>count on hand</th>
         <th>pending to customer</th>
-        <th>count pending from supplier</th>
         <th></th>
       </tr>
     </thead>
@@ -16,7 +15,6 @@
         <td><%= variant.sku %></td>
         <td><%= variant.inventory.count_on_hand %></td>
         <td><%= variant.inventory.count_pending_to_customer %></td>
-        <td><%= variant.inventory.count_pending_from_supplier %></td>
         <td><%= link_to "Change", edit_admin_inventory_adjustment_path(variant) %></td>
       </tr>
     <% end %>

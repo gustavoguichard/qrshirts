@@ -367,27 +367,22 @@ inventories:
     attributes:
       count_on_hand: 11
       count_pending_to_customer: 5
-      count_pending_from_supplier: 0
   2:
     attributes:
       count_on_hand: 102
       count_pending_to_customer: 0
-      count_pending_from_supplier: 0
   3:
     attributes:
       count_on_hand: 103
       count_pending_to_customer: 0
-      count_pending_from_supplier: 0
   4:
     attributes:
       count_on_hand: 104
       count_pending_to_customer: 0
-      count_pending_from_supplier: 0
   5:
     attributes:
       count_on_hand: 105
       count_pending_to_customer: 0
-      count_pending_from_supplier: 0
 variants:
   1: #'Polo Shirt 1'
     attributes:
@@ -524,7 +519,6 @@ variant_suppliers:
   1:
     attributes:
       variant_id: 1
-      supplier_id: 1
       cost: 10.00
       total_quantity_supplied: 0
       min_quantity: 11
@@ -533,7 +527,6 @@ variant_suppliers:
   2:
     attributes:
       variant_id: 2
-      supplier_id: 1
       cost: 10.00
       total_quantity_supplied: 0
       min_quantity: 12
@@ -542,7 +535,6 @@ variant_suppliers:
   3:
     attributes:
       variant_id: 3
-      supplier_id: 1
       cost: 10.00
       total_quantity_supplied: 0
       min_quantity: 13
@@ -551,7 +543,6 @@ variant_suppliers:
   4:
     attributes:
       variant_id: 4
-      supplier_id: 2
       cost: 15.00
       total_quantity_supplied: 0
       min_quantity: 4
@@ -560,7 +551,6 @@ variant_suppliers:
   5:
     attributes:
       variant_id: 5
-      supplier_id: 2
       cost: 15.00
       total_quantity_supplied: 0
       min_quantity: 5

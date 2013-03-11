@@ -97,10 +97,7 @@ Hadean::Application.routes.draw do
       resources :sales
     end
     namespace :inventory do
-      resources :suppliers
       resources :overviews
-      resources :purchase_orders
-      resources :receivings
       resources :adjustments
     end
 

@@ -7,7 +7,6 @@ module Hadean
                         'carts',
                         'comments',
                         'images',
-                        'invoices',
                         'orders',
                         'order_items',
                         'payments',
@@ -18,23 +17,17 @@ module Hadean
                         'product_types',
                         'prototypes',
                         'prototype_properties',
-                        'purchase_orders',
-                        'purchase_order_variants',
-                        'return_authorizations',
-                        'return_items',
                         'shipments',
                         'shipping_categories',
                         'shipping_methods',
                         'shipping_rates',
-                        'suppliers',
                         'tax_rates',
                         'transactions',
                         'transaction_ledgers',
                         "users",
                         "user_roles",
                         'variants',
-                        'variant_properties',
-                        'variant_suppliers'
+                        'variant_properties'
                       ]
 
     def truncate_all

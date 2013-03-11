@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308224649) do
+ActiveRecord::Schema.define(:version => 20130311194609) do
 
   create_table "accounting_adjustments", :force => true do |t|
     t.integer  "adjustable_id",                                 :null => false
@@ -192,9 +192,8 @@ ActiveRecord::Schema.define(:version => 20130308224649) do
   add_index "images", ["position"], :name => "index_images_on_position"
 
   create_table "inventories", :force => true do |t|
-    t.integer "count_on_hand",               :default => 0
-    t.integer "count_pending_to_customer",   :default => 0
-    t.integer "count_pending_from_supplier", :default => 0
+    t.integer "count_on_hand",             :default => 0
+    t.integer "count_pending_to_customer", :default => 0
   end
 
   create_table "invoices", :force => true do |t|
@@ -405,22 +404,6 @@ ActiveRecord::Schema.define(:version => 20130308224649) do
   add_index "purchase_order_variants", ["purchase_order_id"], :name => "index_purchase_order_variants_on_purchase_order_id"
   add_index "purchase_order_variants", ["variant_id"], :name => "index_purchase_order_variants_on_variant_id"
 
-  create_table "purchase_orders", :force => true do |t|
-    t.integer  "supplier_id",                                                         :null => false
-    t.string   "invoice_number"
-    t.string   "tracking_number"
-    t.string   "notes"
-    t.string   "state"
-    t.datetime "ordered_at",                                                          :null => false
-    t.date     "estimated_arrival_on"
-    t.datetime "created_at",                                                          :null => false
-    t.datetime "updated_at",                                                          :null => false
-    t.decimal  "total_cost",           :precision => 8, :scale => 2, :default => 0.0, :null => false
-  end
-
-  add_index "purchase_orders", ["supplier_id"], :name => "index_purchase_orders_on_supplier_id"
-  add_index "purchase_orders", ["tracking_number"], :name => "index_purchase_orders_on_tracking_number"
-
   create_table "roles", :force => true do |t|
     t.string "name", :limit => 30, :null => false
   end
@@ -517,13 +500,6 @@ ActiveRecord::Schema.define(:version => 20130308224649) do
   add_index "states", ["country_id"], :name => "index_states_on_country_id"
   add_index "states", ["name"], :name => "index_states_on_name"
 
-  create_table "suppliers", :force => true do |t|
-    t.string   "name",       :null => false
-    t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "tax_rates", :force => true do |t|
     t.decimal "percentage", :precision => 8, :scale => 2, :default => 0.0,  :null => false
     t.integer "state_id"
@@ -613,21 +589,6 @@ ActiveRecord::Schema.define(:version => 20130308224649) do
 
   add_index "variant_properties", ["property_id"], :name => "index_variant_properties_on_property_id"
   add_index "variant_properties", ["variant_id"], :name => "index_variant_properties_on_variant_id"
-
-  create_table "variant_suppliers", :force => true do |t|
-    t.integer  "variant_id",                                                               :null => false
-    t.integer  "supplier_id",                                                              :null => false
-    t.decimal  "cost",                    :precision => 8, :scale => 2, :default => 0.0,   :null => false
-    t.integer  "total_quantity_supplied",                               :default => 0
-    t.integer  "min_quantity",                                          :default => 1
-    t.integer  "max_quantity",                                          :default => 10000
-    t.boolean  "active",                                                :default => true
-    t.datetime "created_at",                                                               :null => false
-    t.datetime "updated_at",                                                               :null => false
-  end
-
-  add_index "variant_suppliers", ["supplier_id"], :name => "index_variant_suppliers_on_supplier_id"
-  add_index "variant_suppliers", ["variant_id"], :name => "index_variant_suppliers_on_variant_id"
 
   create_table "variants", :force => true do |t|
     t.integer  "product_id",                                                    :null => false
