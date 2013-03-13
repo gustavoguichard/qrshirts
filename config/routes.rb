@@ -98,7 +98,7 @@ Hadean::Application.routes.draw do
     end
     namespace :inventory do
       resources :overviews
-      resources :adjustments
+      resources :adjustments, only: [:edit, :update]
     end
 
     namespace :merchandise do

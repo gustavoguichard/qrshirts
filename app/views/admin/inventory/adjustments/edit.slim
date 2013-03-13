@@ -1,0 +1,19 @@
+h3
+  | Ajuste de estoque para #{@variant.product.name} - #{@variant.name}: #{@variant.sku}
+= form_for(@variant, :url => admin_inventory_adjustment_path(@variant)) do |f|
+  = render :partial => 'form', :locals => {:f => f}
+  .generic_submit_button
+    = f.submit "Atualizar estoque", class: "button", id: "adjust_inventory_button"
+table
+  thead
+    tr
+      th Código
+      th Quantidade
+      th Reservados
+      th
+  tr
+    td= @variant.sku
+    td= @variant.inventory.count_on_hand
+    td= @variant.inventory.count_pending_to_customer
+p
+  = link_to 'Ajustar outros', admin_inventory_overviews_path, class: 'button'

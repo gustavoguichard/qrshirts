@@ -1,0 +1,24 @@
+h3= t('admin.inventory')
+.admin_inventory_overviews
+  - @products.each do |product|
+    table
+      thead
+        tr.odd
+          th.column1_header colspan="3"
+            = product.name
+          th= link_to 'edit', edit_admin_merchandise_product_path(product)
+        tr
+          th Código
+          th Preço
+          th Quantidade
+          th Reservados
+      tbody
+        - product.variants.each do |variant|
+          tr class=cycle("odd", "even")
+            td= "#{variant.name} - #{variant.sku}"
+            td= variant.price
+            td
+              = "#{variant.inventory.count_on_hand} - "
+              = link_to "Editar", edit_admin_inventory_adjustment_path(variant)
+            td= variant.inventory.count_pending_to_customer
+= will_paginate @products
