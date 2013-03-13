@@ -150,14 +150,12 @@ class Cart < ActiveRecord::Base
   # @param [User, #read] user that is adding something to the cart
   # @param [Integer, #optional] ItemType id that is being added to the cart
   # @return [CartItem] return the cart item that is added to the cart
-  def add_variant(variant_id, customer, qty = 1, cart_item_type_id = ItemType::SHOPPING_CART_ID, admin_purchase = false)
+  def add_variant(variant_id, customer, qty = 1, cart_item_type_id = ItemType::SHOPPING_CART_ID)
     items = shopping_cart_items.find_all_by_variant_id(variant_id)
     variant = Variant.find(variant_id)
-    quantity_to_purchase = (variant.quantity_purchaseable(admin_purchase) < qty.to_i) ? variant.quantity_purchaseable(admin_purchase) : qty.to_i # if we have less than desired instock
+    quantity_to_purchase = (variant.quantity_purchaseable < qty.to_i) ? variant.quantity_purchaseable : qty.to_i # if we have less than desired instock
 
-    if admin_purchase && (quantity_to_purchase > 0)
-      cart_item = add_cart_items(items, quantity_to_purchase, customer, cart_item_type_id, variant_id)
-    elsif variant.sold_out?
+    if variant.sold_out?
       cart_item = saved_cart_items.create(:variant_id   => variant_id,
                                     :user         => customer,
                                     :item_type_id => ItemType::SAVE_FOR_LATER_ID,

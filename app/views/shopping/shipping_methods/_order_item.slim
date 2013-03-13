@@ -1,0 +1,7 @@
+.seven.clearfix class="#{cycle("line_item_blue", "line_item_light_gray")}"
+  .seven.columns
+    = image_tag(items.first.variant.product.featured_image(:mini))
+    = items.first.variant.product.name
+    | Quantidade: #{items.size}
+  .five.columns.last
+    = raw items.first.variant.display_property_details
