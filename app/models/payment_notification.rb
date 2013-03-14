@@ -7,6 +7,9 @@ class PaymentNotification < ActiveRecord::Base
   def mark_order_as_purchased
     if status == "Completed"
       order.order_complete!
+      true
+    else
+      false
     end
   end
 end

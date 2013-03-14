@@ -161,7 +161,7 @@ class Order < ActiveRecord::Base
     self.state = 'paid'
     self.completed_at = Time.zone.now
     self.shipment.prepare!
-    self.save
+    self.save!
     update_inventory
   end
 
