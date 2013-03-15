@@ -1,0 +1,28 @@
+- if @tax_rate.errors.any?
+  #error_explanation
+    h2
+      = pluralize(@tax_rate.errors.count, "error")
+      | prohibited this tax_rate from being saved:
+    ul
+      - @tax_rate.errors.full_messages.each do |msg|
+        li= msg
+fieldset
+  label Porcentagem
+  = f.text_field :percentage
+  label País
+  - if Settings.tax_per_state_id
+    = select_tag :select_country, options_from_collection_for_select(countries, "second", "first"), {include_blank: true}
+    label Estado
+    = f.select :state_id, @states, {include_blank: true}
+  - else
+    label País
+    = f.select :country_id, countries, {include_blank: true}
+  label Data de início
+  .date-select
+    = f.date_select :start_date
+  label Data de fim
+  .date-select
+    = f.date_select :end_date
+  label Ativa
+  = f.check_box :active
+= f.submit "Criar", class: "button"

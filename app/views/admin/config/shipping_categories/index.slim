@@ -1,0 +1,13 @@
+.admin_title_header
+  h3 Categorias de entrega
+  = link_to 'Nova Categoria de entrega', new_admin_config_shipping_category_path, :class => 'button'
+.admin_shipping_categories
+  table
+    thead
+      tr.odd
+        th.column1_header Nome
+        th
+    - @shipping_categories.each do |shipping_category|
+      tr class=cycle("odd", "")
+        td= shipping_category.name
+        td= link_to 'Editar', edit_admin_config_shipping_category_path(shipping_category)

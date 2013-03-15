@@ -10,8 +10,8 @@
   <% for comment in order.comments %>
     <tr class='<%= cycle("odd", "")%>'>
       <td><%= link_to comment.name, admin_fulfillment_order_comment_path(order, comment) %></td>
-      <td><%= link_to "Edit", edit_admin_fulfillment_order_comment_path(order, comment) %></td>
-      <td><%= link_to "Destroy", admin_fulfillment_order_comment_path(order, comment), :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Editar", edit_admin_fulfillment_order_comment_path(order, comment) %></td>
+      <td><%= link_to "Destruir", admin_fulfillment_order_comment_path(order, comment), :confirm => 'Tem certeza?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

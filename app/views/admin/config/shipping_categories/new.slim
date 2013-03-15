@@ -1,0 +1,10 @@
+h1 Nova categoria de entrega
+= form_for(@shipping_category, url: admin_config_shipping_categories_path) do |f|
+  = render partial: 'form', locals: {f: f}
+= link_to 'Voltar', admin_config_shipping_categories_path, class: 'button'
+p
+  | Um exemplo de categoria de entrega poderia ser "roupas". A categoria é usada para definir produtos que podem ser entregues com a mesma forma de entrega. Por exemplo:
+  ul
+    li Produto "A" pode ser entregue por Sedex em 5 dias.
+    li Produto "B" só pode ser entregue por PAC.
+    li Produto "C" só pode ser entregue no Brasil.

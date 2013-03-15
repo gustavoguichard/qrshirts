@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_admin_fulfillment_order_comment_path(order, @comment), :class => 'button' %> |
-  <%= link_to "Destroy", admin_fulfillment_order_comment_path(order, @comment), :data => {:confirm => 'Are you sure?'}, :method => :delete, :class => 'button' %> |
-  <%= link_to "View All", admin_fulfillment_order_comments_path(order), :class => 'button' %>
+  <%= link_to "Editar", edit_admin_fulfillment_order_comment_path(order, @comment), :class => 'button' %> |
+  <%= link_to "Destruir", admin_fulfillment_order_comment_path(order, @comment), :data => {:confirm => 'Tem certeza?'}, :method => :delete, :class => 'button' %> |
+  <%= link_to "Ver todos", admin_fulfillment_order_comments_path(order), :class => 'button' %>
 </p>

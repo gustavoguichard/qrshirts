@@ -15,7 +15,7 @@
   <% @shipping_zones.each do |shipping_zone| %>
     <tr class='<%= cycle("odd", "")%>'>
       <td><%= link_to shipping_zone.name, edit_admin_config_shipping_zone_path(shipping_zone) %></td>
-      <td><%= link_to "Edit", edit_admin_config_shipping_zone_path(shipping_zone) %></td>
+      <td><%= link_to "Editar", edit_admin_config_shipping_zone_path(shipping_zone) %></td>
     </tr>
   <% end %>
   </table>

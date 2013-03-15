@@ -23,8 +23,8 @@
           <td><%= sale.percent_off %></td>
           <td><%= sale.starts_at %></td>
           <td><%= sale.ends_at %></td>
-        <td><%= link_to "edit", edit_admin_generic_sale_path(sale) %></td>
-        <td><%= link_to "inactivate", [:admin, :generic, sale], :data => { :confirm => 'Are you sure?' }, :method => :delete %></td>
+        <td><%= link_to "editar", edit_admin_generic_sale_path(sale) %></td>
+        <td><%= link_to "inativar", [:admin, :generic, sale], :data => { :confirm => 'Tem certeza?' }, :method => :delete %></td>
       </tr>
     <% end %>
     </tbody>

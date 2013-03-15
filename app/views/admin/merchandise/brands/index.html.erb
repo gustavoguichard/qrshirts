@@ -15,8 +15,8 @@
     <% for brand in @brands %>
       <tr class='<%= cycle("odd", "")%>'>
         <td><%= link_to brand.name, admin_merchandise_brand_path(brand) %></td>
-        <td><%= link_to "Edit", edit_admin_merchandise_brand_path(brand) %></td>
-        <td><%= link_to "Delete", admin_merchandise_brand_path(brand), confirm: 'Are you sure?', method: :delete %></td>
+        <td><%= link_to "Editar", edit_admin_merchandise_brand_path(brand) %></td>
+        <td><%= link_to "Delete", admin_merchandise_brand_path(brand), confirm: 'Tem certeza?', method: :delete %></td>
       </tr>
     <% end %>
   </table>

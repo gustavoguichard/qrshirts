@@ -76,13 +76,12 @@ Hadean::Application.routes.draw do
         member do
           put :ship
         end
-        resources  :addresses , only: [:edit, :update]# This is for editing the shipment address
+        resources  :addresses , only: [:edit, :update]
       end
     end
     namespace :config do
-      resources :accounts
+      # resources :accounts
       resources :countries, only: [:index, :update, :destroy]
-      resources :overviews
       resources :shipping_categories
       resources :shipping_rates
       resources :shipping_methods

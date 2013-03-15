@@ -1,0 +1,5 @@
+h3 Nova forma de envio
+p Um exemplo de forma de envia seria "Sedex 3-5 dias"
+= form_for(@shipping_method, url: admin_config_shipping_methods_path) do |f|
+  = render partial: 'form', locals: {f: f}
+= link_to 'Voltar', admin_config_shipping_methods_path, class: "button"

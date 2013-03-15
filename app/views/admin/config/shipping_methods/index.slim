@@ -1,0 +1,15 @@
+.admin_title_header
+  h3 Formas de Envio
+  = link_to "Nova forma de envio", new_admin_config_shipping_method_path, class: 'button'
+.admin_shipping_methods
+  table
+    thead
+      tr.odd
+        th.column1_header Nome
+        th
+        th
+    - @shipping_methods.each do |shipping_method|
+      tr class=cycle("odd", "")
+        td
+          = shipping_method.name
+        td= link_to "Editar", edit_admin_config_shipping_method_path(shipping_method)
