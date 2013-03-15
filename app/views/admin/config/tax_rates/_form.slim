@@ -11,9 +11,9 @@ fieldset
   = f.text_field :percentage
   label País
   - if Settings.tax_per_state_id
-    = select_tag :select_country, options_from_collection_for_select(countries, "second", "first"), {include_blank: true}
+    = select_tag :select_country, options_from_collection_for_select(countries, "second", "first")
     label Estado
-    = f.select :state_id, @states, {include_blank: true}
+    = f.select :state_id, options_from_collection_for_select(@states, 'id', 'name'), {include_blank: true}
   - else
     label País
     = f.select :country_id, countries, {include_blank: true}

@@ -5,4 +5,4 @@ h3 Nova taxa fiscal
 - content_for :bottom do
   = javascript_include_tag "admin/config_tax_rate"
   javascript:
-    | Hadean.Utility.registerOnLoadHandler(Hadean.TaxRateForm.initialize());
+    Hadean.Utility.registerOnLoadHandler(Hadean.TaxRateForm.initialize());
