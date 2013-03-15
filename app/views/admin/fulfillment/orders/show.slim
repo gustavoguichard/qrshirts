@@ -1,0 +1,54 @@
+h2
+  | Pedido # #{@order.number}
+  small= " - #{@order.user.name}"
+p
+  - @order.find_total
+  strong Email: 
+  =link_to @order.user.email, "mailto:"+@order.user.email
+  br/
+  strong Pago em: 
+  =@order.display_completed_at
+  br/
+  strong Status: 
+  =t "order.state.#{@order.state}"
+  br/
+  strong ID Transação: 
+  =@order.payment_notification.transaction_id
+.clear
+#order-shipment-items.span-8.last.float-left
+  h4 Ítens
+  table
+    thead
+      tr.odd
+        th.column1_header Nome
+        th Código
+        th Preço
+    tbody
+      - @order.order_items.each_with_index do |item,i|
+        tr class="#{cycle('odd', 'even')}"
+          td
+            = "#{item.variant.product.brand.name} - #{item.variant.product.name} - #{item.variant.product_name} - #{item.variant.sku}"
+          td= item.variant.sku
+          td= number_to_currency item.variant.price
+      tr
+        td colspan="2"
+          strong Sub-total:
+        td= number_to_currency @order.sub_total
+      tr
+        td  colspan="2"
+          strong Taxas:
+        td= number_to_currency @order.taxed_amount
+      tr
+        td  colspan="2"
+          strong Total:
+        td= number_to_currency @order.taxed_total
+
+.span-7.last.float-left
+  h4 Endereço para entrega
+  p
+    = render partial: '/shared/compact_address', locals: {shopping_address: @order.ship_address}
+    = link_to 'Mudar Endereço', admin_history_order_addresses_path(@order), class: 'button green small'
+#shipment-details-box.span-7.last.float-left
+  = render partial: 'admin/fulfillment/orders/shipment_details', locals: {order: @order}
+- content_for :head do
+  = stylesheet_link_tag "cupertino/jquery-ui-1.8.12.custom"

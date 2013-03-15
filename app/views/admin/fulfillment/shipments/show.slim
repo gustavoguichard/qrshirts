@@ -1,0 +1,60 @@
+div
+  p#notice= notice
+  h3 Detalhes da entrega
+  table
+    thead
+      tr
+        th Entregue em: 
+        th Tracking: 
+        th Número: 
+        th Status: 
+        th Forma de entrega:
+    tbody
+      tr
+        td= l @shipment.shipped_at, :format => :us_time if @shipment.shipped_at
+        td= @shipment.tracking
+        td= @shipment.number
+        td= t "shipment.state.#{@shipment.state}"
+        td= @shipment.shipping_method.name
+  h3 Ítens do pedido
+  table
+    thead
+      tr
+        th Produto:
+        th Código:
+        th Preço:
+    tbody
+      - @shipment.order_items.each do |item|
+        tr
+          td
+            = "#{item.variant.product.brand.name} - #{item.variant.product.name} - #{item.variant.product_name} - #{item.variant.sku}"
+          td= item.variant.sku
+          td= item.price
+      - @shipment.order.find_total
+      tr
+        td colspan="2"
+          strong Sub-total:
+        td= number_to_currency @shipment.order.sub_total
+      tr
+        td colspan="2"
+          strong Taxas:
+        td= number_to_currency @shipment.order.taxed_amount
+      tr
+        td colspan="2"
+          strong Total:
+        td= number_to_currency @shipment.order.taxed_total
+  h3 Detalhes do pedido
+  table
+    thead
+      tr
+        th Pedido #:
+        th Cliente:
+        th Endereço de entrega:
+    tbody
+      tr
+        td= @shipment.order.number
+        td= @shipment.order.user.name
+        td= render :partial => '/shared/compact_address', :locals => {:shopping_address => @shipment.address}
+    hr/
+  p
+    = link_to 'Editar', edit_admin_fulfillment_shipment_path(@shipment), class: "button small"

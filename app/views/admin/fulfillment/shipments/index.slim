@@ -1,12 +1,17 @@
-h3 Shipments
+p.right
+  - unless params[:to_ship]
+    = link_to "Para entregar", admin_fulfillment_shipments_path(to_ship: true), class: "button small"
+  - else
+    = link_to "Todas entregas", admin_fulfillment_shipments_path(), class: "button small"
+h3 Entregas
 table
   thead
     tr.odd
-      th.column1_header Number
-      th Order #
-      th Shipped at
+      th.column1_header Número
+      th Pedido #
+      th Entregue em
       th Tracking
-      th State
+      th Status
       th Items
       th
       th
@@ -14,16 +19,17 @@ table
     - if shipment.has_items?
       tr class=cycle("odd", "even")
         td= shipment.number
-        td= link_to shipment.order.number, edit_admin_fulfillment_order_path(shipment.order)
+        td= link_to shipment.order.number, admin_fulfillment_order_path(shipment.order)
         td= I18n.localize(shipment.shipped_at, format: :us_time) if shipment.shipped_at
         td= shipment.tracking
-        td= shipment.state
+        td= t "shipment.state.#{shipment.state}"
         td
           = raw shipment.order_items.collect {|item| item.variant.product_name }.join('<br/>')
         td
-          = link_to 'Show', admin_fulfillment_shipment_path(shipment)
+          = link_to 'Ver', admin_fulfillment_shipment_path(shipment)
           |  | 
-          = link_to 'Edit', edit_admin_fulfillment_shipment_path(shipment)
+          = link_to 'Editar', edit_admin_fulfillment_shipment_path(shipment)
         td
           - unless shipment.shipped?
-            = button_to 'Mark Shipped', ship_admin_fulfillment_shipment_path(shipment, order_id: shipment.order.number), confirm: "Are you sure?", method: :put
+            = button_to 'Marcar entregue', ship_admin_fulfillment_shipment_path(shipment, order_id: shipment.order.number), confirm: "Are you sure?", method: :put
+= will_paginate @shipments

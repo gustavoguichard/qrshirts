@@ -1,0 +1,22 @@
+/#shipment-address
+  p= render partial: '/shared/compact_address', locals: {shopping_address: @shipment.address}
+  = link_to 'Alterar endereço', edit_admin_fulfillment_shipment_address_path(@shipment, @shipment.address), class: "button small"
+#shipment_form_wrapper
+  h2 Editar entrega
+  = form_for(@shipment, url: admin_fulfillment_shipment_path(@shipment)) do |f|
+    = render partial: 'form', locals: {f: f }
+  = link_to 'Ver', admin_fulfillment_shipment_path(@shipment)
+  |  | 
+  = link_to 'Voltar', admin_fulfillment_shipments_path(order_id: @shipment.order.number)
+#shipment_comment_form_wrapper
+  h2 Comentários
+  #order_comments
+    ul
+      - @shipment.order.comments.each do |comment|
+        li
+          = comment.note
+        hr/
+  = form_for( @comment, url: admin_fulfillment_order_comments_path(@shipment.order), html: {'data-order_id' => @shipment.order.number}) do |f|
+    = render partial: 'comments_form', locals: {f: f }
+- content_for :bottom do
+  = javascript_include_tag "admin/fulfillment_shipment.js"

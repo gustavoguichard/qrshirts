@@ -2,10 +2,13 @@ class Admin::Fulfillment::ShipmentsController < Admin::Fulfillment::BaseControll
   # GET /admin/fulfillment/shipments
   # GET /admin/fulfillment/shipments.xml
   def index
-    @shipments = Shipment.joins(:order).where("orders.state != ?", 'in_progress').includes([:order, {:order_items => {:variant => :product} }])
+    @shipments = Shipment.with_paid_order.includes([:order, {:order_items => {:variant => :product} }]).paginate(:page => pagination_page, :per_page => pagination_rows)
     if params[:order_id].present?
       @order = Order.find_by_number(params[:order_id])
       @shipments = @shipments.where(['shipments.order_id = ?', @order.id])
+    end
+    if params[:to_ship].present?
+      @shipments = @shipments.to_ship
     end
   end
 

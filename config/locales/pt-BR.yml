@@ -111,6 +111,18 @@ pt-BR:
       upload_images: "Em seguida você deve fazer upload de imagens. Para fazer isso clique para editar seu produto e em seguida clique em adicionar imagens."
       inventory: "Você precisa controlar seu estoque. Para fazer isso clique em %{link}. Então clique em purchase order and follow the step to create a purchase order. Once the purchase order is complete, you need to click receive for the inventory to be in stock."
 
+  shipment:
+    state:
+      shipped: "Entregue"
+      ready_to_ship: "Pronto para entrega"
+      pending: "Aguardando pagamento"
+  order:
+    state:
+      in_progress: "Em andamento"
+      complete: "Completo"
+      paid: "Pago"
+      canceled: "Cancelado"
+
 
   # formatos de data e hora
   date:
@@ -177,7 +189,7 @@ pt-BR:
       long: "%A, %d de %B de %Y, %H:%M h"
       widget: "%d <span class='month'>%B</span>"
       us_date: "%d/%m/%Y"
-      us_time: "%d/%m/%Y as %I:%M %p"
+      us_time: "%d/%m/%Y às %I:%M %p"
       long_date: "%d de %B de %Y"
     am: ''
     pm: ''

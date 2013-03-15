@@ -32,6 +32,9 @@ class Shipment < ActiveRecord::Base
   CHARACTERS_SEED = 20
   NUMBER_SEED     = 2002002002000
 
+  scope :to_ship, where(shipped_at: nil)
+  scope :with_paid_order, joins(:order).where("orders.state != ?", 'in_progress')
+
   state_machine :initial => 'pending' do
 
     event :prepare do

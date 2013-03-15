@@ -1,0 +1,25 @@
+- if @shipment.errors.any?
+  #error_explanation
+    h2
+      = pluralize(@shipment.errors.count, "error")
+      | prohibited this shipment from being saved:
+    ul
+      - @shipment.errors.full_messages.each do |msg|
+        li= msg
+#shipment-details
+  ul
+    li 
+      strong Entregue em: 
+      = l @shipment.shipped_at, :format => :us_time if @shipment.shipped_at
+    li
+      strong Número da entrega: 
+      = @shipment.number
+    li
+      strong Status: 
+      = t "shipment.state.#{@shipment.state}"
+    li
+      strong Tracking: 
+      = f.text_field :tracking, style: "width: 300px;"
+  .actions
+    = f.submit 'Atualizar Tracking Number', class: "button"
+.clear

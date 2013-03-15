@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130315003135) do
+ActiveRecord::Schema.define(:version => 20130315145424) do
 
   create_table "accounting_adjustments", :force => true do |t|
     t.integer  "adjustable_id",                                 :null => false
@@ -451,25 +451,19 @@ ActiveRecord::Schema.define(:version => 20130315003135) do
 
   add_index "shipping_methods", ["shipping_zone_id"], :name => "index_shipping_methods_on_shipping_zone_id"
 
-  create_table "shipping_rate_types", :force => true do |t|
-    t.string "name", :null => false
-  end
-
   create_table "shipping_rates", :force => true do |t|
-    t.integer  "shipping_method_id",                                                    :null => false
-    t.decimal  "rate",                  :precision => 8, :scale => 2, :default => 0.0,  :null => false
-    t.integer  "shipping_rate_type_id",                                                 :null => false
-    t.integer  "shipping_category_id",                                                  :null => false
-    t.decimal  "minimum_charge",        :precision => 8, :scale => 2, :default => 0.0,  :null => false
+    t.integer  "shipping_method_id",                                                   :null => false
+    t.decimal  "rate",                 :precision => 8, :scale => 2, :default => 0.0,  :null => false
+    t.integer  "shipping_category_id",                                                 :null => false
+    t.decimal  "minimum_charge",       :precision => 8, :scale => 2, :default => 0.0,  :null => false
     t.integer  "position"
-    t.boolean  "active",                                              :default => true
-    t.datetime "created_at",                                                            :null => false
-    t.datetime "updated_at",                                                            :null => false
+    t.boolean  "active",                                             :default => true
+    t.datetime "created_at",                                                           :null => false
+    t.datetime "updated_at",                                                           :null => false
   end
 
   add_index "shipping_rates", ["shipping_category_id"], :name => "index_shipping_rates_on_shipping_category_id"
   add_index "shipping_rates", ["shipping_method_id"], :name => "index_shipping_rates_on_shipping_method_id"
-  add_index "shipping_rates", ["shipping_rate_type_id"], :name => "index_shipping_rates_on_shipping_rate_type_id"
 
   create_table "shipping_zones", :force => true do |t|
     t.string "name", :null => false

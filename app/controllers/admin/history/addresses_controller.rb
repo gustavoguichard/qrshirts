@@ -48,7 +48,7 @@ class Admin::History::AddressesController < Admin::BaseController
     respond_to do |format|
       if @address && @order.ship_address = @address
         if @order.save
-          format.html { redirect_to(admin_history_order_url(@order) , :notice => 'Address was successfully selected.') }
+          format.html { redirect_to(admin_fulfillment_order_url(@order) , :notice => 'Address was successfully selected.') }
         else
           format.html { render :action => "edit" }
         end

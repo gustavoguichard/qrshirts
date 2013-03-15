@@ -1,14 +1,11 @@
-h4 Shipment Details
-- if order.shipment.nil?
-  .well
-    | No Shipments have been made on this order.
-    br/
-    a#create-shipment-button.tiny.button data-url=(create_shipment_admin_fulfillment_order_path(order.id))
-      = t("label_create_shipment_button")
-- else
-  .well
-    | Shipping Method: #{order.shipment.shipping_method.name}
-    br/
-    | Shipping #: #{order.shipment.number} Tracking:#{order.shipment.tracking} State:#{order.shipment.state}
-  .span-7.rounded-10.line_item_blue
-    = link_to 'View Shipments for this order.', admin_fulfillment_shipments_path(:order_id => order.number)
+h5 Detalhes para entrega
+p
+  | Forma de envio: #{order.shipment.shipping_method.name}
+  br/
+  | Entrega: #{order.shipment.number}
+  br/
+  | Tracking: #{order.shipment.tracking}
+  br/
+  | Estado: #{t "shipment.state.#{order.shipment.state}"}
+.span-7.rounded-10.line_item_blue
+  p= link_to 'Ver a entrega desse pedido.', admin_fulfillment_shipments_path(order_id: order.number), class: 'button small'

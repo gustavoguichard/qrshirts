@@ -9,7 +9,6 @@
     <tr class='odd'>
       <th class='column1_header'>Shipping Method</th>
       <th>Rate</th>
-      <th>Shipping rate type</th>
       <th>Minimum Charge</th>
       <th></th>
       <th></th>
@@ -20,7 +19,6 @@
     <tr class='<%= cycle("odd", "")%>'>
       <td><%= shipping_rate.shipping_method.name %></td>
       <td><%= shipping_rate.rate %></td>
-      <td><%= shipping_rate.shipping_rate_type.name %></td>
       <td><%= shipping_rate.minimum_charge %></td>
 
       <td><%= link_to 'Show', admin_config_shipping_rate_path(shipping_rate) %></td>

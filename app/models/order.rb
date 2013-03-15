@@ -51,6 +51,7 @@ class Order < ActiveRecord::Base
 
   has_many   :order_items, :dependent => :destroy
   has_one   :shipment
+  has_one   :payment_notification
   has_many   :comments, :as => :commentable
 
   belongs_to :user
@@ -314,7 +315,7 @@ class Order < ActiveRecord::Base
   def shipping_rates(items = nil)
     items ||= OrderItem.order_items_in_cart(self.id)
     rates = items.inject([]) do |rates, item|
-      rates << item.shipping_rate if item.shipping_rate.individual? || !rates.include?(item.shipping_rate)
+      rates << item.shipping_rate if !rates.include?(item.shipping_rate)
       rates
     end
   end
@@ -529,7 +530,7 @@ class Order < ActiveRecord::Base
     unless self.ship_address.nil?
       tax_time = completed_at? ? completed_at : Time.zone.now
       rate = TaxRate.for_region(self.ship_address.state_id).at(tax_time).active.order('start_date DESC').first
-      self.tax_rate = rate.percentage || 0.0
+      self.tax_rate = rate ? rate.percentage : 0.0
     end
   end
 

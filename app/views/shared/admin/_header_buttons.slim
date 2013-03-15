@@ -4,7 +4,7 @@ li.has-flyout
   a.flyout-toggle href="#"
     span
   ul.flyout
-    li= link_to "Novas", admin_fulfillment_orders_path
+    li= link_to "Novos", admin_fulfillment_orders_path
     li= link_to t('admin.history'), admin_history_orders_path
     li= link_to t(:shipments), admin_fulfillment_shipments_path
     li= link_to t("admin.inventory"), admin_inventory_overviews_path
@@ -28,7 +28,7 @@ li.has-flyout
     li= link_to t(:sales), admin_generic_sales_path
 li= link_to t("admin.users"), admin_users_path
 li.has-flyout
-  = link_to t("admin.config"), admin_config_accounts_path
+  = link_to t("admin.config"), '#'
   a.flyout-toggle href="#"
     span
   ul.flyout

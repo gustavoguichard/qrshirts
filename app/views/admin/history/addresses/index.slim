@@ -1,0 +1,29 @@
+h2
+  | Endereços de #{@order.user.name}
+p Selecione o endereço para alterar a entrega ou crie um novo endereço
+table
+  thead
+    tr.odd
+      th.column1_header Nome
+      th Sobrenome
+      th Endereço
+      th Cidade
+      th Estado
+      th CEP
+      th
+      th
+  tbody
+    - @addresses.each do |address|
+      tr class=cycle("odd", "")
+        td= address.first_name
+        td= address.last_name
+        td
+          = address.address1
+          br/
+          = address.address2
+        td= address.city
+        td= address.state_id
+        td= address.zip_code
+        td
+          = button_to 'Selecionar', admin_history_order_address_path(@order, address), method: :put
+p= link_to 'Novo endereço', new_admin_history_order_address_path(@order), class: "button"
