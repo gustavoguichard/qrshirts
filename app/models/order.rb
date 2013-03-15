@@ -33,7 +33,6 @@
 #  email           :string(255)
 #  state           :string(255)
 #  user_id         :integer(4)
-#  bill_address_id :integer(4)
 #  ship_address_id :integer(4)
 #  coupon_id       :integer(4)
 #  active          :boolean(1)      default(TRUE), not null
@@ -43,6 +42,7 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  credited_amount :decimal(8, 2)   default(0.0)
+#  tax_rate    :decimal(8, 2)   default(0.0), not null
 #  shipment_id     :integer(4)
 #
 
@@ -63,7 +63,6 @@ class Order < ActiveRecord::Base
   before_save       :update_tax_rates
 
 
-  # after_find :set_beginning_values
 
   attr_accessor :total, :sub_total, :deal_amount, :taxed_total
 
@@ -177,7 +176,7 @@ class Order < ActiveRecord::Base
   def calculate_totals
     # if calculated at is nil then this order hasn't been calculated yet
     # also if any single item in the order has been updated, the order needs to be re-calculated
-    if any_order_item_needs_to_be_calculated? && all_order_items_are_ready_to_calculate?
+    if any_order_item_needs_to_be_calculated?
       calculate_each_order_items_total
       sub_total = total
       self.total = total + shipping_charges
@@ -187,8 +186,8 @@ class Order < ActiveRecord::Base
   end
 
   def initialize_shipment(shipping_method_id)
-    if shipment.nil?
-      Shipment.create_shipments_with_items(self)
+    unless shipment
+      Shipment.create_shipments_with_items(self, shipping_method_id)
     else
       shipment.update_attributes(shipping_method_id: shipping_method_id)
     end
@@ -223,13 +222,6 @@ class Order < ActiveRecord::Base
        hash
      end
      return_hash
-  end
-  # looks at all the order items and determines if the order has all the required elements to complete a checkout
-  #
-  # @param [none]
-  # @return [Boolean]
-  def ready_to_checkout?
-    order_items.all? {|item| item.ready_to_calculate? }
   end
 
   def self.include_checkout_objects
@@ -279,7 +271,7 @@ class Order < ActiveRecord::Base
   # @param none
   # @return [Float] tax rate  10.5% === 10.5
   def order_tax_percentage
-    (!order_items.blank? && order_items.first.tax_rate.try(:percentage)) ? order_items.first.tax_rate.try(:percentage) : 0.0
+    tax_rate || 0.0
   end
 
   # amount the coupon reduces the value of the order
@@ -327,22 +319,6 @@ class Order < ActiveRecord::Base
     end
   end
 
-  # all the tax charges to apply to the order
-  #
-  # @param [none]
-  # @return [Array] array of tax charges that will be charged
-  def tax_charges
-    order_items.map {|item| item.tax_charge }
-  end
-
-  # sum of all the tax charges to apply to the order
-  #
-  # @param [none]
-  # @return [Decimal]
-  def total_tax_charges
-    tax_charges.sum
-  end
-
   # add the variant to the order items in the order, normally called at order creation
   #
   # @param [Variant] variant to add
@@ -351,9 +327,8 @@ class Order < ActiveRecord::Base
   # @return [none]
   def add_items(variant, quantity, state_id = nil)
     self.save! if self.new_record?
-    tax_rate_id = state_id ? variant.product.tax_rate(state_id) : nil
     quantity.times do
-      self.order_items.push(OrderItem.create(:order => self,:variant_id => variant.id, :price => variant.price, :tax_rate_id => tax_rate_id))
+      self.order_items.push(OrderItem.create(order: self, variant_id: variant.id, price: variant.price))
     end
   end
 
@@ -487,16 +462,12 @@ class Order < ActiveRecord::Base
     calculated_at.nil? || (order_items.any? {|item| (item.updated_at > self.calculated_at) })
   end
 
-  def all_order_items_are_ready_to_calculate?
-    order_items.all? {|item| item.ready_to_calculate? }
-  end
-
   def calculate_each_order_items_total(force = false)
     self.total = 0.0
     tax_time = completed_at? ? completed_at : Time.zone.now
     order_items.each do |item|
       if (calculated_at.nil? || item.updated_at > self.calculated_at)
-        item.tax_rate = item.variant.product.tax_rate(self.ship_address.state_id, tax_time)
+        # item.tax_rate = item.variant.product.tax_rate(self.ship_address.state_id, tax_time)
         item.calculate_total
         item.save
       end
@@ -555,16 +526,10 @@ class Order < ActiveRecord::Base
   # @param none
   # @return [none]
   def update_tax_rates
-    if ship_address_id_changed?
-      # set_beginning_values
+    unless self.ship_address.nil?
       tax_time = completed_at? ? completed_at : Time.zone.now
-      order_items.each do |item|
-        rate = item.variant.product.tax_rate(self.ship_address.state_id, tax_time)
-        if rate && item.tax_rate_id != rate.id
-          item.tax_rate = rate
-          item.save
-        end
-      end
+      rate = TaxRate.for_region(self.ship_address.state_id).at(tax_time).active.order('start_date DESC').first
+      self.tax_rate = rate.percentage || 0.0
     end
   end
 

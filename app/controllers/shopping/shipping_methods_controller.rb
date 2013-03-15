@@ -19,20 +19,13 @@ class Shopping::ShippingMethodsController < Shopping::BaseController
 
   # PUT /shopping/shipping_methods/1
   def update
-    all_selected = true
-    params[:shipping_category].each_pair do |category_id, rate_id|#[rate]
-      if rate_id
-        items = OrderItem.includes([{:variant => :product}]).
+    if params[:shipping_category]
+      items = OrderItem.includes([{:variant => :product}]).
                           where(['order_items.order_id = ? AND
-                                  products.shipping_category_id = ?', session_order_id, category_id])
+                                  products.shipping_category_id = ?', session_order_id, params[:shipping_category].keys[0]])
 
-        OrderItem.update_all("shipping_rate_id = #{rate_id}","id IN (#{items.map{|i| i.id}.join(',')})")
-      else
-        all_selected = false
-      end
-    end
-    if all_selected
-      session_order.initialize_shipment params[:id]
+      OrderItem.update_all("shipping_rate_id = #{params[:shipping_category].values[0]}","id IN (#{items.map{|i| i.id}.join(',')})")
+      session_order.initialize_shipment params[:shipping_category].values[0]
       redirect_to(shopping_orders_url, :notice => I18n.t('shipping_method_updated'))
     else
       redirect_to( shopping_shipping_methods_url, :notice => I18n.t('all_shipping_methods_must_be_selected'))

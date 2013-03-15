@@ -97,17 +97,14 @@ class Shipment < ActiveRecord::Base
   #
   # @param [Order]
   # @return [ none ]
-  def self.create_shipments_with_items(order)
-    order.order_items.group_by(&:shipping_method_id).each do |shipping_method_id, order_items|
-      shipment = Shipment.new(:shipping_method_id => shipping_method_id,
-                              :address_id         => order.ship_address_id,
-                              :order_id           => order.id
-                              )
-      order_items.each do |item|
-        shipment.order_items.push(item)
-      end
-      shipment.save!
+  def self.create_shipments_with_items(order, shipping_method_id)
+    shipment = Shipment.new(shipping_method_id: shipping_method_id,
+                              address_id: order.ship_address_id,
+                              order_id: order.id)
+    order.order_items.each do |item|
+      shipment.order_items.push(item)
     end
+    shipment.save!
   end
 
   # Addresses that the user has to ship to

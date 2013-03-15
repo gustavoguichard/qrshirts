@@ -2,7 +2,6 @@ class Admin::Fulfillment::ShipmentsController < Admin::Fulfillment::BaseControll
   # GET /admin/fulfillment/shipments
   # GET /admin/fulfillment/shipments.xml
   def index
-    # orders = Order.where("state = ?", 'in_progress')
     @shipments = Shipment.joins(:order).where("orders.state != ?", 'in_progress').includes([:order, {:order_items => {:variant => :product} }])
     if params[:order_id].present?
       @order = Order.find_by_number(params[:order_id])

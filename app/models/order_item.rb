@@ -24,25 +24,13 @@ class OrderItem < ActiveRecord::Base
 
   has_many   :return_items
 
-  #after_save :calculate_order
-  after_find :set_beginning_values
-  after_destroy :set_order_calculated_at_to_nil
-
   validates :variant_id,  :presence => true
   validates :order_id,    :presence => true
 
-  def set_beginning_values
-    @beginning_tax_rate_id      = self.tax_rate_id      rescue @beginning_tax_rate_id = nil # this stores the initial value of the tax_rate
-    @beginning_shipping_rate_id = self.shipping_rate_id rescue @beginning_shipping_rate_id = nil # this stores the initial value of the tax_rate
-    @beginning_total            = self.total            rescue @beginning_total = nil # this stores the initial value of the total
-  end
-
   state_machine :initial => 'unpaid' do
-
     event :pay do
       transition :to => 'paid', :from => ['unpaid']
     end
-
     event :return do
       transition :to => 'returned', :from => ['paid']
     end
@@ -114,37 +102,6 @@ class OrderItem < ActiveRecord::Base
                           order_items.tax_rate_id,
                           order_items.price,
                           order_items.total, order_items.variant_id")
-  end
-
-  # forces the order to be re-calculated.  If the order item has changed then the order totals need to be adjusted
-  #
-  # @param [none]
-  # @return [none]
-  def calculate_order
-    if self.ready_to_calculate? &&
-        (shipping_rate_id != @beginning_shipping_rate_id || tax_rate_id != @beginning_tax_rate_id)
-      set_beginning_values
-      order.calculate_totals
-    end
-  end
-
-  # if something changes to the order item and you dont want to recalculate
-  #   (maybe because you are chnging several more things) then
-  #    this method will mark the calculated at to be nil and thus tell the order that
-  #    it needs to calculate the total again
-  #
-  # @param [none]
-  # @return [none]
-  def set_order_calculated_at_to_nil
-    order.update_attribute(:calculated_at, nil)
-  end
-
-  # determines if the order item has all the attributes set and thus you can now determine the final total
-  #
-  # @param [none]
-  # @return [Boolean]
-  def ready_to_calculate?
-    shipping_rate_id && tax_rate_id
   end
 
   # this is the price after coupons and anything before calculating the price + tax

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130311194609) do
+ActiveRecord::Schema.define(:version => 20130315003135) do
 
   create_table "accounting_adjustments", :force => true do |t|
     t.integer  "adjustable_id",                                 :null => false
@@ -238,7 +238,6 @@ ActiveRecord::Schema.define(:version => 20130311194609) do
     t.string   "email"
     t.string   "state"
     t.integer  "user_id"
-    t.integer  "bill_address_id"
     t.integer  "ship_address_id"
     t.integer  "coupon_id"
     t.boolean  "active",                                        :default => true,  :null => false
@@ -249,9 +248,9 @@ ActiveRecord::Schema.define(:version => 20130311194609) do
     t.datetime "updated_at",                                                       :null => false
     t.decimal  "credited_amount", :precision => 8, :scale => 2, :default => 0.0
     t.integer  "shipment_id"
+    t.decimal  "tax_rate",        :precision => 8, :scale => 2, :default => 0.0,   :null => false
   end
 
-  add_index "orders", ["bill_address_id"], :name => "index_orders_on_bill_address_id"
   add_index "orders", ["coupon_id"], :name => "index_orders_on_coupon_id"
   add_index "orders", ["email"], :name => "index_orders_on_email"
   add_index "orders", ["number"], :name => "index_orders_on_number"

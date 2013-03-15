@@ -90,7 +90,7 @@
 class Cart < ActiveRecord::Base
   belongs_to  :user
   belongs_to  :customer, :class_name => 'User'
-  has_many    :cart_items
+  has_many    :cart_items, dependent: :destroy
   has_many    :shopping_cart_items,       :conditions => ['cart_items.active = ? AND
                                                           cart_items.item_type_id = ?', true, ItemType::SHOPPING_CART_ID],
                                           :class_name => 'CartItem'

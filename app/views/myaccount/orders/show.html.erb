@@ -22,13 +22,6 @@
           </td>
         </tr>
         <tr>
-          <td class='left-align'> Billing Address: </td>
-          <td>
-            <%= render :partial => '/shared/compact_address', :locals => {:shopping_address => @order.bill_address} if @order.bill_address_id %>
-          </td>
-        </tr>
-
-        <tr>
           <td COLSPAN=2> Items </td>
         </tr>
         <% @order.order_items.each do |item| %>
