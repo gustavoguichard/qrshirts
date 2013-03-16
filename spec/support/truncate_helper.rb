@@ -11,7 +11,6 @@ module Hadean
                         'order_items',
                         'payments',
                         'payment_profiles',
-                        'phones',
                         'products',
                         'product_properties',
                         'product_types',

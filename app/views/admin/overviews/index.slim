@@ -10,7 +10,7 @@ h2 style="text-align:center" = t 'admin.overview.welcome', company: t(:company)
 - else
   ol
     li = raw t 'admin.overview.change_password', link: link_to(t('admin.admin_users'), admin_users_path, 'data-popup' => true)
-    li = raw t 'admin.overview.every_config', link: link_to(t('admin.config'), admin_config_overviews_path, 'data-popup' => true)
+    /li = raw t 'admin.overview.every_config', link: link_to(t('admin.config'), admin_users_path, 'data-popup' => true)
     li = raw t 'admin.overview.create_properties', link: link_to(t('admin.properties'), admin_merchandise_properties_path, 'data-popup' => true)
     li = raw t 'admin.overview.pruduct_types', link: link_to(t('admin.product_type'), admin_merchandise_product_types_path, 'data-popup' => true)
     li = raw t 'admin.overview.prototype', link: link_to(t('admin.prototype'), admin_merchandise_prototypes_path, 'data-popup' => true)

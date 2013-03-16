@@ -1,0 +1,4 @@
+= render partial: '/admin/merchandise/sub_header'
+h3 Novo Fit
+= form_for @product_type, url: admin_merchandise_product_types_path do |form|
+  = render partial: '/admin/merchandise/product_types/form', locals: {form: form, button_action: "Criar"}

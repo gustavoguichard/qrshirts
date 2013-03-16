@@ -8,6 +8,7 @@
 # Table name: brands
 #
 #  id   :integer          not null, primary key
+#  image :string
 #  name :string(255)
 #
 
@@ -16,6 +17,6 @@ class Brand < ActiveRecord::Base
   has_many :variants
   has_many :products
 
-  validates :name,  :presence => true,       :length => { :maximum => 255 }, :uniqueness => true
-                    #:format   => { :with => CustomValidators::Names.name_validator }
+  validates :name,  presence: true, length: { maximum: 255 }, uniqueness: true
+  validates :image, presence: true
 end

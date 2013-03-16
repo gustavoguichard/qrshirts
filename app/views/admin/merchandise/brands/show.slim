@@ -1,0 +1,14 @@
+= render partial: '/admin/merchandise/sub_header'
+h3
+  | Estampa - #{@brand.name}
+p
+  strong Nome: 
+  = @brand.name
+p
+  = link_to "Editar", edit_admin_merchandise_brand_path(@brand), class: 'button'
+  |  
+  = link_to "Deletar", admin_merchandise_brand_path(@brand), data: {confirm: 'Tem certeza?'}, method: :delete, class: 'button'
+  |  
+  = link_to "Nova Estampa", new_admin_merchandise_brand_path, class: 'button'
+  |  
+  = link_to "Ver todas", admin_merchandise_brands_path, class: 'button'

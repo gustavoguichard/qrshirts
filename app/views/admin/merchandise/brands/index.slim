@@ -1,0 +1,17 @@
+= render partial: '/admin/merchandise/sub_header'
+.admin_title_header
+  h3 Estampas
+  = link_to "Nova Estampa", new_admin_merchandise_brand_path, class: 'button'
+.admin_brands
+  table
+    thead
+      tr.odd
+        th.column1_header Nome
+        th
+        th
+    tbody
+      - for brand in @brands
+        tr class=cycle("odd", "")
+          td= link_to brand.name, admin_merchandise_brand_path(brand)
+          td= link_to "Editar", edit_admin_merchandise_brand_path(brand)
+          td= link_to "Delete", admin_merchandise_brand_path(brand), confirm: 'Tem certeza?', method: :delete

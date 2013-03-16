@@ -1,5 +1,5 @@
 h3
-  | Ajuste de estoque para #{@variant.product.name} - #{@variant.name}: #{@variant.sku}
+  | Ajuste de estoque para #{@variant.product.product_type.name} #{@variant.product.name} - #{@variant.name} (##{@variant.sku})
 = form_for(@variant, :url => admin_inventory_adjustment_path(@variant)) do |f|
   = render :partial => 'form', :locals => {:f => f}
   .generic_submit_button

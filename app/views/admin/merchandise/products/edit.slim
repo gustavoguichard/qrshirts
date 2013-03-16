@@ -1,0 +1,12 @@
+= render partial: '/admin/merchandise/sub_header'
+h2 Editar Produto
+= link_to 'Adicionar Imagem', edit_admin_merchandise_images_product_path(@product), class: 'button light'
+|  
+= link_to 'Tamanhos', admin_merchandise_product_variants_path(@product), class: 'button light'
+|  
+= link_to 'Voltar ao Produto',     admin_merchandise_product_path(@product), class: 'button'
+#article-sidebar.sidebar
+  = form_for @product, url: admin_merchandise_product_path(@product) do |form|
+    = render partial: 'form', locals: {form: form}
+    .generic_submit_button
+      = submit_tag "Atualizar", class: "button", id: "create_product_button"

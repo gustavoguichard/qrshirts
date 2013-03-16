@@ -1,0 +1,7 @@
+= render partial: '/admin/merchandise/sub_header'
+h4
+  | Editar tamanho de #{@product.product_type.name} - #{@product.name}
+= form_for @variant, url: "#{admin_merchandise_product_variants_path(@product)}/#{@variant.id}" do |form|
+  = render partial: '/admin/merchandise/variants/form', locals: {form: form}
+  .generic_submit_button
+    = submit_tag "Atualizar", class: "button", id: "create_variant_button"

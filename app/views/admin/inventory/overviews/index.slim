@@ -5,7 +5,7 @@ h3= t('admin.inventory')
       - @products.each do |product|
         tr class="#{cycle('odd', 'even')}"
           th
-            = link_to "#{product.brand.name} - #{product.name}", "#", class: "product_name"
+            = link_to "#{product.product_type.name} - #{product.name}", "#", class: "product_name"
             table.variants style="display:none;"
               thead
                 tr
@@ -17,7 +17,7 @@ h3= t('admin.inventory')
                 - product.variants.each do |variant|
                   tr class=cycle("odd", "even")
                     td= "#{variant.name} - #{variant.sku}"
-                    td= variant.price
+                    td= number_to_currency variant.price
                     td
                       = "#{variant.inventory.count_on_hand} - "
                       = link_to "Editar", edit_admin_inventory_adjustment_path(variant)

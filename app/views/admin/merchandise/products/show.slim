@@ -1,0 +1,51 @@
+= render :partial => '/admin/merchandise/sub_header'
+h3
+  | #{@product.product_type.name} - #{@product.name}
+span style="color:#{@product.active ? "#3A3" : "#C33"}; float:right; margin-top: -45px"
+  - if @product.available?
+    = link_to 'Desativar', admin_merchandise_product_path(@product), method: :delete, data: {confirm: "Isso irá desativar o produto, tem certeza?"}, class: 'button green-button'
+  - else
+    = link_to 'Ativar', activate_admin_merchandise_product_path(@product), method: 'PUT', data: {confirm: "Isso irá ativar o produto, tem certeza?"}, class: 'button red-button'
+label
+  | Descrição (#{link_to 'editar', edit_admin_merchandise_products_description_path(@product)})
+p= raw @product.description
+label Meta Keywords
+p= @product.meta_keywords
+label Meta Description
+p= @product.meta_description
+label Fit
+p= @product.product_type.name
+label Estampa
+p= @product.brand.name
+label Categoria de entrega
+p= @product.shipping_category.name
+fieldset#admin-product-properties.span-12
+  legend Tamanhos
+  - if @product.variants.size == 0
+    p
+      | Nenhum tamanho foi criado. #{link_to 'Criar alguns tamanhos?', edit_admin_merchandise_multi_product_variant_path(@product)}
+  - else
+    p= link_to 'Editar tamanhos', edit_admin_merchandise_multi_product_variant_path(@product)
+    table
+      thead
+        tr
+          th Código
+          th Preço
+          th Custo
+          th
+      tbody
+        - @product.variants.each do |variant|
+          | <tr style='#{'color:#FFAEB9;' unless variant.active?}'>
+          td= variant.sku
+          td= variant.price
+          td= variant.cost
+          td= link_to 'Ver', admin_merchandise_product_variant_path(@product, variant)
+fieldset
+  legend
+    | Imagens (#{link_to 'editar', edit_admin_merchandise_images_product_path(@product)})
+  - @product.images.each do |image|
+    label= image.photo_file_name
+    = image_tag image.photo.url(:small)
+  p
+p style="margin-top: 30px"
+  = link_to 'Todos Produtos', admin_merchandise_products_path(), :class => 'button yellow'

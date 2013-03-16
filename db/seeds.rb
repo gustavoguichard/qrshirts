@@ -38,10 +38,6 @@ AddressType::NAMES.each do |address_type|
   AddressType.find_or_create_by_name(address_type)
 end
 
-PhoneType::NAMES.each do |phone_type|
-  PhoneType.find_or_create_by_name(phone_type)
-end
-
 ItemType::NAMES.each do |item_type|
   ItemType.find_or_create_by_name(item_type)
 end

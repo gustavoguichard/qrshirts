@@ -1,0 +1,52 @@
+= form.fields_for :variants, Variant.new(:product_id => @product.id), :child_index => "new_variants" do |ff|
+  #variants_fields_template style="display:none;"
+    .span-6.three.columns.new_variant_container style="float: left;"
+      table.span-6.ar-sidebar style="width:270px;"
+        tr
+          td
+          td style="float:right;"
+            = link_to 'remove', '#remove', :class => 'remove_variant_child'
+        tr
+          td Código
+          td
+            = ff.text_field :sku, :class => 'span-3'
+        tr
+          td Preço
+          td
+            = ff.text_field :price, :class => 'span-3'
+        tr
+          td Custo
+          td
+            = ff.text_field :cost, :class => 'span-3'
+        tr
+          td Nome
+          td
+            = ff.text_field :name, :class => 'span-3'
+- @product.variants.each do |variant|
+  .span-6.column style="width:240px;"
+    = form.fields_for :variants, variant do |ff|
+      table.span-6.ar-sidebar style="width:240px;"
+        thead
+          tr
+            th colspan="2"
+              = variant.sku
+        tr
+          td Código
+          td
+            = ff.text_field :sku, :class => 'span-3'
+        tr
+          td Preço
+          td
+            = ff.text_field :price, :class => 'span-3'
+        tr
+          td Custo
+          td
+            = ff.text_field :cost, :class => 'span-3'
+        tr
+          td Nome
+          td
+            = ff.text_field :name, :class => 'span-3'
+        tr
+          td Desativar
+          td
+            = ff.check_box :inactivate, :class => 'span-3'

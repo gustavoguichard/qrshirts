@@ -1,0 +1,4 @@
+= render partial: '/admin/merchandise/sub_header'
+h3 Editar Fit
+= form_for @product_type, url: admin_merchandise_product_type_path(@product_type) do |form|
+  = render partial: '/admin/merchandise/product_types/form', locals: {form: form, button_action: "Update"}

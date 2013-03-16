@@ -1,0 +1,22 @@
+= render partial: '/admin/merchandise/sub_header'
+h2
+  | Produto: #{@product.product_type.name} - #{@product.name} (#{@variant.sku})
+= link_to 'Editar Tamanho', edit_admin_merchandise_product_variant_path(@product, @variant), class: 'button'
+fieldset#admin-product-names.span-12
+  p
+    = label :variant, :sku, 'Código'
+    = @variant.sku
+  p
+    = label :variant, :price, 'Preço'
+    = @variant.price
+  p
+    = label :variant, :cost, 'Custo'
+    = @variant.cost
+  p
+    = label :variant, :count_on_hand, 'Estoque'
+    = @variant.count_on_hand
+  p
+    = label :variant, :count_pending_to_customer, 'Reservados'
+    = @variant.count_pending_to_customer
+- if @variant.active?
+  p= link_to 'Desativar Tamanho', admin_merchandise_product_variant_path(@product, @variant), class: 'button red-button', method: :delete, data: {confirm: "Tem certeza?"}

@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"shi",
+				"shipping_rate_type_id"
+			],
+			[
+				"ship",
+				"shipped_at"
+			],
+			[
+				"shipped",
+				"shipped_at"
+			],
+			[
+				"read",
+				"ready_to_ship"
+			],
+			[
+				"to",
+				"to_ship"
+			],
+			[
+				"shippin",
+				"shipping_method_id"
+			],
+			[
+				"user",
+				"user_cart_items"
+			],
+			[
+				"curre",
+				"current_user_session"
+			],
+			[
+				"session",
+				"session_cart"
+			],
+			[
+				"sel",
+				"self"
+			],
+			[
 				"las",
 				"last_name"
 			],
@@ -98,10 +138,6 @@
 			[
 				"table",
 				"table: <table>"
-			],
-			[
-				"to",
-				"to_json  (function)"
 			],
 			[
 				"nil",
@@ -392,10 +428,6 @@
 				"Array: Array.new(10) { |i| .. }"
 			],
 			[
-				"user",
-				"user_info  (variable)"
-			],
-			[
 				"fac",
 				"facebook  (function)"
 			],
@@ -482,38 +514,6 @@
 			[
 				"value",
 				"value_1  (variable)"
-			],
-			[
-				"link",
-				"link: link - alternate"
-			],
-			[
-				"html",
-				"html: html"
-			],
-			[
-				"get_blo",
-				"get_bloginfo  (function)"
-			],
-			[
-				"getWeatherIma",
-				"getWeatherImage  (function)"
-			],
-			[
-				"arr",
-				"array: $… = array (…)"
-			],
-			[
-				"shuffle",
-				"shuffle  (function)"
-			],
-			[
-				"margin-le",
-				"margin-left:   (property)"
-			],
-			[
-				"padding-le",
-				"padding-left"
 			]
 		]
 	},
@@ -523,12 +523,16 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 69.0,
+		"height": 309.0,
 		"selected_items":
 		[
 			[
-				"mov",
-				"File: Move"
+				"slim",
+				"Set Syntax: Ruby Slim"
+			],
+			[
+				"rena",
+				"File: Rename"
 			],
 			[
 				"ren",
@@ -539,8 +543,56 @@
 				"File: Delete"
 			],
 			[
-				"rena",
+				"del",
+				"File: Delete"
+			],
+			[
+				"late",
+				"Rails Latest Migration: Open latest Rails migration"
+			],
+			[
+				"delte",
+				"File: Delete"
+			],
+			[
+				"re",
 				"File: Rename"
+			],
+			[
+				"lates",
+				"Rails Latest Migration: Open latest Rails migration"
+			],
+			[
+				"lat",
+				"Rails Latest Migration: Open latest Rails migration"
+			],
+			[
+				"la",
+				"Rails Latest Migration: Open latest Rails migration"
+			],
+			[
+				"delet",
+				"File: Delete"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"r",
+				"File: Rename"
+			],
+			[
+				"",
+				"Convert Case: Upper Case"
+			],
+			[
+				"delt",
+				"File: Delete"
+			],
+			[
+				"mov",
+				"File: Move"
 			],
 			[
 				"move",
@@ -557,14 +609,6 @@
 			[
 				"clos",
 				"Project: Close"
-			],
-			[
-				"",
-				"Emmet: Encode\\Decode Image to data:URL"
-			],
-			[
-				"r",
-				"File: Rename"
 			],
 			[
 				"sniwor",
@@ -680,134 +724,134 @@
 	},
 	"file_history":
 	[
-		"/Users/Guga/Sites/qrshirts/app/views/shopping/orders/index.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/models/address.rb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/reports/overviews/show.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/shared/admin/_header_buttons.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/shared/_welcome_header.html.erb",
-		"/Users/Guga/Sites/qrshirts/config/environments/development.rb",
-		"/Users/Guga/Sites/qrshirts/config/environment.rb",
-		"/Users/Guga/Sites/qrshirts/Gemfile",
-		"/Users/Guga/Sites/qrshirts/app/controllers/application_controller.rb",
-		"/Users/Guga/Sites/qrshirts/config/config.yml",
-		"/Users/Guga/Sites/qrshirts/config/settings.yml",
-		"/Users/Guga/Sites/qrshirts/config/application.rb",
-		"/Users/Guga/Sites/qrshirts/config/locales/pt-BR.yml",
-		"/Users/Guga/Sites/qrshirts/config/locales/en.yml",
-		"/Users/Guga/Sites/qrshirts/app/models/user.rb",
-		"/Users/Guga/Sites/qrshirts/app/views/myaccount/overviews/show.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/overviews/index.slim",
-		"/Users/Guga/Sites/qrshirts/app/controllers/shopping/orders_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/invoice.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/payment.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/order.rb",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/admin/app.css.sass",
-		"/Users/Guga/Sites/qrshirts/config/environments/production.rb",
-		"/Users/Guga/Sites/qrshirts/config/settings/production.yml",
-		"/Users/Guga/Sites/qrshirts/config/config.local.yml",
-		"/Users/Guga/Sites/qrshirts/.gitignore",
-		"/Users/Guga/Sites/qrshirts/config/initializers/01-load_config.rb",
-		"/Users/Guga/Sites/qrshirts/config/initializers/settings.rb",
-		"/Users/Guga/Sites/qrshirts/config/initializers/rails_config.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/tax_rate.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/country.rb",
 		"/Users/Guga/Sites/qrshirts/config/database.yml",
-		"/Users/Guga/Sites/qrshirts/qrshirts.sublime-project",
-		"/Users/Guga/Sites/qrshirts/spec/models/order_spec.rb",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/site/app.css.scss",
-		"/Users/Guga/Sites/qrshirts/spec/controllers/myaccount/orders_controller_spec.rb",
-		"/Users/Guga/Sites/qrshirts/spec/controllers/shopping/shipping_methods_controller_spec.rb",
-		"/Users/Guga/Sites/qrshirts/spec/controllers/admin/generic/coupons_controller_spec.rb",
-		"/Users/Guga/Sites/qrshirts/Gemfile.lock",
-		"/Users/Guga/Sites/qrshirts/config/environments/test.rb",
-		"/Users/Guga/Sites/qrshirts/db/seed/international_states/brazil_states.yml",
-		"/Users/Guga/Sites/qrshirts/spec/models/shipment_spec.rb",
-		"/Users/Guga/Sites/qrshirts/spec/models/variant_spec.rb",
-		"/Users/Guga/Sites/qrshirts/config/initializers/mail.rb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_categories/index.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/properties/index.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/shopping/checkout/billing_addresses/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/shopping/checkout/shipping_addresses/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/myaccount/addresses/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/shopping/addresses/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/shopping/cart_items/index.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/models/shipping_zone.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/state.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/user_session.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/shipping_category.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/return_reason.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/shopping/base_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/states_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/notifier.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/product.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/admin/shopping/base_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/admin/config/countries_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/admin/config/shipping_categories_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/admin/config/tax_rates_controller.rb",
+		"/Users/Guga/Sites/qrshirts/Gemfile",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/overviews/index.slim",
+		"/Users/Guga/Sites/qrshirts/app/controllers/admin/merchandise/wizards/base_controller.rb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/new.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/index.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/edit.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/_sub_header.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/show.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/descriptions/edit.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/_form.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/variants/index.slim",
+		"/Users/Guga/Sites/qrshirts/app/models/variant.rb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/multi/variants/edit.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/variants/show.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/multi/variants/_form.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/variants/_form.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/variants/edit.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/variants/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/multi/variants/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/multi/variants/_variant.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/multi/variants/_variant.html.erb",
 		"/Users/Guga/Sites/qrshirts/app/controllers/admin/merchandise/multi/variants_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/admin/merchandise/products_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/tables.css.scss",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/product_page.css.scss",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/signup.css.scss",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/login.css.scss",
-		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/foundation/jquery.foundation.orbit.js",
-		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/admin/config_tax_rate.js",
-		"/Users/Guga/Sites/qrshirts/app/views/shopping/shipping_methods/index.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/shopping/shipping_methods_controller.rb",
-		"/Users/Guga/Sites/qrshirts/VERSION",
-		"/Users/Guga/Sites/qrshirts/README.md",
-		"/Users/Guga/Sites/qrshirts/.rspec",
-		"/Users/Guga/Sites/qrshirts/.rvmrc",
-		"/Users/Guga/Sites/qrshirts/solr/conf/solrconfig.xml",
-		"/Users/Guga/Sites/qrshirts/db/seed/states.yml",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/multi/variants/edit.html.erb",
+		"/Users/Guga/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/variants/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/variants/new.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/variants/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/qrshirts.sublime-project",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/variants/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/fulfillment/orders/show.slim",
 		"/Users/Guga/Sites/qrshirts/config/routes.rb",
-		"/Users/Guga/Sites/qrshirts/lib/tasks/add_country_states.rake",
-		"/Users/Guga/Sites/qrshirts/app/models/shipping_rate.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/myaccount/orders_controller.rb",
-		"/Users/Guga/Sites/qrshirts/db/seeds.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/admin/config/shipping_zones_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/models/shipping_rate_type.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/admin/shopping/checkout/base_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/myaccount/addresses_controller.rb",
-		"/Users/Guga/Sites/qrshirts/spec/controllers/admin/config/countries_controller_spec.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/shopping/addresses_controller.rb",
-		"/Users/Guga/Sites/qrshirts/config/ripple.yml",
-		"/Users/Guga/Sites/qrshirts/spec/controllers/admin/help_controller_spec.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/admin/config/accounts_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/admin/users_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/config/tax_rates/index.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/models/cart_item.rb",
-		"/Users/Guga/Sites/qrshirts/app/helpers/application_helper.rb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/config/countries/index.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/config/tax_rates/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/admin/countries.js",
-		"/Users/Guga/Sites/qrshirts/db/seed/countries.yml",
-		"/Users/Guga/Sites/qrshirts/app/views/layouts/admin.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/layouts/admin_cart.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/layouts/admin_markup.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/layouts/application.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/layouts/welcome.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/config/tax_rates/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/variants/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/descriptions/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/db/migrate/20100814070158_create_variant_suppliers.rb",
+		"/Users/Guga/Sites/qrshirts/config/locales/pt-BR.yml",
+		"/Users/Guga/Sites/qrshirts/app/models/product.rb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/_sub_header.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/shared/admin/_header_buttons.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/users/index.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/config/countries/index.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/admin/index_grid.js",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/history/orders/show.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/history/orders/index.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/history/orders/show.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/history/orders/index.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/users/_users.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/users/_form.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/users/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/users/new.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/users/edit.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/users/edit.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/users/new.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/users/index.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/shared/admin/_header_buttons.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/.gitignore",
 		"/Users/Guga/Sites/qrshirts/app/views/shared/admin/_header_bar.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/shared/admin/_header_bar.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/shared/_myaccount_subheader.slim"
+		"/Users/Guga/Sites/qrshirts/app/views/shared/_welcome_header.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/admin/config_tax_rate.js",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/tax_rates/index.slim",
+		"/Users/Guga/Sites/qrshirts/app/models/state.rb",
+		"/Users/Guga/Sites/qrshirts/app/controllers/states_controller.rb",
+		"/Users/Guga/Sites/qrshirts/app/views/states/index.json.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/tax_rates/edit.slim",
+		"/Users/Guga/Sites/qrshirts/app/controllers/admin/config/tax_rates_controller.rb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/tax_rates/_form.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/tax_rates/new.slim",
+		"/Users/Guga/Sites/qrshirts/app/models/tax_rate.rb",
+		"/Users/Guga/Sites/qrshirts/app/controllers/products_controller.rb",
+		"/Users/Guga/Sites/qrshirts/app/models/country.rb",
+		"/Users/Guga/Sites/qrshirts/lib/custom_validators.rb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/deals/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/brands/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/myaccount/overviews/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/deals/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/coupons/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/deals/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/helpers/application_helper.rb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/accounts/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/accounts/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_categories/_form.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_categories/edit.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_categories/index.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_categories/show.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_methods/_form.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_rates/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_rates/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_rates/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_rates/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_rates/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_zones/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_zones/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_zones/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_zones/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/fulfillment/comments/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/fulfillment/comments/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/fulfillment/comments/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/fulfillment/comments/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/coupons/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/coupons/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/coupons/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/coupons/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/deals/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/inventory/overviews/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/inventory/overviews/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/brands/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/brands/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/brands/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/changes/properties/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/product_types/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/product_types/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/properties/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/properties/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/properties/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/prototypes/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/brands/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/brands/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/product_types/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/product_types/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/properties/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/properties/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/shipping_categories/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/shipping_categories/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/reports/overviews/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/users/_form.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/users/index.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/customer/password_resets/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/myaccount/addresses/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/myaccount/addresses/edit.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/myaccount/addresses/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/myaccount/addresses/new.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/myaccount/addresses/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/products/index.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/products/show.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/shopping/shipping_methods/index.slim"
 	],
 	"find":
 	{
@@ -815,145 +859,147 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
+			"<project>",
+			"",
 			"<project>"
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
-			"locale",
-			"gateway",
-			"capture_cim",
-			"gateway",
-			"currency_code",
-			"amount",
-			"FB_APP_SECRET",
-			"FB_APP_ID",
-			"CONFIG[",
-			"']",
-			"settings",
-			"settings.yml",
-			"production.yml",
-			"= CONFIG[",
-			"create_invoice",
-			"complete?",
-			"USA_ID",
-			"cc_params",
-			"credit_card",
-			"response",
-			"complete?",
-			"provessar",
-			"\n<<<<<<<",
-			"HEAD",
-			"<<<<<<< HEAD",
-			"next_form",
-			"shopping_orders_url",
-			"shipping_zone_id: 5",
-			"shipping_zone",
-			"LOCATIONS",
-			"LOCATIONS\nLOCATIONS",
-			"default",
+			".span-3",
+			".span-6.last",
+			".clear",
+			" =>",
+			"Name",
+			"Cost",
+			"Price",
+			" =>",
+			"Variant",
+			"master",
+			".clear",
+			" =>",
+			"  =>",
+			" =>",
+			"variant",
+			" =>",
+			"varian",
+			"propert",
+			"propertie",
+			" =>",
+			".clear",
+			" =>",
+			"  =>",
+			" =>",
+			"Propert",
+			"brand",
+			"user",
+			"javascript:\n    |",
+			"form_info",
+			"countries",
+			"link_to \"Show\"",
+			"submit 'Update'",
+			"\"inactivate\"",
+			"link_to \"edit\"",
+			"\"Back to List\"",
+			":class => ",
+			"\"View All\"",
+			"'Are you sure?'",
+			"\"Edit\"",
+			"\"Destroy\"",
+			" =>",
+			"Product",
+			" =>",
+			"<%",
+			" %>",
+			"Back",
+			"shipping_rates\",",
+			"shipping_rate_type",
+			"sub_name",
+			"sub_name\nsub_name\nsub_name",
+			"sub_name",
 			"individual?",
-			"individual",
-			"where(",
-			"active_countries",
-			"Country.active",
-			".active",
-			"paypal",
-			"smtp",
-			"ActionMail",
-			"encryption_key",
-			"dependent",
-			"inactivate!",
-			"states",
-			"zen",
-			"quiet",
-			"bri",
-			"content_for :head do",
+			"per_item_verbage",
+			"individual?",
+			"shipping_rate_t",
+			"shipping_rate_type_id",
+			"shipping_rate_type",
+			"span.span-4.last.column",
+			"@order",
+			"span.span-5.last.column",
+			"li",
+			"li\n          span.span-5.last.column",
+			"label.span-5.column",
+			"td",
+			"li\n        ",
+			"strong ",
 			" =>",
-			"|:",
-			"sortable",
-			"Atualizar",
+			"history",
+			"status",
+			"sub_total",
 			" =>",
-			"admin.users.",
-			"'",
-			"admin.overviews.",
-			"'",
-			"admin.product",
-			"t('",
-			"a hre",
-			",          :",
-			"               ",
-			"              ",
-			"             ",
-			"            ",
-			"           ",
-			"          ",
-			"birth_date",
-			"display_birth_date",
-			"display_bir",
-			"<li",
-			"| ",
-			"My Account",
-			"if nil",
-			"main_product_tabs",
-			"most_li",
-			"most_likely_user",
-			"compact_address",
+			"'Number",
+			"number",
 			" =>",
-			"layout",
-			"admin_cart",
-			"layout",
+			"shipping_method_id",
+			"order_items",
+			"||",
+			"tax_rate",
+			"order_tax_percentage",
+			"taxable_money",
+			"taxed_total",
+			"bill_address_id",
+			"orders",
+			"shipping_rates",
+			"total_tax_charges",
+			"tax_charges",
+			"tax_rate",
 			" =>",
-			"admin_mark",
-			"welcome",
-			"RoReCommerce",
-			"_to(t 'admin",
-			"admin.",
-			"nothing_in_cart",
-			"%B %d, %Y",
-			"%m/%d/%Y",
-			" =>",
-			"=>",
-			"admin_gri",
-			"initialize",
-			"pipeline",
-			"include",
-			";\n",
-			"include",
-			"mixin",
-			"app_mixin",
-			"mixin",
-			"| ",
-			"asset",
-			"heroku",
-			"mineo",
-			"serve",
-			"false",
-			"\", \"",
-			"auto",
-			"height: auto",
-			"height:auto",
-			"taxo",
-			"sprite",
-			"after",
-			"sprit",
-			"sprite",
-			"strong",
-			"#",
-			"h2",
-			"h3",
-			"spac",
-			"font-size",
-			"why",
-			"about",
-			";",
-			"6B6A5E"
+			"tax_rate",
+			"order_tax_percentage",
+			"find_sub_total",
+			"best_qualifing_deal",
+			"taxed_total",
+			"get_taxed_total",
+			"update_tax_rates",
+			"ship_address_id_changed?",
+			"coupon",
+			"calculate_total",
+			"calculate_each_order_items_total",
+			"any_order_item_needs_to_be_calculated",
+			"ready_to",
+			"ready_to_calculate",
+			"set_beginning_values",
+			":set_beginning_values",
+			"set_beginning_values",
+			"set_order_calculated_at_to_nil",
+			"any_order_item_needs_to_be_calculated?",
+			"ready_to_checkout?",
+			"ready_to_checkout",
+			"all_order_items_are_ready_to_calculate",
+			"ready_to_calculate?",
+			"shipping_rate_id",
+			"calculate_order",
+			"ready_to_calculate?",
+			"ready_to_calculate",
+			"calculate_order",
+			"set_beginning_values",
+			"tax",
+			"order_tax_percentage",
+			"tax",
+			"tax_rate_id",
+			"set_beginning_values",
+			"total",
+			"tax",
+			"order",
+			"cart_item_ids",
+			"cart",
+			"destroy cart"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -961,6 +1007,15 @@
 		"regex": false,
 		"replace_history":
 		[
+			"link_to \"Ver\"",
+			"submit 'Atualizar'",
+			"link_to \"editar\"",
+			"\"Voltar a lista\"",
+			"class: ",
+			"\"Ver todos\"",
+			"'Tem certeza?'",
+			"\"Editar\"",
+			"\"Destruir\""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1022,516 +1077,516 @@
 		"selected_items":
 		[
 			[
-				"deve",
-				"config/environments/development.rb"
+				"multiva",
+				"app/controllers/admin/merchandise/multi/variants_controller.rb"
 			],
 			[
-				"applcont",
-				"app/controllers/application_controller.rb"
+				"multicon",
+				"app/controllers/admin/merchandise/multi/variants_controller.rb"
 			],
 			[
-				"gem",
-				"Gemfile"
+				"vari",
+				"app/models/variant.rb"
 			],
 			[
-				"confi",
-				"config/config.yml"
+				"aminfulfilordesho",
+				"app/views/admin/fulfillment/orders/show.slim"
 			],
 			[
-				"sett",
-				"config/settings.yml"
-			],
-			[
-				"envi",
-				"config/environment.rb"
-			],
-			[
-				"viewsharmen",
-				"app/views/shared/admin/_header_buttons.slim"
-			],
-			[
-				"ptbr",
-				"config/locales/pt-BR.yml"
-			],
-			[
-				"app",
-				"config/application.rb"
-			],
-			[
-				"appl",
-				"config/application.rb"
-			],
-			[
-				"modeuser",
-				"app/models/user.rb"
-			],
-			[
-				"ptb",
-				"config/locales/pt-BR.yml"
-			],
-			[
-				"enym",
-				"config/locales/en.yml"
-			],
-			[
-				"reportoversho",
-				"app/views/admin/reports/overviews/show.html.erb"
-			],
-			[
-				"overvisho",
-				"app/views/myaccount/overviews/show.html.erb"
-			],
-			[
-				"overind",
-				"app/views/admin/overviews/index.slim"
-			],
-			[
-				"configym",
-				"config/config.yml"
-			],
-			[
-				"giti",
-				".gitignore"
-			],
-			[
-				"settirb",
-				"config/initializers/settings.rb"
-			],
-			[
-				"prod",
-				"config/environments/production.rb"
-			],
-			[
-				"count",
-				"app/models/country.rb"
-			],
-			[
-				"addr",
-				"app/models/address.rb"
-			],
-			[
-				"ordercon",
-				"app/controllers/shopping/orders_controller.rb"
-			],
-			[
-				"apprb",
-				"config/application.rb"
-			],
-			[
-				"git",
-				".gitignore"
-			],
-			[
-				"data",
-				"config/database.yml"
-			],
-			[
-				"gitg",
-				".gitignore"
-			],
-			[
-				"ord",
-				"app/models/order.rb"
-			],
-			[
-				"shoppcontrol",
-				"app/controllers/shopping/orders_controller.rb"
-			],
-			[
-				"appcssass",
-				"app/assets/stylesheets/admin/app.css.sass"
-			],
-			[
-				"appcsssas",
-				"app/assets/stylesheets/admin/app.css.sass"
-			],
-			[
-				"shocontro",
-				"app/controllers/shopping/base_controller.rb"
-			],
-			[
-				"shoppcontr",
-				"app/controllers/shopping/orders_controller.rb"
-			],
-			[
-				"shippimethoinde",
-				"app/views/shopping/shipping_methods/index.html.erb"
-			],
-			[
-				"shippmethcon",
-				"app/controllers/shopping/shipping_methods_controller.rb"
-			],
-			[
-				"statesyml",
-				"db/seed/states.yml"
-			],
-			[
-				"brazi",
-				"db/seed/international_states/brazil_states.yml"
-			],
-			[
-				"route",
+				"rou",
 				"config/routes.rb"
 			],
 			[
-				"shippmethoin",
-				"app/views/shopping/shipping_methods/index.html.erb"
-			],
-			[
-				"shippmecon",
-				"app/controllers/shopping/shipping_methods_controller.rb"
-			],
-			[
-				"brail",
-				"db/seed/international_states/brazil_states.yml"
-			],
-			[
-				"shippzon",
-				"app/models/shipping_zone.rb"
-			],
-			[
-				"shipzoncon",
-				"app/controllers/admin/config/shipping_zones_controller.rb"
-			],
-			[
-				"stat",
-				"app/models/state.rb"
-			],
-			[
-				"addre",
-				"app/models/address.rb"
-			],
-			[
-				"controshoor",
-				"app/controllers/shopping/orders_controller.rb"
-			],
-			[
-				"ordcon",
-				"app/controllers/myaccount/orders_controller.rb"
-			],
-			[
-				"shippra",
-				"app/models/shipping_rate.rb"
-			],
-			[
-				"shippca",
-				"app/models/shipping_category.rb"
-			],
-			[
-				"add_co",
-				"lib/tasks/add_country_states.rake"
-			],
-			[
-				"paym",
-				"app/models/payment.rb"
-			],
-			[
-				"shicacon",
-				"app/controllers/admin/config/shipping_categories_controller.rb"
-			],
-			[
-				"shica",
-				"app/models/shipping_category.rb"
-			],
-			[
-				"shipprat",
-				"app/models/shipping_rate_type.rb"
-			],
-			[
-				"ordecontr",
-				"app/controllers/myaccount/orders_controller.rb"
-			],
-			[
-				"shipmehcon",
-				"app/controllers/shopping/shipping_methods_controller.rb"
-			],
-			[
-				"countr",
-				"app/models/country.rb"
-			],
-			[
-				"pa",
-				"app/models/payment.rb"
-			],
-			[
-				"confienv",
-				"config/environments/test.rb"
-			],
-			[
-				"configenvi",
-				"config/environments/production.rb"
-			],
-			[
-				"confienvi",
-				"config/environments/development.rb"
-			],
-			[
-				"helcon",
-				"spec/controllers/admin/help_controller_spec.rb"
-			],
-			[
-				"controlle",
-				"app/controllers/admin/config/accounts_controller.rb"
-			],
-			[
-				"usecon",
-				"app/controllers/admin/users_controller.rb"
+				"varian",
+				"db/migrate/20100814070158_create_variant_suppliers.rb"
 			],
 			[
 				"produ",
 				"app/models/product.rb"
 			],
 			[
-				"shipcacont",
-				"app/controllers/admin/config/shipping_categories_controller.rb"
-			],
-			[
-				"shipcat",
-				"app/models/shipping_category.rb"
-			],
-			[
-				"tax",
-				"app/models/tax_rate.rb"
-			],
-			[
-				"taxratcon",
-				"app/controllers/admin/config/tax_rates_controller.rb"
-			],
-			[
-				"sharedslim",
+				"sharedadmin",
 				"app/views/shared/admin/_header_buttons.slim"
 			],
 			[
-				"statcon",
-				"app/controllers/states_controller.rb"
+				"rout",
+				"config/routes.rb"
 			],
 			[
-				"taxracont",
-				"app/controllers/admin/config/tax_rates_controller.rb"
+				"loca",
+				"config/locales/pt-BR.yml"
 			],
 			[
-				"taxrafor",
-				"app/views/admin/config/tax_rates/_form.html.erb"
+				"localpt",
+				"config/locales/pt-BR.yml"
 			],
 			[
-				"taxraht",
-				"app/views/admin/config/tax_rates/edit.html.erb"
-			],
-			[
-				"sta",
-				"app/models/state.rb"
-			],
-			[
-				"addcoun",
-				"lib/tasks/add_country_states.rake"
-			],
-			[
-				"seedcountri",
-				"db/seed/countries.yml"
-			],
-			[
-				"counjs",
-				"app/assets/javascripts/admin/countries.js"
-			],
-			[
-				"councont",
-				"app/controllers/admin/config/countries_controller.rb"
-			],
-			[
-				"adminuscont",
-				"app/controllers/admin/users_controller.rb"
-			],
-			[
-				"overindesl",
+				"adminoverinde",
 				"app/views/admin/overviews/index.slim"
 			],
 			[
-				"overvisli",
-				"app/views/admin/overviews/index.slim"
+				"gem",
+				"Gemfile"
 			],
 			[
-				"welheasl",
+				"dat",
+				"config/database.yml"
+			],
+			[
+				"shared/",
 				"app/views/shared/_welcome_header.slim"
 			],
 			[
-				"wel",
-				"app/controllers/welcome_controller.rb"
+				"stat",
+				"app/models/state.rb"
 			],
 			[
-				"layouadmisl",
-				"app/views/layouts/admin.slim"
+				"taxra",
+				"app/models/tax_rate.rb"
 			],
 			[
-				"admincarsl",
-				"app/views/layouts/admin_cart.slim"
+				"confitaxraind",
+				"app/views/admin/config/tax_rates/index.slim"
 			],
 			[
-				"admima",
-				"app/views/layouts/admin_markup.slim"
+				"statecon",
+				"app/controllers/states_controller.rb"
 			],
 			[
-				"welsl",
-				"app/views/layouts/welcome.slim"
+				"coun",
+				"app/models/country.rb"
 			],
 			[
-				"welc",
-				"app/controllers/welcome_controller.rb"
+				"adminconfitaxra",
+				"app/controllers/admin/config/tax_rates_controller.rb"
 			],
 			[
-				"welco",
-				"app/controllers/welcome_controller.rb"
+				"libcu",
+				"lib/custom_validators.rb"
 			],
 			[
-				"he",
-				"app/controllers/admin/help_controller.rb"
+				"route",
+				"config/routes.rb"
 			],
 			[
-				"admovecontro",
-				"app/controllers/admin/overviews_controller.rb"
+				"countriein",
+				"app/views/admin/config/countries/index.slim"
 			],
 			[
-				"ovindeslim",
-				"app/views/admin/overviews/index.slim"
+				"schem",
+				"db/schema.rb"
 			],
 			[
-				"local",
-				"config/locales/en.yml"
+				"schema",
+				"db/schema.rb"
 			],
 			[
-				"",
-				".rspec"
-			],
-			[
-				"mainfoo",
-				"app/views/shared/_main_footer.slim"
-			],
-			[
-				"show",
-				"app/views/abouts/show.slim"
-			],
-			[
-				"variasp",
-				"spec/models/variant_spec.rb"
-			],
-			[
-				"shipspe",
-				"spec/models/shipment_spec.rb"
-			],
-			[
-				"purcha",
-				"app/models/purchase_order.rb"
-			],
-			[
-				"pro",
-				"app/models/product.rb"
-			],
-			[
-				"produspe",
-				"spec/models/product_spec.rb"
-			],
-			[
-				"en",
-				"config/environment.rb"
-			],
-			[
-				"table",
-				"app/assets/stylesheets/tables.css.scss"
-			],
-			[
-				"sitappcss",
-				"app/assets/stylesheets/site/app.css.scss"
-			],
-			[
-				"signu",
-				"app/assets/stylesheets/signup.css.scss"
-			],
-			[
-				"produpa",
-				"app/assets/stylesheets/product_page.css.scss"
-			],
-			[
-				"appmixi",
-				"app/assets/stylesheets/site/_app_mixins.css.scss"
-			],
-			[
-				"siteappm",
-				"app/assets/stylesheets/site/_app_mixins.css.scss"
-			],
-			[
-				"login",
-				"app/assets/stylesheets/login.css.scss"
-			],
-			[
-				"appsli",
-				"app/views/layouts/application.slim"
-			],
-			[
-				"layouapp",
-				"app/views/layouts/application.html.erb"
-			],
-			[
-				"lo",
-				"app/assets/stylesheets/login.css.scss"
+				"schme",
+				"spec/controllers/shopping/shipping_methods_controller_spec.rb"
 			],
 			[
 				"orderit",
 				"app/models/order_item.rb"
 			],
 			[
-				"devel",
-				"config/environments/development.rb"
+				"shippratet",
+				"spec/models/shipping_rate_type_spec.rb"
 			],
 			[
-				"de",
-				"config/environments/development.rb"
+				"shippraty",
+				"app/models/shipping_rate_type.rb"
 			],
 			[
-				"allcs",
-				"app/assets/stylesheets/store/all.css"
+				"shippra",
+				"app/models/shipping_rate.rb"
 			],
 			[
-				"applr",
+				"ship",
+				"app/models/shipment.rb"
+			],
+			[
+				"adminfulfilshipin",
+				"app/views/admin/fulfillment/shipments/index.slim"
+			],
+			[
+				"adminhisordcon",
+				"app/controllers/admin/history/orders_controller.rb"
+			],
+			[
+				"adminfulshi",
+				"app/controllers/admin/fulfillment/shipments_controller.rb"
+			],
+			[
+				"aminhistoo",
+				"app/controllers/admin/history/orders_controller.rb"
+			],
+			[
+				"adminhisto",
+				"app/controllers/admin/history/orders_controller.rb"
+			],
+			[
+				"adminhistoorderind",
+				"app/views/admin/history/orders/index.slim"
+			],
+			[
+				"production",
+				"config/environments/production.rb"
+			],
+			[
+				"adminhisad",
+				"app/controllers/admin/history/addresses_controller.rb"
+			],
+			[
+				"shareadmin",
+				"app/views/shared/admin/_header_buttons.slim"
+			],
+			[
+				"admfulforderind",
+				"app/views/admin/fulfillment/orders/index.slim"
+			],
+			[
+				"order",
+				"app/models/order.rb"
+			],
+			[
+				"pt-br",
+				"config/locales/pt-BR.yml"
+			],
+			[
+				"shoppordein",
+				"app/views/shopping/orders/index.slim"
+			],
+			[
+				"shoppinordei",
+				"app/views/shopping/orders/index.slim"
+			],
+			[
+				"admfulord",
+				"app/controllers/admin/fulfillment/orders_controller.rb"
+			],
+			[
+				"sharedco",
+				"app/views/shared/_compact_address.slim"
+			],
+			[
+				"paym",
+				"app/models/payment_notification.rb"
+			],
+			[
+				"modord",
+				"app/models/order.rb"
+			],
+			[
+				"adminfulfishipind",
+				"app/views/admin/fulfillment/shipments/index.html.erb"
+			],
+			[
+				"adminfulfishio",
+				"app/controllers/admin/fulfillment/shipments_controller.rb"
+			],
+			[
+				"adminfulfilshipminde",
+				"app/views/admin/fulfillment/shipments/index.html.erb"
+			],
+			[
+				"tax",
+				"app/models/tax_rate.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"pro",
+				"app/models/product.rb"
+			],
+			[
+				"prod",
+				"app/models/product.rb"
+			],
+			[
+				"tax_ra",
+				"app/models/tax_rate.rb"
+			],
+			[
+				"vieshoppaddressinde",
+				"app/views/shopping/addresses/index.slim"
+			],
+			[
+				"shoppinorderin",
+				"app/views/shopping/orders/index.slim"
+			],
+			[
+				"addr",
+				"app/models/address.rb"
+			],
+			[
+				"item",
+				"app/models/order_item.rb"
+			],
+			[
+				"ite",
+				"app/models/cart_item.rb"
+			],
+			[
+				"shoppshippmein",
+				"app/views/shopping/shipping_methods/index.slim"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"shoppship",
+				"app/controllers/shopping/shipping_methods_controller.rb"
+			],
+			[
+				"cart",
+				"app/models/cart.rb"
+			],
+			[
+				"applcon",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"paymennoco",
+				"app/controllers/shopping/payment_notifications_controller.rb"
+			],
+			[
+				"shi",
+				"app/models/shipment.rb"
+			],
+			[
+				"viewshoppordeind",
+				"app/views/shopping/orders/index.slim"
+			],
+			[
+				"shoppcartite",
+				"app/controllers/shopping/cart_items_controller.rb"
+			],
+			[
+				"appmodecar",
+				"app/models/cart.rb"
+			],
+			[
+				"paymenno",
+				"app/models/payment_notification.rb"
+			],
+			[
+				"inven",
+				"app/models/inventory.rb"
+			],
+			[
+				"admininvenadjuform",
+				"app/views/admin/inventory/adjustments/_form.slim"
+			],
+			[
+				"admininventoadfo",
+				"app/views/admin/inventory/adjustments/_form.html.erb"
+			],
+			[
+				"adminadjuedi",
+				"app/views/admin/inventory/adjustments/edit.html.erb"
+			],
+			[
+				"admininvenedi",
+				"app/views/admin/inventory/overviews/edit.html.erb"
+			],
+			[
+				"app",
 				"config/application.rb"
 			],
 			[
-				"func",
-				"Samba/functions.php"
+				"adminivenadjus",
+				"app/views/admin/inventory/adjustments/index.html.erb"
 			],
 			[
-				"scrscss",
-				"Samba/sass/screen.scss"
+				"admininverove",
+				"app/controllers/admin/inventory/overviews_controller.rb"
 			],
 			[
-				"scss",
-				"Samba/sass/_base.scss"
+				"admininverover",
+				"app/controllers/admin/inventory/overviews_controller.rb"
 			],
 			[
-				".scss",
-				"Samba/sass/_base.scss"
+				"admininventoadj",
+				"app/controllers/admin/inventory/adjustments_controller.rb"
 			],
 			[
-				"wp-con",
-				"samba/wp-config.php"
+				"varia",
+				"app/models/variant.rb"
 			],
 			[
-				"scr",
-				"sass/screen.scss"
+				"adjustsho",
+				"app/views/admin/inventory/adjustments/show.html.erb"
 			],
 			[
-				"screesc",
-				"sass/screen.scss"
+				"admininvenadin",
+				"app/views/admin/inventory/adjustments/index.html.erb"
 			],
 			[
-				"bas",
-				"sass/_base.scss"
+				"admininventoov",
+				"app/views/admin/inventory/overviews/index.html.erb"
 			],
 			[
-				"sass",
-				"sass/screen.scss"
+				"paymenotisp",
+				"spec/controllers/payment_notifications_controller_spec.rb"
 			],
 			[
-				"ba",
-				"sass/_base.scss"
+				"variansu",
+				"db/migrate/20100814070158_create_variant_suppliers.rb"
+			],
+			[
+				"suppl",
+				"db/migrate/20100814070105_create_suppliers.rb"
+			],
+			[
+				"purchaseor",
+				"db/migrate/20100814210657_create_purchase_orders.rb"
+			],
+			[
+				"receiv",
+				"spec/controllers/admin/inventory/receivings_controller_spec.rb"
+			],
+			[
+				"purcha",
+				"spec/controllers/admin/inventory/purchase_orders_controller_spec.rb"
+			],
+			[
+				"pur",
+				"app/controllers/admin/inventory/purchase_orders_controller.rb"
+			],
+			[
+				"purc",
+				"spec/factories/purchase_order_variant.rb"
+			],
+			[
+				"suppli",
+				"spec/models/variant_supplier_spec.rb"
+			],
+			[
+				"supplie",
+				"spec/factories/variant_supplier.rb"
+			],
+			[
+				"orde",
+				"app/models/order.rb"
+			],
+			[
+				"creditcard",
+				"app/models/credit_card_cancel.rb"
+			],
+			[
+				"recei",
+				"app/models/receive_purchase_order.rb"
+			],
+			[
+				"adminshopprodco",
+				"app/controllers/admin/shopping/products_controller.rb"
+			],
+			[
+				"adminshouserco",
+				"app/controllers/admin/shopping/users_controller.rb"
+			],
+			[
+				"adminfulfilshipcon",
+				"app/controllers/admin/fulfillment/shipments_controller.rb"
+			],
+			[
+				"fulfishipinde",
+				"app/views/admin/fulfillment/shipments/index.html.erb"
+			],
+			[
+				"adminfulshipcon",
+				"app/controllers/admin/fulfillment/shipments_controller.rb"
+			],
+			[
+				"ord",
+				"app/models/order.rb"
+			],
+			[
+				"adminfulfordercon",
+				"app/controllers/admin/fulfillment/orders_controller.rb"
+			],
+			[
+				"adminfu",
+				"app/views/admin/fulfillment/shipments/index.html.erb"
+			],
+			[
+				"",
+				"app/views/admin/history/orders/show.slim"
+			],
+			[
+				"shopporderin",
+				"app/views/shopping/orders/index.slim"
+			],
+			[
+				"adminuserform",
+				"app/views/admin/users/_form.slim"
+			],
+			[
+				"adminuseredi",
+				"app/views/admin/users/edit.slim"
+			],
+			[
+				"rake",
+				"lib/tasks/add_country_states.rake"
+			],
+			[
+				"brasils",
+				"db/seed/international_states/brazil_states.yml"
+			],
+			[
+				"adminfulfilordshipdeta",
+				"app/views/admin/fulfillment/orders/_shipment_details.slim"
+			],
+			[
+				"aminfulfishipcon",
+				"app/controllers/admin/fulfillment/shipments_controller.rb"
+			],
+			[
+				"adminfulfishiind",
+				"app/views/admin/fulfillment/shipments/index.html.erb"
+			],
+			[
+				"adminfulfilmeshipcont",
+				"app/controllers/admin/fulfillment/shipments_controller.rb"
+			],
+			[
+				"admifullordc",
+				"app/controllers/admin/fulfillment/orders_controller.rb"
+			],
+			[
+				"adminfulfilshipde",
+				"app/views/admin/fulfillment/orders/_shipment_details.slim"
+			],
+			[
+				"adminfulfishipdeta",
+				"app/views/admin/fulfillment/orders/_shipment_details.html.erb"
+			],
+			[
+				"admifulodercon",
+				"app/controllers/admin/fulfillment/orders_controller.rb"
+			],
+			[
+				"shipmetho",
+				"app/models/shipping_method.rb"
+			],
+			[
+				"shippca",
+				"app/models/shipping_category.rb"
+			],
+			[
+				"shoship",
+				"app/controllers/shopping/shipping_methods_controller.rb"
+			],
+			[
+				"shopaddc",
+				"app/controllers/shopping/addresses_controller.rb"
+			],
+			[
+				"adminhisordesho",
+				"app/views/admin/history/orders/show.slim"
 			]
 		],
 		"width": 0.0

@@ -112,19 +112,19 @@ Hadean::Application.routes.draw do
 
       namespace :changes do
         resources :products do
-          resource :property,          only: [:edit, :update]
+          resource :property, only: [:edit, :update]
         end
       end
 
-      namespace :wizards do
-        resources :brands,              only: [:index, :create, :update]
-        resources :products,            only: [:new, :create]
-        resources :properties,          only: [:index, :create, :update]
-        resources :prototypes,          only: [:update]
-        resources :tax_categories,      only: [:index, :create, :update]
-        resources :shipping_categories, only: [:index, :create, :update]
-        resources :product_types,       only: [:index, :create, :update]
-      end
+      # namespace :wizards do
+      #   resources :brands,              only: [:index, :create, :update]
+      #   resources :products,            only: [:new, :create]
+      #   resources :properties,          only: [:index, :create, :update]
+      #   resources :prototypes,          only: [:update]
+      #   resources :tax_categories,      only: [:index, :create, :update]
+      #   resources :shipping_categories, only: [:index, :create, :update]
+      #   resources :product_types,       only: [:index, :create, :update]
+      # end
 
       namespace :multi do
         resources :products do
