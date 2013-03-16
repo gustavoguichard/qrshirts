@@ -1,0 +1,10 @@
+= render partial: '/admin/merchandise/sub_header'
+h3
+  | Adicionar Imagens para #{@product.product_type.name} #{@product.name}
+= form_for @product, url: admin_merchandise_images_product_path(@product) do |form|
+  = render partial: '/admin/merchandise/images/products/form', locals: {form: form}
+  = submit_tag "Atualizar", class: "button"
+p
+  = link_to 'Ver Imagens', admin_merchandise_images_product_path(@product), class: "button"
+  |  
+  = link_to 'Detalhes do produto', admin_merchandise_product_path(@product), class: "button"

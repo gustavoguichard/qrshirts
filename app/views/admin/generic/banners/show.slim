@@ -1,0 +1,20 @@
+h2 Banner
+p
+  strong Imagem: 
+  br/
+  = image_tag @banner.image(:small)
+p
+  strong Link: 
+  = link_to @banner.link_url, @banner.link_url
+p
+  strong Começa em: 
+  = @banner.display_start_time
+p
+  strong Termina em: 
+  = @banner.display_expires_time
+p
+  = link_to "Editar", edit_admin_generic_banner_path(@banner), class: 'button'
+  |  
+  = link_to 'Destruir', admin_generic_banner_path(@banner), confirm: 'Tem certeza?', method: :delete, class: 'button'
+  |  
+  =link_to "Ver todos", admin_generic_banners_path, class: 'button'

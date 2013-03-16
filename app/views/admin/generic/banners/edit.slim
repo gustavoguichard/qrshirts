@@ -1,0 +1,7 @@
+h1 Editar Banner
+= form_for(@banner, url: admin_generic_banner_path(@banner)) do |f|
+  = render partial: 'form', locals: {f: f}
+p
+  = link_to 'Ver', admin_generic_banner_path( @banner ), class: 'button'
+  |  
+  = link_to 'Ver todos', admin_generic_banners_path, class: 'button'

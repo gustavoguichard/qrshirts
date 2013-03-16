@@ -1,0 +1,25 @@
+.admin_title_header.clearfix
+  h3 Banners
+  = link_to "Novo Banner", new_admin_generic_banner_path, :class => 'button'
+.admin_banners
+  table
+    thead
+      tr.odd
+        th.column1_header Imagem
+        th Link
+        th Começa em
+        th Termina em
+        th
+    tbody
+      - for banner in @banners
+        tr class=cycle("odd", "")
+          td
+            = link_to edit_admin_generic_banner_path(banner) do
+              = image_tag banner.image(:thumb)
+          td= link_to banner.link_url, banner.link_url
+          td= banner.display_start_time
+          td= banner.display_expires_time
+          td
+            = link_to "Editar", edit_admin_generic_banner_path(banner)
+            |  | 
+            = link_to 'Destruir', admin_generic_banner_path(banner), confirm: 'Tem certeza?', method: :delete

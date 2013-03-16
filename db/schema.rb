@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130316153044) do
+ActiveRecord::Schema.define(:version => 20130316165838) do
 
   create_table "accounting_adjustments", :force => true do |t|
     t.integer  "adjustable_id",                                 :null => false
@@ -65,6 +65,15 @@ ActiveRecord::Schema.define(:version => 20130316153044) do
   add_index "addresses", ["addressable_id"], :name => "index_addresses_on_addressable_id"
   add_index "addresses", ["addressable_type"], :name => "index_addresses_on_addressable_type"
   add_index "addresses", ["state_id"], :name => "index_addresses_on_state_id"
+
+  create_table "banners", :force => true do |t|
+    t.string   "image_id",                                      :null => false
+    t.string   "link_url",                                      :null => false
+    t.datetime "starts_at",  :default => '2013-03-16 17:02:50', :null => false
+    t.datetime "ends_at",    :default => '2013-03-16 17:02:50', :null => false
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
+  end
 
   create_table "batches", :force => true do |t|
     t.string   "batchable_type"

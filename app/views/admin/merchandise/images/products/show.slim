@@ -1,0 +1,9 @@
+= render partial: '/admin/merchandise/sub_header'
+h3
+  | Imagens para #{@product.product_type.name} #{@product.name}
+- @product.images.each do |image|
+  = image_tag image.photo(:small) if image.valid?
+p style="margin-top: 30px"
+  = link_to 'Editar Imagens', edit_admin_merchandise_images_product_path(@product), class: "button"
+  |  
+  = link_to 'Detalhes do produto', admin_merchandise_product_path(@product), class: "button"

@@ -6,6 +6,8 @@
     ul
       - @brand.errors.full_messages.each do |msg|
         li= msg
+- unless @brand.new_record?
+  p= image_tag @brand.image(:square)
 label Nome
 = f.text_field :name
 label ID da Imagem

@@ -1,0 +1,22 @@
+- if @banner.errors.any?
+  #error_explanation
+    h2
+      = pluralize(@banner.errors.count, "error")
+      | prohibited this banner from being saved:
+    ul
+      - @banner.errors.full_messages.each do |msg|
+        li= msg
+fieldset
+  - unless @banner.new_record?
+    p= image_tag @banner.image(:small)
+  label Imagem
+  = f.text_field :image_id
+  label Link
+  = f.text_field :link_url
+  label Começa em
+  .date-select
+    = f.date_select :starts_at
+  label Termina em
+  .date-select
+    = f.date_select :ends_at
+= f.submit "Criar", class: "button"

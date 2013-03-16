@@ -1,0 +1,4 @@
+h1 Novo Banner
+= form_for(@banner, url: admin_generic_banners_path(@banner)) do |f|
+  = render partial: 'form', locals: {f: f}
+p= link_to "Voltar a lista", admin_generic_banners_path, class: "button"

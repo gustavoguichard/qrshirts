@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
   layout 'welcome'
 
   def index
+    @banners = Banner.active
     @featured_product = Product.featured
     @best_selling_products = Product.limit(5)
     @other_products  ## search 2 or 3 categories (maybe based on the user)

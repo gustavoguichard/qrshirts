@@ -24,16 +24,18 @@ class Brand < ActiveRecord::Base
 
   def image(size = :square)
     case size
-      when :square then FlickRaw.url_s(self.photo_info)
-      when :medium then FlickRaw.url_q(self.photo_info)
-      else FlickRaw.url(self.photo_info)
+      when :square then FlickRaw.url_s(photo_info)
+      when :medium then FlickRaw.url_q(photo_info)
+      else FlickRaw.url(photo_info)
     end
+  rescue
+    nil
   end
 
 private
 
   def photo_info
-    flickr.photos.getInfo(:photo_id => self.image_id)
+    flickr.photos.getInfo(photo_id: self.image_id) rescue nil
   end
 
 end

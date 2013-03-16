@@ -44,8 +44,7 @@ fieldset
   legend
     | Imagens (#{link_to 'editar', edit_admin_merchandise_images_product_path(@product)})
   - @product.images.each do |image|
-    label= image.photo_file_name
-    = image_tag image.photo.url(:small)
+    = image_tag image.photo(:small)
   p
 p style="margin-top: 30px"
   = link_to 'Todos Produtos', admin_merchandise_products_path(), :class => 'button yellow'

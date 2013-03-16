@@ -1,0 +1,11 @@
+fieldset
+  / = remove_child_link('remover', image_form)
+  br/
+  - unless image_form.object.new_record?
+    = image_tag image_form.object.photo(:small)
+  label Posição
+  = image_form.select       :position, (1..8)
+  label Legenda
+  = image_form.text_field   :caption
+  label ID da foto
+  = image_form.text_field   :image_id

@@ -94,6 +94,7 @@ Hadean::Application.routes.draw do
       resources :coupons
       resources :deals
       resources :sales
+      resources :banners
     end
     namespace :inventory do
       resources :overviews

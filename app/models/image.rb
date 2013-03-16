@@ -1,18 +1,13 @@
+# coding: utf-8
 # == Schema Information
 #
 # Table name: images
 #
 #  id                 :integer(4)      not null, primary key
-#  imageable_id       :integer(4)
-#  imageable_type     :string(255)
-#  image_height       :integer(4)
-#  image_width        :integer(4)
+#  t.string           :image_id        default: "", :null => false
+#  t.integer          :product_id      null: false
 #  position           :integer(4)
 #  caption            :string(255)
-#  photo_file_name    :string(255)
-#  photo_content_type :string(255)
-#  photo_file_size    :integer(4)
-#  photo_updated_at   :datetime
 #  updated_at         :datetime
 #  created_at         :datetime
 #
@@ -41,16 +36,19 @@ class Image < ActiveRecord::Base
 
   def photo(size = :square)
     case size
-      when :square then FlickRaw.url_s(self.photo_info)
-      when :medium then FlickRaw.url_q(self.photo_info)
-      else FlickRaw.url(self.photo_info)
+      when :square    then FlickRaw.url_s(photo_info)
+      when :medium    then FlickRaw.url_q(photo_info)
+      when :small     then FlickRaw.url_n(photo_info)
+      else FlickRaw.url(photo_info)
     end
+  rescue
+    nil
   end
 
 private
 
   def photo_info
-    flickr.photos.getInfo(:photo_id => self.image_id)
+    flickr.photos.getInfo(photo_id: self.image_id) rescue nil
   end
 
   # save the w,h of the original image (from which others can be calculated)

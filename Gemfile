@@ -8,6 +8,9 @@ gem 'thin'
 # I18n
 gem 'rails-i18n'
 
+# Controller improvements 
+gem 'inherited_resources'
+
 group :assets do
   gem 'sass',         '>= 3.2.3'
   gem 'sass-rails',   '>= 3.2.4'
