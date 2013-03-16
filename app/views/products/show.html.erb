@@ -28,7 +28,7 @@
           <ul id="pikame" class="jcarousel-skin-pika">
             <% @product.images.each do |image|%>
               <li>
-                <a><%= image_tag(image.photo.url(:large)) %></a>
+                <a><%= image_tag(image.photo(:large)) %></a>
               </li>
             <% end %>
             <% if @product.images.empty? %>

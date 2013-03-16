@@ -6,7 +6,7 @@ h1 Pick a Shipping Method
         - items.each do |item|
           .nine.clearfix.panel
             .six.columns
-              = image_tag(item.variant.product.featured_image(:mini))
+              = image_tag(item.variant.product.images.first.photo(:square))
               = item.variant.product.name
               | Quantity: #{item.quantity}
             .five.columns.last style="text-align:left;"
