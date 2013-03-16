@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: address_types
+#
+#  id          :integer          not null, primary key
+#  name        :string(64)       not null
+#  description :string(255)
+#
+
 require 'spec_helper'
 
 describe AddressType do

@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: properties
+#
+#  id              :integer          not null, primary key
+#  identifing_name :string(255)      not null
+#  display_name    :string(255)
+#  active          :boolean          default(TRUE)
+#
+
 require 'spec_helper'
 
 describe Property do

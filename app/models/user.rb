@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                :integer          not null, primary key
+#  first_name        :string(255)
+#  last_name         :string(255)
+#  birth_date        :date
+#  email             :string(255)
+#  state             :string(255)
+#  account_id        :integer
+#  customer_cim_id   :string(255)
+#  password_salt     :string(255)
+#  crypted_password  :string(255)
+#  perishable_token  :string(255)
+#  persistence_token :string(255)
+#  access_token      :string(255)
+#  comments_count    :integer          default(0)
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+
 # == USERS DOCUMENTATION
 #
 # The users table represents...  USERS!!!
@@ -7,32 +29,9 @@
 #
 
 ##
-
-# == Schema Information
-#
-# Table name: users
-#
-#  id                :integer(4)      not null, primary key
-#  first_name        :string(255)
-#  last_name         :string(255)
-#  birth_date        :date
-#  email             :string(255)
-#  state             :string(255)
-#  account_id        :integer(4)
-#  customer_cim_id   :string(255)
-#  password_salt     :string(255)
-#  crypted_password  :string(255)
-#  perishable_token  :string(255)
-#  persistence_token :string(255)
-#  access_token      :string(255)
-#  comments_count    :integer(4)      default(0)
-#  created_at        :datetime
-#  updated_at        :datetime
-#
-
 class User < ActiveRecord::Base
-  include TransactionAccountable
-  include UserCim
+  # include TransactionAccountable
+  # include UserCim
 
   acts_as_authentic do |config|
     config.validate_email_field
@@ -316,11 +315,11 @@ class User < ActiveRecord::Base
   #
   # @param  [ none ]
   # @return [ String ] CIM id returned from the gateway
-  def get_cim_profile
-    return customer_cim_id if customer_cim_id
-    create_cim_profile
-    customer_cim_id
-  end
+  # def get_cim_profile
+  #   return customer_cim_id if customer_cim_id
+  #   create_cim_profile
+  #   customer_cim_id
+  # end
 
   # name and first line of address (used by credit card gateway to descript the merchant)
   #

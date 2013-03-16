@@ -2,11 +2,11 @@
 #
 # Table name: transactions
 #
-#  id         :integer(4)      not null, primary key
+#  id         :integer          not null, primary key
 #  type       :string(255)
-#  batch_id   :integer(4)
-#  created_at :datetime
-#  updated_at :datetime
+#  batch_id   :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 class RefundInventory < Transaction

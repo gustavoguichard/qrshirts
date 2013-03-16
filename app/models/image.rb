@@ -3,13 +3,13 @@
 #
 # Table name: images
 #
-#  id                 :integer(4)      not null, primary key
-#  t.string           :image_id        default: "", :null => false
-#  t.integer          :product_id      null: false
-#  position           :integer(4)
-#  caption            :string(255)
-#  updated_at         :datetime
-#  created_at         :datetime
+#  id         :integer          not null, primary key
+#  position   :integer
+#  caption    :string(255)
+#  updated_at :datetime
+#  created_at :datetime
+#  image_id   :string(255)      default(""), not null
+#  product_id :integer          not null
 #
 
 # require 'paperclip'

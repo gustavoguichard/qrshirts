@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: carts
+#
+#  id          :integer          not null, primary key
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  customer_id :integer
+#
+
 # the cart is simply a bucket of stuff.  it is very well documented in a blog post I have posted:
 
 # The first thing that comes to mind of a great cart is that it is "stupid".
@@ -74,18 +85,6 @@
 # So adding it back to the cart is as easy as changing the state to "shopping_cart".
 #
 # Take a look at [This Blog Post](http://www.ror-e.com/posts/29-e-commerce-tips-1-2-the-shopping-cart) for more details.
-
-
-# == Schema Information
-#
-# Table name: carts
-#
-#  id          :integer(4)      not null, primary key
-#  user_id     :integer(4)
-#  created_at  :datetime
-#  updated_at  :datetime
-#  customer_id :integer(4)
-#
 
 class Cart < ActiveRecord::Base
   belongs_to  :user

@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: sales
+#
+#  id          :integer          not null, primary key
+#  product_id  :integer
+#  percent_off :decimal(8, 2)    default(0.0)
+#  starts_at   :datetime
+#  ends_at     :datetime
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Sale < ActiveRecord::Base
   attr_accessible :ends_at, :percent_off, :product_id, :starts_at
 

@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: accounting_adjustments
+#
+#  id              :integer          not null, primary key
+#  adjustable_id   :integer          not null
+#  adjustable_type :string(255)      not null
+#  notes           :string(255)
+#  amount          :decimal(8, 2)    not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 require 'spec_helper'
 
 describe AccountingAdjustment do

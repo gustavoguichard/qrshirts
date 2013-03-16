@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: product_types
+#
+#  id        :integer          not null, primary key
+#  name      :string(255)      not null
+#  parent_id :integer
+#  active    :boolean          default(TRUE)
+#  rgt       :integer
+#  lft       :integer
+#
+
 class ProductType < ActiveRecord::Base
   acts_as_nested_set  #:order => "name"
   has_many :products, dependent: :restrict

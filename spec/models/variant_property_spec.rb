@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: variant_properties
+#
+#  id          :integer          not null, primary key
+#  variant_id  :integer          not null
+#  property_id :integer          not null
+#  description :string(255)      not null
+#  primary     :boolean          default(FALSE)
+#
+
 require 'spec_helper'
 
 describe VariantProperty do

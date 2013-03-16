@@ -1,3 +1,26 @@
+# == Schema Information
+#
+# Table name: orders
+#
+#  id              :integer          not null, primary key
+#  number          :string(255)
+#  ip_address      :string(255)
+#  email           :string(255)
+#  state           :string(255)
+#  user_id         :integer
+#  ship_address_id :integer
+#  coupon_id       :integer
+#  active          :boolean          default(TRUE), not null
+#  shipped         :boolean          default(FALSE), not null
+#  calculated_at   :datetime
+#  completed_at    :datetime
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  credited_amount :decimal(8, 2)    default(0.0)
+#  shipment_id     :integer
+#  tax_rate        :decimal(8, 2)    default(0.0), not null
+#
+
 # == Class Info
 #
 #  The checkout process starts on the http://www.yoursite.com/shopping/cart_items page.
@@ -21,30 +44,6 @@
 #     transaction will go through and the card is charged when the item is shipped.
 #
 #  The order will now be in the 'paid' state.  Each order item will also be marked as "paid".
-
-
-# == Schema Information
-#
-# Table name: orders
-#
-#  id              :integer(4)      not null, primary key
-#  number          :string(255)
-#  ip_address      :string(255)
-#  email           :string(255)
-#  state           :string(255)
-#  user_id         :integer(4)
-#  ship_address_id :integer(4)
-#  coupon_id       :integer(4)
-#  active          :boolean(1)      default(TRUE), not null
-#  shipped         :boolean(1)      default(FALSE), not null
-#  calculated_at   :datetime
-#  completed_at    :datetime
-#  created_at      :datetime
-#  updated_at      :datetime
-#  credited_amount :decimal(8, 2)   default(0.0)
-#  tax_rate    :decimal(8, 2)   default(0.0), not null
-#  shipment_id     :integer(4)
-#
 
 class Order < ActiveRecord::Base
   has_friendly_id :number, :use_slug => false

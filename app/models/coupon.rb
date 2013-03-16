@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: coupons
+#
+#  id            :integer          not null, primary key
+#  type          :string(255)      not null
+#  code          :string(255)      not null
+#  amount        :decimal(8, 2)    default(0.0)
+#  minimum_value :decimal(8, 2)
+#  percent       :integer          default(0)
+#  description   :text             not null
+#  combine       :boolean          default(FALSE)
+#  starts_at     :datetime
+#  expires_at    :datetime
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
 # Coupons are straight forward.  Picture a coupon you have in a grocery store.
 # The only big difference in the grocery store you can have 30 coupon for different items you buy.
 # For ror-e you can only have one Coupon for an entire order.  This is pretty standard in the ecommerce world.
@@ -22,25 +40,6 @@
 ###  eligible? uses (order.completed_at || Time.zone.now)
 ###  thus being accurate for returned items and items being purchased right now.
 ####################################################################################
-
-
-# == Schema Information
-#
-# Table name: coupons
-#
-#  id            :integer(4)      not null, primary key
-#  type          :string(255)     not null
-#  code          :string(255)     not null
-#  amount        :decimal(8, 2)   default(0.0)
-#  minimum_value :decimal(8, 2)
-#  percent       :integer(4)      default(0)
-#  description   :text            default(""), not null
-#  combine       :boolean(1)      default(FALSE)
-#  starts_at     :datetime
-#  expires_at    :datetime
-#  created_at    :datetime
-#  updated_at    :datetime
-#
 
 class Coupon < ActiveRecord::Base
   has_many :orders

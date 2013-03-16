@@ -2,19 +2,19 @@
 #
 # Table name: payments
 #
-#  id              :integer(4)      not null, primary key
-#  invoice_id      :integer(4)
+#  id              :integer          not null, primary key
+#  invoice_id      :integer
 #  confirmation_id :string(255)
-#  amount          :integer(4)
+#  amount          :integer
 #  error           :string(255)
 #  error_code      :string(255)
 #  message         :string(255)
 #  action          :string(255)
 #  params          :text
-#  success         :boolean(1)
-#  test            :boolean(1)
-#  created_at      :datetime
-#  updated_at      :datetime
+#  success         :boolean
+#  test            :boolean
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
 #
 
 class Payment < ActiveRecord::Base

@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: prototypes
+#
+#  id     :integer          not null, primary key
+#  name   :string(255)      not null
+#  active :boolean          default(TRUE), not null
+#
+
 class Prototype < ActiveRecord::Base
 
   has_many :products

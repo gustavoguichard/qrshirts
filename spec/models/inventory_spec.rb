@@ -2,9 +2,9 @@
 #
 # Table name: inventories
 #
-#  id                          :integer          not null, primary key
-#  count_on_hand               :integer          default(0)
-#  count_pending_to_customer   :integer          default(0)
+#  id                        :integer          not null, primary key
+#  count_on_hand             :integer          default(0)
+#  count_pending_to_customer :integer          default(0)
 #
 
 require 'spec_helper'

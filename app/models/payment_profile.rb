@@ -2,14 +2,14 @@
 #
 # Table name: payment_profiles
 #
-#  id             :integer(4)      not null, primary key
-#  user_id        :integer(4)
-#  address_id     :integer(4)
+#  id             :integer          not null, primary key
+#  user_id        :integer
+#  address_id     :integer
 #  payment_cim_id :string(255)
-#  default        :boolean(1)
-#  active         :boolean(1)
-#  created_at     :datetime
-#  updated_at     :datetime
+#  default        :boolean
+#  active         :boolean
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #  last_digits    :string(255)
 #  month          :string(255)
 #  year           :string(255)

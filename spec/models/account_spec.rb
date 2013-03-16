@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: accounts
+#
+#  id             :integer          not null, primary key
+#  name           :string(255)      not null
+#  account_type   :string(255)      not null
+#  monthly_charge :decimal(8, 2)    default(0.0), not null
+#  active         :boolean          default(TRUE), not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
 require 'spec_helper'
 
 describe Account do

@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: product_properties
+#
+#  id          :integer          not null, primary key
+#  product_id  :integer          not null
+#  property_id :integer          not null
+#  position    :integer
+#  description :string(255)      not null
+#
+
 require 'spec_helper'
 
 describe ProductProperty do

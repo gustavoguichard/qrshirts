@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: accounting_adjustments
+#
+#  id              :integer          not null, primary key
+#  adjustable_id   :integer          not null
+#  adjustable_type :string(255)      not null
+#  notes           :string(255)
+#  amount          :decimal(8, 2)    not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 # ACCOUNTING ADJUSTMENTS DOCUMENTATION
 #
 # The users table represents...  ACCOUNTING ADJUSTMENTS!!!
@@ -10,20 +23,6 @@
 
 # This model adds an extra log to view the notes and amount associated with this specific
 # type of "accounting adjustment".  This table could be used in a report for your accountant.
-
-# == Schema Information
-#
-# Table name: accounting_adjustments
-#
-#  id              :integer(4)      not null, primary key
-#  adjustable_id   :integer(4)      not null
-#  adjustable_type :string(255)     not null
-#  notes           :string(255)
-#  amount          :decimal(8, 2)   not null
-#  created_at      :datetime
-#  updated_at      :datetime
-#
-
 class AccountingAdjustment < ActiveRecord::Base
 
   has_many  :batches,             :as => :batchable

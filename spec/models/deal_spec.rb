@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: deals
+#
+#  id              :integer          not null, primary key
+#  buy_quantity    :integer          not null
+#  get_percentage  :integer
+#  deal_type_id    :integer          not null
+#  product_type_id :integer          not null
+#  get_amount      :integer
+#  deleted_at      :datetime
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 require 'spec_helper'
 
 describe Deal do

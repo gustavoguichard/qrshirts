@@ -2,11 +2,11 @@
 #
 # Table name: shipping_methods
 #
-#  id               :integer(4)      not null, primary key
-#  name             :string(255)     not null
-#  shipping_zone_id :integer(4)      not null
-#  created_at       :datetime
-#  updated_at       :datetime
+#  id               :integer          not null, primary key
+#  name             :string(255)      not null
+#  shipping_zone_id :integer          not null
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
 #
 
 class ShippingMethod < ActiveRecord::Base

@@ -1,3 +1,11 @@
+# == Schema Information
+#
+# Table name: phone_types
+#
+#  id   :integer          not null, primary key
+#  name :string(255)      not null
+#
+
 class PhoneType < ActiveRecord::Base
   has_many :phones
 

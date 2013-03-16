@@ -1,17 +1,17 @@
-# The BRANDS table represents...  BRANDS!!!
-#
-# For now Brand is just a label added to some descriptive fields.  The only field is Name
-# and hence the variants should use a method called brand_name and cache the result and hence one less DB query for this name.
-
 # == Schema Information
 #
 # Table name: brands
 #
-#  id   :integer          not null, primary key
-#  image :string
-#  name :string(255)
+#  id       :integer          not null, primary key
+#  name     :string(255)
+#  image_id :string(255)
+#  featured :boolean          default(FALSE), not null
 #
 
+# The BRANDS table represents...  BRANDS!!!
+#
+# For now Brand is just a label added to some descriptive fields.  The only field is Name
+# and hence the variants should use a method called brand_name and cache the result and hence one less DB query for this name.
 class Brand < ActiveRecord::Base
 
   has_many :variants

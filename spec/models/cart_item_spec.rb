@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: cart_items
+#
+#  id           :integer          not null, primary key
+#  user_id      :integer
+#  cart_id      :integer
+#  variant_id   :integer          not null
+#  quantity     :integer          default(1)
+#  active       :boolean          default(TRUE)
+#  item_type_id :integer          not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
 require 'spec_helper'
 
 describe CartItem do

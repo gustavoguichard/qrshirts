@@ -1,16 +1,15 @@
-## Inventory is a table that needs to have pestimistic locking.
-#  This requires the SQL to be very fast in order to ensure the table is not locked.
-#  Please keep the table free from extra data that might cause locking to become an issue.
-
-
 # == Schema Information
 #
 # Table name: inventories
 #
-#  id                          :integer          not null, primary key
-#  count_on_hand               :integer          default(0)
-#  count_pending_to_customer   :integer          default(0)
+#  id                        :integer          not null, primary key
+#  count_on_hand             :integer          default(0)
+#  count_pending_to_customer :integer          default(0)
 #
+
+## Inventory is a table that needs to have pestimistic locking.
+#  This requires the SQL to be very fast in order to ensure the table is not locked.
+#  Please keep the table free from extra data that might cause locking to become an issue.
 
 class Inventory < ActiveRecord::Base
   has_one :variant

@@ -2,17 +2,17 @@
 #
 # Table name: order_items
 #
-#  id               :integer(4)      not null, primary key
+#  id               :integer          not null, primary key
 #  price            :decimal(8, 2)
 #  total            :decimal(8, 2)
-#  order_id         :integer(4)      not null
-#  variant_id       :integer(4)      not null
-#  state            :string(255)     not null
-#  tax_rate_id      :integer(4)
-#  shipping_rate_id :integer(4)
-#  shipment_id      :integer(4)
-#  created_at       :datetime
-#  updated_at       :datetime
+#  order_id         :integer          not null
+#  variant_id       :integer          not null
+#  state            :string(255)      not null
+#  tax_rate_id      :integer
+#  shipping_rate_id :integer
+#  shipment_id      :integer
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
 #
 
 class OrderItem < ActiveRecord::Base

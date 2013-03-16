@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: comments
+#
+#  id               :integer          not null, primary key
+#  note             :text
+#  commentable_type :string(255)
+#  commentable_id   :integer
+#  created_by       :integer
+#  user_id          :integer
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
 require 'spec_helper'
 
 describe Comment do

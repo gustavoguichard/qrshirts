@@ -1,3 +1,11 @@
+# == Schema Information
+#
+# Table name: shipping_categories
+#
+#  id   :integer          not null, primary key
+#  name :string(255)      not null
+#
+
 class ShippingCategory < ActiveRecord::Base
   #belongs_to :product
   has_many :products

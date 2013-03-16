@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: user_roles
+#
+#  id      :integer          not null, primary key
+#  role_id :integer          not null
+#  user_id :integer          not null
+#
+
 require 'spec_helper'
 
 describe UserRole do

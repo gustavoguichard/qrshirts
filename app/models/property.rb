@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: properties
+#
+#  id              :integer          not null, primary key
+#  identifing_name :string(255)      not null
+#  display_name    :string(255)
+#  active          :boolean          default(TRUE)
+#
+
 class Property < ActiveRecord::Base
 
   has_many :prototype_properties

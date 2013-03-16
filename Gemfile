@@ -22,12 +22,12 @@ end
 
 gem "american_date"
 gem 'authlogic'#, "3.2.0"
-gem "asset_sync"
-gem 'aws-sdk'
+# gem "asset_sync"
+# gem 'aws-sdk'
 gem 'bluecloth',     '~> 2.1.0'
 gem 'cancan', '~> 1.6.8'
 gem 'chronic'
- gem 'dalli', '~> 1.0.2'
+gem 'dalli', '~> 1.0.2'
 
 gem 'dynamic_form'
 gem "friendly_id", "~> 3.3"
@@ -45,11 +45,11 @@ gem 'prawn', '~> 0.12.0'
 
 gem "rails3-generators", :git => "https://github.com/neocoin/rails3-generators.git"
 gem "rails_config"
-gem 'rmagick',    :require => 'RMagick'
+# gem 'rmagick',    :require => 'RMagick'
 
 # Payment
-gem "activemerchant", '~> 1.29.3'#, :lib => 'active_merchant'
-gem 'paypal-express'
+# gem "activemerchant", '~> 1.29.3'#, :lib => 'active_merchant'
+# gem 'paypal-express'
 
 gem 'rake', '~> 0.9.2'
 gem 'state_machine', '~> 1.1.2'
@@ -67,7 +67,7 @@ gem 'slim-rails'
 
 group :development do
   gem 'awesome_print'
-  #gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
   gem 'quiet_assets'
   gem "autotest-rails-pure"
 

@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: prototypes
+#
+#  id     :integer          not null, primary key
+#  name   :string(255)      not null
+#  active :boolean          default(TRUE), not null
+#
+
 require 'spec_helper'
 
 describe Prototype do

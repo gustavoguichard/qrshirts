@@ -1,3 +1,11 @@
+# == Schema Information
+#
+# Table name: shipping_zones
+#
+#  id   :integer          not null, primary key
+#  name :string(255)      not null
+#
+
 require 'spec_helper'
 
 describe ShippingZone do

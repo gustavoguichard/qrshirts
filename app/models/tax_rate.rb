@@ -2,13 +2,13 @@
 #
 # Table name: tax_rates
 #
-#  id            :integer(4)      not null, primary key
-#  percentage    :decimal(8, 2)   default(0.0), not null
-#  state_id      :integer(4)      not null
-#  country_id      :integer(4)      not null
-#  start_date    :date            not null
-#  end_date      :date
-#  active        :boolean(1)      default(TRUE)
+#  id         :integer          not null, primary key
+#  percentage :decimal(8, 2)    default(0.0), not null
+#  state_id   :integer
+#  country_id :integer
+#  start_date :date             not null
+#  end_date   :date
+#  active     :boolean          default(TRUE)
 #
 
 class TaxRate < ActiveRecord::Base

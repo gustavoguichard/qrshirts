@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: states
+#
+#  id               :integer          not null, primary key
+#  name             :string(255)      not null
+#  abbreviation     :string(5)        not null
+#  described_as     :string(255)
+#  country_id       :integer          not null
+#  shipping_zone_id :integer          not null
+#
+
 require 'spec_helper'
 
 describe State, " methods" do

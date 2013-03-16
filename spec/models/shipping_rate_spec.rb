@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: shipping_rates
+#
+#  id                   :integer          not null, primary key
+#  shipping_method_id   :integer          not null
+#  rate                 :decimal(8, 2)    default(0.0), not null
+#  shipping_category_id :integer          not null
+#  minimum_charge       :decimal(8, 2)    default(0.0), not null
+#  position             :integer
+#  active               :boolean          default(TRUE)
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#
+
 require 'spec_helper'
 
 describe ShippingRate, 'instance methods' do

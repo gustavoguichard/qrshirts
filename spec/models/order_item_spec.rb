@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: order_items
+#
+#  id               :integer          not null, primary key
+#  price            :decimal(8, 2)
+#  total            :decimal(8, 2)
+#  order_id         :integer          not null
+#  variant_id       :integer          not null
+#  state            :string(255)      not null
+#  tax_rate_id      :integer
+#  shipping_rate_id :integer
+#  shipment_id      :integer
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
 require 'spec_helper'
 
 

@@ -1,20 +1,19 @@
-# To understand this model more please look at the documentation in the CART.rb model
-
 # == Schema Information
 #
 # Table name: cart_items
 #
-#  id           :integer(4)      not null, primary key
-#  user_id      :integer(4)
-#  cart_id      :integer(4)
-#  variant_id   :integer(4)      not null
-#  quantity     :integer(4)      default(1)
-#  active       :boolean(1)      default(TRUE)
-#  item_type_id :integer(4)      not null
-#  created_at   :datetime
-#  updated_at   :datetime
+#  id           :integer          not null, primary key
+#  user_id      :integer
+#  cart_id      :integer
+#  variant_id   :integer          not null
+#  quantity     :integer          default(1)
+#  active       :boolean          default(TRUE)
+#  item_type_id :integer          not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
 #
 
+# To understand this model more please look at the documentation in the CART.rb model
 class CartItem < ActiveRecord::Base
   belongs_to :item_type
   belongs_to :user

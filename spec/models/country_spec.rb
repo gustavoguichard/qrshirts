@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: countries
+#
+#  id               :integer          not null, primary key
+#  name             :string(255)
+#  abbreviation     :string(5)
+#  shipping_zone_id :integer
+#  active           :boolean          default(FALSE)
+#
+
 require 'spec_helper'
 
 describe Country do

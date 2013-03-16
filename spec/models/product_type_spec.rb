@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: product_types
+#
+#  id        :integer          not null, primary key
+#  name      :string(255)      not null
+#  parent_id :integer
+#  active    :boolean          default(TRUE)
+#  rgt       :integer
+#  lft       :integer
+#
+
 require 'spec_helper'
 
 describe ProductType, '#admin_grid(params = {})' do

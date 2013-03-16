@@ -1,3 +1,11 @@
+# == Schema Information
+#
+# Table name: shipping_zones
+#
+#  id   :integer          not null, primary key
+#  name :string(255)      not null
+#
+
 class ShippingZone < ActiveRecord::Base
   has_many :shipping_methods
   ## if your model requires more shipping zones create a join table and delete state.shipping_zone_id

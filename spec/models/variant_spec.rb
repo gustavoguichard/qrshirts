@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: variants
+#
+#  id           :integer          not null, primary key
+#  product_id   :integer          not null
+#  sku          :string(255)      not null
+#  name         :string(255)
+#  price        :decimal(8, 2)    default(0.0), not null
+#  cost         :decimal(8, 2)    default(0.0), not null
+#  deleted_at   :datetime
+#  master       :boolean          default(FALSE), not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  brand_id     :integer
+#  inventory_id :integer
+#
+
 require 'spec_helper'
 
 describe Variant, " instance methods" do

@@ -1,3 +1,26 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id                   :integer          not null, primary key
+#  name                 :string(255)      not null
+#  description          :text
+#  product_keywords     :text
+#  product_type_id      :integer          not null
+#  prototype_id         :integer
+#  shipping_category_id :integer          not null
+#  permalink            :string(255)      not null
+#  available_at         :datetime
+#  deleted_at           :datetime
+#  meta_keywords        :string(255)
+#  meta_description     :string(255)
+#  featured             :boolean          default(FALSE)
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  description_markup   :text
+#  brand_id             :integer
+#
+
 require 'spec_helper'
 
 describe Product, ".instance methods with images" do

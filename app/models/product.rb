@@ -2,24 +2,23 @@
 #
 # Table name: products
 #
-#  id                   :integer(4)      not null, primary key
-#  name                 :string(255)     not null
+#  id                   :integer          not null, primary key
+#  name                 :string(255)      not null
 #  description          :text
 #  product_keywords     :text
-#  product_type_id      :integer(4)      not null
-#  prototype_id         :integer(4)
-#  shipping_category_id :integer(4)      not null
-#  permalink            :string(255)     not null
+#  product_type_id      :integer          not null
+#  prototype_id         :integer
+#  shipping_category_id :integer          not null
+#  permalink            :string(255)      not null
 #  available_at         :datetime
 #  deleted_at           :datetime
 #  meta_keywords        :string(255)
 #  meta_description     :string(255)
-#  featured             :boolean(1)      default(FALSE)
-#  created_at           :datetime
-#  updated_at           :datetime
+#  featured             :boolean          default(FALSE)
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
 #  description_markup   :text
-#  active               :boolean(1)      default(FALSE)
-#  brand_id             :integer(4)
+#  brand_id             :integer
 #
 
 class VariantRequiredError < StandardError; end

@@ -1,3 +1,11 @@
+# == Schema Information
+#
+# Table name: item_types
+#
+#  id   :integer          not null, primary key
+#  name :string(255)
+#
+
 class ItemType < ActiveRecord::Base
   has_many :cart_items
 

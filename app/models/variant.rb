@@ -1,27 +1,26 @@
+# == Schema Information
+#
+# Table name: variants
+#
+#  id           :integer          not null, primary key
+#  product_id   :integer          not null
+#  sku          :string(255)      not null
+#  name         :string(255)
+#  price        :decimal(8, 2)    default(0.0), not null
+#  cost         :decimal(8, 2)    default(0.0), not null
+#  deleted_at   :datetime
+#  master       :boolean          default(FALSE), not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  brand_id     :integer
+#  inventory_id :integer
+#
+
 # Variant can be thought of as specific types of product.
 #
 # A product could be considered Levis 501 Blues
 #   => Then a variant would specify the color and size of a specific pair of Jeans
 #
-
-# == Schema Information
-#
-# Table name: variants
-#
-#  id           :integer(4)      not null, primary key
-#  product_id   :integer(4)      not null
-#  sku          :string(255)     not null
-#  name         :string(255)
-#  price        :decimal(8, 2)   default(0.0), not null
-#  cost         :decimal(8, 2)   default(0.0), not null
-#  deleted_at   :datetime
-#  master       :boolean(1)      default(FALSE), not null
-#  created_at   :datetime
-#  updated_at   :datetime
-#  brand_id     :integer(4)
-#  inventory_id :integer(4)
-#
-
 class Variant < ActiveRecord::Base
 
   has_many :variant_properties

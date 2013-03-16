@@ -1,3 +1,26 @@
+# == Schema Information
+#
+# Table name: orders
+#
+#  id              :integer          not null, primary key
+#  number          :string(255)
+#  ip_address      :string(255)
+#  email           :string(255)
+#  state           :string(255)
+#  user_id         :integer
+#  ship_address_id :integer
+#  coupon_id       :integer
+#  active          :boolean          default(TRUE), not null
+#  shipped         :boolean          default(FALSE), not null
+#  calculated_at   :datetime
+#  completed_at    :datetime
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  credited_amount :decimal(8, 2)    default(0.0)
+#  shipment_id     :integer
+#  tax_rate        :decimal(8, 2)    default(0.0), not null
+#
+
 require 'spec_helper'
 
 describe Order, "instance methods" do

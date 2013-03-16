@@ -2,14 +2,14 @@
 #
 # Table name: phones
 #
-#  id             :integer(4)      not null, primary key
-#  phone_type_id  :integer(4)
-#  number         :string(255)     not null
-#  phoneable_type :string(255)     not null
-#  phoneable_id   :integer(4)      not null
-#  primary        :boolean(1)      default(FALSE)
-#  created_at     :datetime
-#  updated_at     :datetime
+#  id             :integer          not null, primary key
+#  phone_type_id  :integer
+#  number         :string(255)      not null
+#  phoneable_type :string(255)      not null
+#  phoneable_id   :integer          not null
+#  primary        :boolean          default(FALSE)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 
 class Phone < ActiveRecord::Base

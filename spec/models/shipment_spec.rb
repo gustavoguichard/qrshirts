@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: shipments
+#
+#  id                 :integer          not null, primary key
+#  order_id           :integer
+#  shipping_method_id :integer          not null
+#  address_id         :integer          not null
+#  tracking           :string(255)
+#  number             :string(255)      not null
+#  state              :string(255)      not null
+#  shipped_at         :datetime
+#  active             :boolean          default(TRUE), not null
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#
+
 require 'spec_helper'
 
 describe Shipment, 'instance methods' do

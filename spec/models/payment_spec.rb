@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: payments
+#
+#  id              :integer          not null, primary key
+#  invoice_id      :integer
+#  confirmation_id :string(255)
+#  amount          :integer
+#  error           :string(255)
+#  error_code      :string(255)
+#  message         :string(255)
+#  action          :string(255)
+#  params          :text
+#  success         :boolean
+#  test            :boolean
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 require 'spec_helper'
 
 describe Payment, " instance methods" do
