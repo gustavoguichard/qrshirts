@@ -98,28 +98,28 @@ Hadean::Application.configure do
   config.active_support.deprecation = :notify
 
 
-  config.after_initialize do
-    #Formtastic::SemanticFormBuilder.send(:include, Formtastic::DatePicker)
-    #Formtastic::SemanticFormBuilder.send(:include, Formtastic::FuturePicker)
-    #Formtastic::SemanticFormBuilder.send(:include, Formtastic::YearPicker)
+  # config.after_initialize do
+  #   #Formtastic::SemanticFormBuilder.send(:include, Formtastic::DatePicker)
+  #   #Formtastic::SemanticFormBuilder.send(:include, Formtastic::FuturePicker)
+  #   #Formtastic::SemanticFormBuilder.send(:include, Formtastic::YearPicker)
 
-    ActiveMerchant::Billing::Base.mode = :test
-    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
-      :login      => Settings.paypal.login,
-      :password   => Settings.paypal.password,
-      :signature  => Settings.paypal.signature,
-      :test       => true
-    )
+  #   ActiveMerchant::Billing::Base.mode = :test
+  #   ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+  #     :login      => Settings.paypal.login,
+  #     :password   => Settings.paypal.password,
+  #     :signature  => Settings.paypal.signature,
+  #     :test       => true
+  #   )
 
-    Paperclip::Attachment.default_options[:storage] = :s3
+  #   Paperclip::Attachment.default_options[:storage] = :s3
 
-  end
-  PAPERCLIP_STORAGE_OPTS = {  :styles => {:mini => '48x48>',
-                                          :small => '100x100>',
-                                          :medium   => '200x200>',
-                                          :product => '320x320>',
-                                          :large => '600x600>' },
-                              :default_style => :product,
-                              :url => "/assets/products/:id/:style/:basename.:extension",
-                              :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension" }
+  # end
+  # PAPERCLIP_STORAGE_OPTS = {  :styles => {:mini => '48x48>',
+  #                                         :small => '100x100>',
+  #                                         :medium   => '200x200>',
+  #                                         :product => '320x320>',
+  #                                         :large => '600x600>' },
+  #                             :default_style => :product,
+  #                             :url => "/assets/products/:id/:style/:basename.:extension",
+  #                             :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension" }
 end

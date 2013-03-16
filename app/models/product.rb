@@ -40,8 +40,7 @@ class Product < ActiveRecord::Base
   has_many :properties,          :through => :product_properties
 
   has_many :variants
-  has_many :images, :as         => :imageable,
-                    :order      => :position,
+  has_many :images, :order      => :position,
                     :dependent  => :destroy
 
   has_many :active_variants,
@@ -54,7 +53,7 @@ class Product < ActiveRecord::Base
 
   accepts_nested_attributes_for :variants,            :reject_if => proc { |attributes| attributes['sku'].blank? }
   accepts_nested_attributes_for :product_properties,  :reject_if => proc { |attributes| attributes['description'].blank? }, :allow_destroy => true
-  accepts_nested_attributes_for :images,              :reject_if => proc { |t| (t['photo'].nil? && t['photo_from_link'].blank?) }, :allow_destroy => true
+  accepts_nested_attributes_for :images#,              :reject_if => proc { |t| (t['photo'].nil? && t['photo_from_link'].blank?) }, :allow_destroy => true
 
   validates :product_type_id, :shipping_category_id, :brand_id,  presence: true
   validates :name,                  presence: true,   length: { maximum: 165 }
@@ -82,7 +81,7 @@ class Product < ActiveRecord::Base
   # @param [Optional Symbol] the size of the image expected back
   # @return [String] name of the file to show from the public folder
   def featured_image(image_size = :small)
-    images.first ? images.first.photo.url(image_size) : "no_image_#{image_size.to_s}.jpg"
+    images.first ? images.first.photo(image_size) : "no_image_#{image_size.to_s}.jpg"
   end
 
   # Price of cheapest variant

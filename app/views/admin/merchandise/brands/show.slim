@@ -5,7 +5,7 @@ p
   strong Nome: 
   = @brand.name
   br/
-  = image_tag @brand.image('q') if @brand.has_image?
+  = image_tag @brand.image(:medium)
   br/
   strong Destaque: 
   =@brand.featured

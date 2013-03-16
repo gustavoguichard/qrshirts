@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130316022727) do
+ActiveRecord::Schema.define(:version => 20130316144330) do
 
   create_table "accounting_adjustments", :force => true do |t|
     t.integer  "adjustable_id",                                 :null => false
@@ -175,23 +175,16 @@ ActiveRecord::Schema.define(:version => 20130316022727) do
   add_index "deals", ["product_type_id"], :name => "index_deals_on_product_type_id"
 
   create_table "images", :force => true do |t|
-    t.integer  "imageable_id"
-    t.string   "imageable_type"
-    t.integer  "image_height"
-    t.integer  "image_width"
     t.integer  "position"
     t.string   "caption"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
     t.datetime "updated_at"
     t.datetime "created_at"
+    t.string   "image_id",   :default => "", :null => false
+    t.integer  "product_id",                 :null => false
   end
 
-  add_index "images", ["imageable_id"], :name => "index_images_on_imageable_id"
-  add_index "images", ["imageable_type"], :name => "index_images_on_imageable_type"
   add_index "images", ["position"], :name => "index_images_on_position"
+  add_index "images", ["product_id"], :name => "index_images_on_product_id"
 
   create_table "inventories", :force => true do |t|
     t.integer "count_on_hand",             :default => 0

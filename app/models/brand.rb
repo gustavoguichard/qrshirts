@@ -22,23 +22,18 @@ class Brand < ActiveRecord::Base
 
   scope :bg_choosen, where(featured: true)
 
-  def image(size = 's')
-    unless image_id.nil?
-      case size
-        when 's' then FlickRaw.url_s(self.photo)
-        when 'q' then FlickRaw.url_q(self.photo)
-        else FlickRaw.url(self.photo)
-      end
-    else
-      nil
+  def image(size = :square)
+    case size
+      when :square then FlickRaw.url_s(self.photo_info)
+      when :medium then FlickRaw.url_q(self.photo_info)
+      else FlickRaw.url(self.photo_info)
     end
   end
 
-  def photo
+private
+
+  def photo_info
     flickr.photos.getInfo(:photo_id => self.image_id)
   end
 
-  def has_image?
-    !image_id.nil?
-  end
 end
