@@ -4,7 +4,17 @@
   javascript:
     Hadean.AdminMerchandiseProductForm.initialize( @product.id );
   = error_messages_for 'product'
+
+= form.hidden_field :shipping_category_id, value: @shipping_category.id
 fieldset#admin-product-general-info
+  .span-3
+    = form.label :product_type, 'Fit'
+  .span-6.last
+    = form.select :product_type_id, nested_set_options(ProductType, ProductType.new) {|i, level| "#{'-' * level} #{i.name}" }, {include_blank: true}
+  .span-3
+    = form.label :brand, 'Estampa'
+  .span-6.last
+    = form.select :brand_id, @brands, {include_blank: true }
   .span-3
     = form.label :name, 'Nome'
   .span-6.last
@@ -26,15 +36,3 @@ fieldset#admin-product-general-info
     = form.label :meta_description
   .span-6.last
     = form.text_field :meta_description
-  .span-3
-    = form.label :product_type, 'Fit'
-  .span-6.last
-    = form.select :product_type_id, nested_set_options(ProductType, ProductType.new) {|i, level| "#{'-' * level} #{i.name}" }, {include_blank: true}
-  .span-3
-    = form.label :shipping_category, 'Categoria de entrega'
-  .span-6.last
-    = form.select :shipping_category_id, @select_shipping_category
-  .span-3
-    = form.label :brand, 'Estampa'
-  .span-6.last
-    = form.select :brand_id, @brands, {include_blank: true }
