@@ -12,6 +12,8 @@
     tbody
       - for brand in @brands
         tr class=cycle("odd", "")
-          td= link_to brand.name, admin_merchandise_brand_path(brand)
+          td
+            = image_tag brand.image, class: "right" if brand.has_image?
+            = link_to brand.name, admin_merchandise_brand_path(brand)
           td= link_to "Editar", edit_admin_merchandise_brand_path(brand)
           td= link_to "Delete", admin_merchandise_brand_path(brand), confirm: 'Tem certeza?', method: :delete

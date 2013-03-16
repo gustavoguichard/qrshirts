@@ -4,6 +4,11 @@ h3
 p
   strong Nome: 
   = @brand.name
+  br/
+  = image_tag @brand.image('q') if @brand.has_image?
+  br/
+  strong Destaque: 
+  =@brand.featured
 p
   = link_to "Editar", edit_admin_merchandise_brand_path(@brand), class: 'button'
   |  

@@ -6,6 +6,8 @@ unless Rails.env.production?
   ENV['PAYPAL_LOGIN']        = APP_CONFIG['PAYPAL_LOGIN']
   ENV['PAYPAL_PASSWORD']    = APP_CONFIG['PAYPAL_PASSWORD']
   ENV['PAYPAL_SIGNATURE']  = APP_CONFIG['PAYPAL_SIGNATURE']
+  ENV['FLICKR_API_KEY']  = APP_CONFIG['FLICKR_API_KEY']
+  ENV['FLICKR_API_SECRET']  = APP_CONFIG['FLICKR_API_SECRET']
 end
 
 require File.expand_path('../../lib/printing/invoice_printer', __FILE__)

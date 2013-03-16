@@ -11,7 +11,8 @@ class ApplicationController < ActionController::Base
                 :search_product,
                 :product_types,
                 :myaccount_tab,
-                :select_countries
+                :select_countries,
+                :bg_brand
 
   before_filter :secure_session
 
@@ -56,6 +57,10 @@ class ApplicationController < ActionController::Base
 
   def require_user
     redirect_to login_url and store_return_location and return if logged_out?
+  end
+
+  def bg_brand
+    @bg_brand ||= Brand.bg_choosen.sample
   end
 
   def store_return_location

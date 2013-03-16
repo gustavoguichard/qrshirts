@@ -78,8 +78,9 @@ ActiveRecord::Schema.define(:version => 20130316022727) do
   add_index "batches", ["batchable_type"], :name => "index_batches_on_batchable_type"
 
   create_table "brands", :force => true do |t|
-    t.string "name"
-    t.string "image"
+    t.string  "name"
+    t.string  "image_id"
+    t.boolean "featured", :default => false, :null => false
   end
 
   create_table "cart_items", :force => true do |t|

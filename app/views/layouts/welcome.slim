@@ -10,7 +10,7 @@ html
     = javascript_include_tag 'application'
     = javascript_include_tag "foundation"
     = yield :head
-  body
+  body style="background: url(#{bg_brand.image('s')}) repeat center fixed;"
     #body_wrapper
       - if notice || alert
         .row

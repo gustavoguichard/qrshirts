@@ -18,5 +18,27 @@ class Brand < ActiveRecord::Base
   has_many :products
 
   validates :name,  presence: true, length: { maximum: 255 }, uniqueness: true
-  validates :image, presence: true
+  validates :image_id, presence: true
+
+  scope :bg_choosen, where(featured: true)
+
+  def image(size = 's')
+    unless image_id.nil?
+      case size
+        when 's' then FlickRaw.url_s(self.photo)
+        when 'q' then FlickRaw.url_q(self.photo)
+        else FlickRaw.url(self.photo)
+      end
+    else
+      nil
+    end
+  end
+
+  def photo
+    flickr.photos.getInfo(:photo_id => self.image_id)
+  end
+
+  def has_image?
+    !image_id.nil?
+  end
 end
