@@ -16,7 +16,7 @@ group :assets do
   gem 'sass-rails',   '>= 3.2.4'
   gem 'compass-rails'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'semantic-mixins'
+  gem 'semantic-mixins', git: 'https://github.com/gustavoguichard/semantic-mixins.git'
   gem 'uglifier', '>= 1.0.3'
   gem 'zurb-foundation', '~> 4.0.0'
 end
@@ -39,17 +39,17 @@ gem 'json', '~>1.7.7'
 gem 'simple_form'
 
 gem 'nested_set', '~> 1.7.0'
-gem "nifty-generators", :git => 'git://github.com/drhenner/nifty-generators.git'
+gem "nifty-generators", git: 'git://github.com/drhenner/nifty-generators.git'
 gem 'nokogiri', '~> 1.5.0'
 # gem 'paperclip', '~> 3.0'
 gem 'prawn', '~> 0.12.0'
 
-gem "rails3-generators", :git => "https://github.com/neocoin/rails3-generators.git"
+gem "rails3-generators", git: "https://github.com/neocoin/rails3-generators.git"
 gem "rails_config"
-# gem 'rmagick',    :require => 'RMagick'
+# gem 'rmagick',    require: 'RMagick'
 
 # Payment
-# gem "activemerchant", '~> 1.29.3'#, :lib => 'active_merchant'
+# gem "activemerchant", '~> 1.29.3'#, lib: 'active_merchant'
 # gem 'paypal-express'
 
 gem 'rake', '~> 0.9.2'
@@ -68,7 +68,7 @@ gem 'slim-rails'
 
 group :development do
   gem 'awesome_print'
-  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'annotate', git: 'git://github.com/ctran/annotate_models.git'
   gem 'quiet_assets'
   gem "autotest-rails-pure"
 
@@ -83,7 +83,7 @@ group :development do
   gem 'binding_of_caller'
 end
 group :test, :development do
-  gem 'capybara', "~> 1.1"#, :git => 'git://github.com/jnicklas/capybara.git'
+  gem 'capybara', "~> 1.1"#, git: 'git://github.com/jnicklas/capybara.git'
   gem 'launchy'
   gem 'database_cleaner'
 end
@@ -91,7 +91,7 @@ end
 group :test do
   gem 'factory_girl', "~> 3.3.0"
   gem 'factory_girl_rails', "~> 3.3.0"
-  gem 'mocha', '~> 0.10.0', :require => false
+  gem 'mocha', '~> 0.10.0', require: false
   gem 'rspec-rails-mocha'
   gem 'rspec-rails', '~> 2.12.2'
 
