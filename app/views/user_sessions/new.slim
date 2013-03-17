@@ -1,8 +1,4 @@
 - content_for :head do
-  - if @registration
-    = stylesheet_link_tag 'signup.css'
-  - else
-    = stylesheet_link_tag 'login.css'
   = stylesheet_link_tag 'cupertino/jquery-ui-1.8.12.custom'
 - content_for :bottom do
   = javascript_include_tag 'jquery.datePicker-2.1.2', 'datePickerInitialize'
