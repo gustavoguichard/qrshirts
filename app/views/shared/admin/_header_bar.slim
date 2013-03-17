@@ -1,5 +1,5 @@
 .admin-login.right
-  span= current_user.name
+  span= link_to current_user.name, edit_admin_user_path(current_user)
   |  | 
   = link_to 'Logout', logout_path, id: 'admin-logout-button', class: "button small"
 
