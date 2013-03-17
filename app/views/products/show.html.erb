@@ -1,9 +1,7 @@
-
 <% content_for :head do -%>
   <%= stylesheet_link_tag 'product_page.css' %>
   <%= stylesheet_link_tag 'pikachoose_product.css' %>
 <% end %>
-
 <div id='product' class='clearfix'>
 
   <div class=' float-left last'>
@@ -28,12 +26,12 @@
           <ul id="pikame" class="jcarousel-skin-pika">
             <% @product.images.each do |image|%>
               <li>
-                <a><%= image_tag(image.photo(:large)) %></a>
+                <a><%= image_tag(image.photo(:normal)) %></a>
               </li>
             <% end %>
             <% if @product.images.empty? %>
               <li>
-                <a><%= image_tag(@product.featured_image(:large)) %></a>
+                <a><%= image_tag(@product.featured_image(:square)) %></a>
               </li>
             <% end %>
           </ul>

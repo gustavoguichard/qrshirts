@@ -1,3 +1,8 @@
+@import "compass/reset";
+@import "compass/typography/lists/horizontal-list";
+@import "compass/typography/text/replacement";
+@import "compass/css3";
+
 // Global Foundation Settings
 @import "settings";
 
@@ -46,5 +51,5 @@
 
 @import "semantic-mixins";
 
+@import "miv/fonts";
 @import "miv/qrshirts";
-

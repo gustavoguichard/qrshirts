@@ -37,8 +37,9 @@ class Image < ActiveRecord::Base
   def photo(size = :square)
     case size
       when :square    then FlickRaw.url_s(photo_info)
-      when :medium    then FlickRaw.url_q(photo_info)
       when :small     then FlickRaw.url_n(photo_info)
+      when :medium    then FlickRaw.url_q(photo_info)
+      when :normal    then FlickRaw.url(photo_info)
       when :large     then FlickRaw.url_z(photo_info)
       else FlickRaw.url(photo_info)
     end

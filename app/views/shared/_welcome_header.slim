@@ -6,13 +6,12 @@
         /! Title Area
         li.name
           h1
-            = link_to site_name, root_path
+            = link_to site_name, root_path, id: "logo"
         li.toggle-topbar.menu-icon
           a href="#"
             span menu
       section.top-bar-section
         ul.left
-          li.divider
           li.has-dropdown
             = link_to t(:products), products_path, :class => 'active'
             ul.dropdown
@@ -22,22 +21,18 @@
               li.divider
               li
                 = link_to t(:all_products), products_path
-          li.divider.hide-for-small
 
         /! Right Nav Section
         ul.right
-          li.divider.show-for-medium-and-up
           li.has-dropdown
             = link_to t(:your_cart), shopping_cart_items_path
             ul.dropdown
               - if session_cart.shopping_cart_items.size > 0
-                li
-                  = link_to(shopping_cart_items_path, :id => 'cart_items_buttons') do
-                    strong Items
+                li= link_to "Ítens", shopping_cart_items_path, :id => 'cart_items_buttons'
                 li.divider
                 - session_cart.shopping_cart_items.each do |item|
                   li
-                    = item.name
+                    = link_to item.name, shopping_cart_items_path
               - else
                 li.divider
                 li
@@ -51,13 +46,17 @@
                 - if current_user.admin?
                   li= link_to 'Admin', admin_path
                 li.divider
-                li
-                  = link_to myaccount_overview_path do
-                    label Account
+                li= link_to "Minha conta", myaccount_overview_path
                 li= link_to t(:orders), myaccount_orders_path
                 li= link_to t(:addresses), myaccount_addresses_path
                 li.divider
                 li= link_to 'Log Out', logout_path
-          li.search
+          /li.search
             form
               input type="search"
+          = link_to "http://facebook.com/quickresponse.shirts/", target: "_blank" do
+            span.social-facebook
+          span.social-twitter
+          span.social-vimeo
+          span.social-pinterest
+          span.social-rss

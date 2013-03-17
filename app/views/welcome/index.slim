@@ -19,20 +19,10 @@ br/
 .row
   .large-12.columns
     .row
-      /! Thumbnails
-      .large-3.small-6.columns
-        img src="http://placehold.it/250x250&text=Thumbnail"
-        h6.panel Description
-      .large-3.small-6.columns
-        img src="http://placehold.it/250x250&text=Thumbnail"
-        h6.panel Description
-      .large-3.small-6.columns
-        img src="http://placehold.it/250x250&text=Thumbnail"
-        h6.panel Description
-      .large-3.small-6.columns
-        img src="http://placehold.it/250x250&text=Thumbnail"
-        h6.panel Description
-      /! End Thumbnails
+      - @best_selling_products.each do |product|
+        .large-3.small-6.columns
+          = link_to image_tag(product.images.first.photo :normal), product_path(product)
+          h6.panel Description
 .row
   .large-12.columns
     .row
