@@ -15,7 +15,7 @@ class Admin::Generic::CouponsController < Admin::Generic::BaseController
   def create
     @coupon = Coupon.new(params[:coupon])
     @coupon.type = params[:c_type]
-    @coupon.errors.add(:base, 'please select coupon type') if params[:c_type].blank?
+    @coupon.errors.add(:base, 'por favor, selecione um tipo de coupon') if params[:c_type].blank?
     if @coupon.errors.size == 0 && @coupon.save
       flash[:notice] = "Successfully created coupon."
       redirect_to admin_generic_coupon_url(@coupon)

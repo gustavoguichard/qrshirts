@@ -14,5 +14,5 @@ class DealType < ActiveRecord::Base
   validates :name,            :presence => true
 
   has_many :deals
-  TYPES = ['Buy X Get % off', 'Buy X Get $ off']
+  TYPES = ['Compre X ganhe % off', 'Compre X ganhe R$ off']
 end

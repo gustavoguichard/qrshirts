@@ -1,0 +1,21 @@
+.admin_title_header.clearfix
+  h3 Coupons
+  = link_to "Novo Coupon", new_admin_generic_coupon_path, class: 'button'
+.admin_coupons
+  table
+    thead
+      tr.odd
+        th.column1_header Código
+        th Tipo
+        th Começa em
+        th Expira em
+        th
+    tbody
+      - for coupon in @coupons
+        tr class=cycle("odd", "")
+          td
+            = link_to coupon.code, admin_generic_coupon_path(coupon), style: "#{'color:#F65566' if coupon.expired?}"
+          td= coupon.type
+          td= coupon.display_start_time
+          td= coupon.display_expires_time
+          td= link_to "Editar", edit_admin_generic_coupon_path(coupon)

@@ -1,0 +1,25 @@
+.admin_title_header.clearfix
+  h3 Ofertas
+  = link_to "Nova Oferta", new_admin_generic_deal_path, :class => "button"
+.admin_deals
+  table
+    thead
+      tr.odd
+        th.column1_header= sortable 'buy_quantity', 'Compra'
+        th Ganha porcentagem
+        th Ganha quantia
+        th Tipo de oferta
+        th Expira em
+        th
+        th
+    tbody
+      - for deal in @deals
+        tr class=cycle("odd", "")
+          td= link_to "#{deal.buy_quantity} #{deal.product_type.name}", [:admin, :generic, deal]
+          td= number_to_percentage deal.get_percentage, precision: 1
+          td= number_to_currency deal.get_amount
+          td= deal.deal_type.name
+          td= I18n.localize(deal.deleted_at, format: :us_time)
+          td= link_to "editar", edit_admin_generic_deal_path(deal)
+          td= link_to "delete", [:admin, :generic, deal], :data =>  confirm='Tem certeza?'
+= will_paginate @deals

@@ -1,0 +1,29 @@
+h1 Coupon
+p
+  strong Código: 
+  = @coupon.code
+p
+  strong Quantia: 
+  = number_to_currency @coupon.amount
+p
+  strong Compra mínima: 
+  = number_to_currency @coupon.minimum_value
+p
+  strong Porcentagem: 
+  = number_to_percentage @coupon.percent, precision: 1
+p
+  strong Descrição: 
+  = @coupon.description
+p
+  strong Cumulativo? 
+  = t @coupon.combine.to_s
+p
+  strong Começa em: 
+  = @coupon.display_start_time
+p
+  strong Expira em: 
+  = @coupon.display_expires_time
+p
+  = link_to "Editar", edit_admin_generic_coupon_path(@coupon), class: 'button'
+  |  | 
+  = link_to "Ver todos", admin_generic_coupons_path, class: 'button'

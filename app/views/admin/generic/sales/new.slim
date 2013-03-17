@@ -1,7 +1,6 @@
 h1 Nova Liquidação
 = form_for @sale, url: admin_generic_sales_path(@sale) do |f|
-  = render partial: "/shared/errors", locals: {object: @sale}
-  =  render partial: 'form', locals: {f: f}
+  = render partial: 'form', locals: {f: f}
   .actions
     = f.submit 'Criar' , class: 'button'
 p

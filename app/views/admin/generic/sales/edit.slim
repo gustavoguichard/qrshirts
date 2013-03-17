@@ -1,7 +1,6 @@
 h1 Editar Liquidação
 = form_for @sale, url: [:admin, :generic, @sale] do |f|
-  = render partial: "/shared/errors", locals: {object: @sale}
-  =  render partial: 'form', locals: {f: f}
+  = render partial: 'form', locals: {f: f}
   .actions
     = f.submit 'Atualizar' , class: 'button'
 p

@@ -121,7 +121,7 @@ class Product < ActiveRecord::Base
   end
 
   def display_name
-    "#{brand.name} - #{product_type.name} - #{name}"
+    "#{self.brand.name} - #{self.product_type.name} - #{self.name}"
   end
 
   # range of the product prices (Just teh low and high price) as an array

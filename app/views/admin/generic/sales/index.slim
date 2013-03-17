@@ -1,0 +1,23 @@
+h1 Liquidações
+#admin_sale_grid_wrapper.pretty_table
+  table
+    thead
+      tr.odd
+        th.column1_header= sortable 'product_id', 'Produto'
+        th Porcentagem 'Off'
+        th Começa em
+        th Termina em
+        th
+    tbody
+      - for sale in @sales
+        tr class=cycle("odd", "")
+          td
+            = link_to [:admin, :generic, sale] do
+              = sale.product.display_name
+              = image_tag sale.product.featured_image(:square), class: "right" if sale.product.has_image?
+          td= number_to_percentage sale.percent_off, precision: 1
+          td= I18n.localize(sale.starts_at, format: :long_date)
+          td= I18n.localize(sale.ends_at, format: :long_date)
+          td= link_to "editar", edit_admin_generic_sale_path(sale)
+= will_paginate @sales
+p= link_to "New Sale", new_admin_generic_sale_path, :class => 'button'

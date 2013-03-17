@@ -1,0 +1,20 @@
+= render partial: "/shared/errors", locals: {object: @deal}
+ul
+  li.field
+    = f.label :buy_quantity, "Compra essa quantidade:"
+    = f.number_field :buy_quantity
+  li.field
+    = f.label :deal_type_id, "Tipo de oferta"
+    = f.select :deal_type_id, deal_types, :include_blank => true
+  li.field
+    = f.label :product_type_id, "FIT"
+    = f.select :product_type_id, product_types, :include_blank => true
+  li.field
+    = f.label :get_amount, "Ganha quantia"
+    = f.number_field :get_amount
+  li.field
+    = f.label :get_percentage, "Ganha porcentagem"
+    = f.number_field :get_percentage
+  li.field.date-select
+    = f.label :deleted_at, "Expira em"
+    = f.datetime_select :deleted_at

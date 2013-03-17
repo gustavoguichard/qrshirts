@@ -1,0 +1,7 @@
+h1 Editar Coupon
+= form_for(@coupon, url: admin_generic_coupon_path(@coupon)) do |f|
+  = render partial: 'form', locals: {f: f}
+p
+  = link_to 'Ver', admin_generic_coupon_path( @coupon ), class: 'button'
+  |  | 
+  = link_to 'View All', admin_generic_coupons_path, class: 'button'

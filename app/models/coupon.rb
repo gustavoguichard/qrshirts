@@ -49,8 +49,10 @@ class Coupon < ActiveRecord::Base
   validates :description,   :presence => true
   validates :starts_at,     :presence => true
   validates :expires_at,    :presence => true
+  
+  Coupon.inheritance_column="not_type_column"
 
-  COUPON_TYPES = ['CouponPercent', 'CouponValue','CouponFirstPurchasePercent', 'CouponFirstPurchaseValue']
+  COUPON_TYPES = ['Porcentagem', 'Valor','Porcentagem na Primeira Compra', 'Valor na Primeira Compra']
   # order must respond to item_prices
   attr_accessor :c_type
 
@@ -59,7 +61,7 @@ class Coupon < ActiveRecord::Base
     qualified?(item_prices, order) ? coupon_amount(item_prices) : 0.0
   end
 
-  # Does the coupon meet the criteria to apply it.  (is the order price total over the coupon's minimum value)
+  # Does the coupon meet the criteria to apply it. (is the order price total over the coupon's minimum value)
   def qualified?(item_prices, order, at = nil)
     at ||= order.completed_at || Time.zone.now
     item_prices.sum > minimum_value && eligible?(at)
@@ -76,6 +78,10 @@ class Coupon < ActiveRecord::Base
 
   def display_expires_time(format = :us_date)
     expires_at ? I18n.localize(expires_at, :format => format) : 'N/A'
+  end
+
+  def expired?
+    expires_at <= Time.zone.now
   end
 
   private

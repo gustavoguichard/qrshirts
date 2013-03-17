@@ -1,0 +1,14 @@
+= render partial: "/shared/errors", locals: {object: @sale}
+ul
+  li.field.three
+    = f.label :product_id, "Produto:"
+    = f.select :product_id, products, :include_blank => true
+  li.field.three
+    = f.label :percent_off, "Porcentagem 'Off':"
+    = f.text_field :percent_off
+  li.field.date-select
+    = f.label :starts_at, "Começa em:"
+    = f.datetime_select :starts_at
+  li.field.date-select
+    = f.label :ends_at, "Termina em:"
+    = f.datetime_select :ends_at

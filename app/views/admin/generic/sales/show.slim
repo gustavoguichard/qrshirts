@@ -1,19 +1,19 @@
 h1 Liquidação
 ul
   li
-    label Produto: 
+    strong Produto: 
     = link_to admin_merchandise_product_path @sale.product do
       = @sale.product.display_name
       br/
       = image_tag @sale.product.featured_image(:small) if @sale.product.has_image?
   li
-    label Porcentagem 'Off': 
+    strong Porcentagem 'Off': 
     = number_to_percentage @sale.percent_off, precision: 1
   li
-    label Começa em: 
+    strong Começa em: 
     = I18n.localize(@sale.starts_at, format: :long_date)
   li
-    label Termina em: 
+    strong Termina em: 
     = I18n.localize(@sale.ends_at, format: :long_date)
 p
   = link_to "Editar", edit_admin_generic_sale_path(@sale), class: 'button'

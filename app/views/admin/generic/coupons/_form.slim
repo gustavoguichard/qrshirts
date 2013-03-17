@@ -1,0 +1,24 @@
+= render partial: "/shared/errors", locals: {object: @coupon}
+fieldset
+  label Código
+  = f.text_field :code
+  - unless @coupon.id
+    label Tipo
+    = select_tag :c_type, @coupon_types.map{|ct| "<option>#{ct}</option>"}.join().html_safe , { :include_blank => true }
+  label Quantia
+  = f.text_field :amount
+  label Compra mínima
+  = f.text_field :minimum_value
+  label Porcentagem
+  = f.text_field :percent
+  label Descrição
+  = f.text_area :description
+  label Cumulativo?
+  = f.check_box :combine
+  label Começa em
+  .date-select
+    = f.date_select :starts_at
+  label Expira em
+  .date-select
+    = f.date_select :expires_at
+= f.submit "Criar", :class => "button"
