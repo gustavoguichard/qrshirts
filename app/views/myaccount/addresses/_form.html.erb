@@ -1,14 +1,4 @@
-  <% if @address.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@address.errors.count, "error") %> prohibited this shipping address from being saved:</h2>
-
-      <ul>
-      <% @address.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= render partial: "/shared/errors", locals: {object: @address} %>
 <div class='main-address'>
     <div class="inline twelve ">
       <div class="field six columns">

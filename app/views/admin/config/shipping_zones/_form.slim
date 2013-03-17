@@ -1,0 +1,6 @@
+= render partial: "/shared/errors", locals: {object: @shipping_zone}
+fieldset
+  label Nome
+  = f.text_field :name
+.actions
+  = f.submit "Criar", :class => "button"

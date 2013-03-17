@@ -1,0 +1,7 @@
+h3 Editando taxa de entrega
+= form_for(@shipping_rate, url: admin_config_shipping_rate_path(@shipping_rate)) do |f|
+  = render partial:  'form', locals: {f: f}
+p
+  = link_to 'Ver', admin_config_shipping_rate_path(@shipping_rate), class: 'button'
+  |  
+  = link_to 'Voltar', admin_config_shipping_rates_path, class: 'button'

@@ -1,0 +1,10 @@
+= render partial: "/shared/errors", locals: {object: @shipping_rate}
+fieldset
+  label Forma de envio
+  = f.select :shipping_method_id, @shipping_methods
+  label Taxa
+  = f.text_field :rate
+  label Compra mínima
+  = f.text_field :minimum_charge
+  = f.hidden_field :shipping_category_id, value: @shipping_categorie.id
+= f.submit "Criar", :class => "button"

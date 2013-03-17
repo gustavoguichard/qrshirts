@@ -14,12 +14,10 @@ html
     = yield :head
   body style="background: url(#{bg_brand.image(:original)}) repeat center fixed;"
     #body_wrapper
-      - if notice || alert
-        aside.flash_notice
-          - if notice
-            p= notice
-          - if alert
-            p= alert
+      - if notice
+        .alert-box.warning = notice
+      - if alert
+        .alert-box.warning = alert
       = render partial: '/shared/welcome_header'
       
       = yield
@@ -27,14 +25,7 @@ html
       #prefooter_wrapper  
     = render 'shared/main_footer'
     = yield :bottom
-    javascript:
-      jQuery(window).ready(
-        function() {
-          jQuery('.flash_notice').delay(6000).slideUp( 'slow');
-          jQuery('.flash_error').delay(6000).slideUp( 'slow');
-        }
-      );
 
     = javascript_include_tag "foundation/app"
+    = javascript_include_tag "custom/site"
   = yield :below_body
-// jQuery('#featured').orbit({ fluid: '8x3', animation: 'horizontal-slide' });

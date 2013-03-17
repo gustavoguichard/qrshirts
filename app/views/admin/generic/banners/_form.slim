@@ -1,11 +1,4 @@
-- if @banner.errors.any?
-  #error_explanation
-    h2
-      = pluralize(@banner.errors.count, "error")
-      | prohibited this banner from being saved:
-    ul
-      - @banner.errors.full_messages.each do |msg|
-        li= msg
+= render partial: "/shared/errors", locals: {object: @banner}
 fieldset
   - unless @banner.new_record?
     p= image_tag @banner.image(:small)

@@ -35,12 +35,5 @@ html
         - if  content_for? :sidebar
           = yield :sidebar
     = yield :bottom
-    javascript:
-      jQuery(window).ready(
-        function() {
-          jQuery('.flash_notice').delay(6000).slideUp( 'slow');
-          jQuery('.flash_error').delay(6000).slideUp( 'slow');
-        }
-      );
 
   = yield :below_body

@@ -1,0 +1,4 @@
+h3 Nova taxa de transporte
+= form_for(@shipping_rate, url: admin_config_shipping_rates_path) do |f|
+  = render partial: 'form', locals: {f: f}
+= link_to "Voltar", admin_config_shipping_rates_path, class: "button"

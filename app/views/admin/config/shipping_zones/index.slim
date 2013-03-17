@@ -1,0 +1,14 @@
+.admin_title_header
+  h3 Regiões de envio
+  = link_to 'Nova região de envio', new_admin_config_shipping_zone_path, class: 'button'
+.admin_shipping_zones
+  table
+    thead
+      tr.odd
+        th.column1_header Name
+        th
+    tbody
+      - @shipping_zones.each do |shipping_zone|
+        tr class=cycle("odd", "")
+          td= link_to shipping_zone.name, edit_admin_config_shipping_zone_path(shipping_zone)
+          td= link_to "Editar", edit_admin_config_shipping_zone_path(shipping_zone)

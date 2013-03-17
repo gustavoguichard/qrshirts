@@ -1,0 +1,5 @@
+h3
+  | Editando região de envio - #{@shipping_zone.name}
+= form_for(@shipping_zone, url: admin_config_shipping_zone_path(@shipping_zone)) do |f|
+  = render partial:  'form', locals: {f: f}
+= link_to "Voltar", admin_config_shipping_zones_path, class: 'button'

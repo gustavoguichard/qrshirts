@@ -1,0 +1,9 @@
+- if object.errors.any?
+  #error_explanation.panel.callout.radius
+    h5
+      = pluralize(object.errors.count, "error")
+      |  no formulário abaixo:
+    p
+      ul
+        - object.errors.full_messages.each do |msg|
+          li= msg

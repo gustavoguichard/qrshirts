@@ -1,7 +1,8 @@
 # encoding: UTF-8
 # pt-BR translations for Ruby on Rails
 pt-BR:
-
+  true: "Sim"
+  false: "Não"
   company:              'QR Shirts'
   hello:                'Olá'
   out_of_stock_notice:  'Desculpe-nos mas esse item está fora de estoque.'
@@ -193,6 +194,11 @@ pt-BR:
       long_date: "%d de %B de %Y"
     am: ''
     pm: ''
+
+  date:
+    formats:
+      us_date: "%d/%m/%Y"
+      long_date: "%d de %B de %Y"
 
   # Usado no Array.to_sentence
   support:

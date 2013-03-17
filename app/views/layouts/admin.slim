@@ -19,9 +19,10 @@ html
   body.bp
     .container
       .row
-        .flash_messages
-          = raw "<div class='alert-box warning'> #{notice} <a href='' class='close'>×</a>" if notice
-          = raw "<div class='alert-box alert'> #{alert} <a href='' class='close'>×</a>" if alert
+        - if notice
+          .alert-box.warning = notice
+        - if alert
+          .alert-box.warning = alert
         = render partial: 'shared/admin/header_bar'
         - if content_for? :header_sub_bar
           #header_sub_bar
@@ -40,12 +41,5 @@ html
         p.right Baseado no #{link_to "RoR eCommerce", "http://ror-e.com"}. v#{RoReCommerce::Version}
 
     = yield :bottom
-    javascript:
-      jQuery(window).ready(
-        function() {
-          jQuery('.flash_notice').delay(6000).slideUp( 'slow');
-          jQuery('.flash_error').delay(6000).slideUp( 'slow');
-        }
-      );
 
   = yield :below_body

@@ -1,11 +1,4 @@
-- if @shipping_category.errors.any?
-  #error_explanation
-    h2
-      = pluralize(@shipping_category.errors.count, "error")
-      | prohibited this admin_config_shipping_category from being saved:
-    ul
-      - @shipping_category.errors.full_messages.each do |msg|
-        li= msg
+= render partial: "/shared/errors", locals: {object: @shipping_category}
 fieldset
   label Nome
   = f.text_field :name

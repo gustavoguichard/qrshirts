@@ -1,15 +1,4 @@
-<% if @coupon.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@coupon.errors.count, "error") %> prohibited this coupon from being saved:</h2>
-
-    <ul>
-    <% @coupon.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
-
+<%= render partial: "/shared/errors", locals: {object: @coupon} %>
 <fieldset>
   <label>Code</label>
   <%= f.text_field :code %>

@@ -1,5 +1,7 @@
 jQuery(document).ready(function ($) {
 
+  jQuery('.alert-box').delay(6000).fadeOut( 'slow');
+
   /* Use this js doc for all application specific JS */
 
   /* TABS --------------------------------- */

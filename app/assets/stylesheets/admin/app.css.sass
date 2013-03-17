@@ -1,6 +1,12 @@
+@import semantic-mixins
 // RoR eCommerce Admin Styles
-.flash_messages
-  margin-top: 20px
+h1 a#logo
+  +image-replace("logo.png")
+
+.admin-login
+  margin: 40px 20px
+  font-weight: bold
+
 .field_with_errors
   input
     border: 1px #C66 solid
@@ -116,3 +122,7 @@ ul
     small
       font-size: 14px
 
+div.alert-box
+  position: absolute
+  top: 5px
+  padding: 10px 40px

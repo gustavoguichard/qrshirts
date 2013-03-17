@@ -1,9 +1,9 @@
 .admin-login.right
   span= current_user.name
-  br/
-  = link_to 'Logout', logout_path, id: 'admin-logout-button'
+  |  | 
+  = link_to 'Logout', logout_path, id: 'admin-logout-button', class: "button small"
 
-h3= link_to site_name, root_path
+h1= link_to site_name, root_path, id: "logo"
 
 ul.nav-bar
 	= render partial: "/shared/admin/header_buttons"
