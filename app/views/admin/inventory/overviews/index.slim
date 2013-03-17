@@ -3,10 +3,17 @@ h3= t('admin.inventory')
   table#inventory_table
     thead
       - @products.each do |product|
-        tr class="#{cycle('odd', 'even')}"
+        tr
           th
-            = link_to "#{product.product_type.name} - #{product.name}", "#", class: "product_name"
-            table.variants style="display:none;"
+            = link_to "#", class: "product_name" do
+              - if product.has_image?
+                = image_tag product.featured_image(:square)
+              = product.brand.name
+              br/
+              = product.product_type.name
+              br/
+              = product.name
+            table.variants
               thead
                 tr
                   th Código

@@ -8,14 +8,12 @@
       tr.odd
         th.column1_header Nome
         th
-        th
     tbody
       - for brand in @brands
         tr class=cycle("odd", "")
           td
             = link_to edit_admin_merchandise_brand_path(brand) do
               = image_tag brand.image, class: "right"
-            = link_to brand.name, admin_merchandise_brand_path(brand)
+            = link_to brand.name, edit_admin_merchandise_brand_path(brand)
             = "#{" - Em destaque" if brand.featured?}"
-          td= link_to "Editar", edit_admin_merchandise_brand_path(brand)
-          td= link_to "Delete", admin_merchandise_brand_path(brand), confirm: 'Tem certeza?', method: :delete
+          td= link_to "Desativar", admin_merchandise_brand_path(brand), confirm: 'Tem certeza?', method: :delete

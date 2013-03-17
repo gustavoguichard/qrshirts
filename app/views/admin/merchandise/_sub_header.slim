@@ -4,7 +4,7 @@
       li
         = link_to 'Descrição', edit_admin_merchandise_products_description_path(@product), style: "#{@product.description.blank? ? 'color:#EF2255;' : ''}"
       li
-        = link_to 'Imagens', edit_admin_merchandise_images_product_path(@product), style: "#{@product.images.size == 0 ? 'color:#EF2255;' : ''}"
+        = link_to 'Imagens', edit_admin_merchandise_images_product_path(@product), style: "#{@product.has_image? ? 'color:#EF2255;' : ''}"
       li
         = link_to 'Produto', admin_merchandise_product_path(@product)
       li

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class Admin::Merchandise::BrandsController < Admin::BaseController
   def index
     @brands = Brand.all
@@ -14,7 +15,7 @@ class Admin::Merchandise::BrandsController < Admin::BaseController
   def create
     @brand = Brand.new(params[:brand])
     if @brand.save
-      flash[:notice] = "Successfully created brand."
+      flash[:notice] = "Estampa criada com sucesso."
       redirect_to admin_merchandise_brand_url(@brand)
     else
       render :action => 'new'
@@ -28,8 +29,8 @@ class Admin::Merchandise::BrandsController < Admin::BaseController
   def update
     @brand = Brand.find(params[:id])
     if @brand.update_attributes(params[:brand])
-      flash[:notice] = "Successfully updated brand."
-      redirect_to admin_merchandise_brand_url(@brand)
+      flash[:notice] = "Estampa atualizada com sucesso."
+      redirect_to admin_merchandise_brands_url
     else
       render :action => 'edit'
     end
@@ -41,7 +42,7 @@ class Admin::Merchandise::BrandsController < Admin::BaseController
     if @brand.products.empty?
       @brand.destroy
     else
-      flash[:alert] = "Sorry this brand is already associated with a product.  You can not delete this brand."
+      flash[:alert] = "Essa estampa está associada com uma camisa, você não pode deletá-la."
     end
 
     redirect_to admin_merchandise_brands_url

@@ -21,16 +21,16 @@
       tr.odd
         th.column1_header= sortable "name", 'Nome'
         th Ativo
-        th Fit
-        th Estampa
-        th
         th
     - @products.each do |product|
       tr class=cycle("odd", "")
-        td= link_to product.name, edit_admin_merchandise_product_path(product)
+        td= link_to "#{product.brand.name} - #{product.product_type.name} - #{product.name}", edit_admin_merchandise_product_path(product)
         td= product.available? ? 'Sim' : 'Não'
-        td= product.product_type.name
-        td= product.brand.name
-        td= link_to "Editar tamanhos",  edit_admin_merchandise_multi_product_variant_path(product)
-        td= link_to "Ver",  admin_merchandise_product_path(product)
+        - if product.has_image?
+          td
+            = link_to admin_merchandise_product_path(product) do
+              = image_tag product.featured_image(:square)
+        - else
+          td= link_to "Ver",  admin_merchandise_product_path(product)
+
   = will_paginate @products

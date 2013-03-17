@@ -83,6 +83,10 @@ class Product < ActiveRecord::Base
     images.first ? images.first.photo(image_size) : "no_image_#{image_size.to_s}.jpg"
   end
 
+  def has_image?
+    images.size > 0
+  end
+
   # Price of cheapest variant
   #
   # @param [none] the size of the image expected back

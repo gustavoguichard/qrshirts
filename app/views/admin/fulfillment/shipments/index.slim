@@ -9,22 +9,24 @@ table
     tr.odd
       th.column1_header Número
       th Pedido #
-      th Entregue em
+      th Entregue em/para
       th Tracking
       th Status
       th Items
-      th
       th
   - @shipments.each do |shipment|
     - if shipment.has_items?
       tr class=cycle("odd", "even")
         td= shipment.number
         td= link_to shipment.order.number, admin_fulfillment_order_path(shipment.order)
-        td= I18n.localize(shipment.shipped_at, format: :us_time) if shipment.shipped_at
+        td
+          = I18n.localize(shipment.shipped_at, format: :us_time) if shipment.shipped_at
+          br/
+          = link_to "Contactar: #{shipment.order.user.email}", "mailto:#{shipment.order.user.email}"
         td= shipment.tracking
         td= t "shipment.state.#{shipment.state}"
         td
-          = raw shipment.order_items.collect {|item| item.variant.product_name }.join('<br/>')
+          = raw shipment.order_items.collect {|item| link_to("#{item.variant.product.name} #{item.variant.product_name}", admin_merchandise_product_path(item.variant.product)) }.join('<br/>')
         td
           = link_to 'Ver', admin_fulfillment_shipment_path(shipment)
           |  | 
