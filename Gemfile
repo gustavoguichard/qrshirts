@@ -18,7 +18,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'semantic-mixins', '0.1.5'
   gem 'uglifier', '>= 1.0.3'
-  gem 'zurb-foundation', '~> 4.0.4'
+  # gem 'zurb-foundation', '~> 4.0.8'
 end
 
 gem "american_date"
