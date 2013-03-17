@@ -3,8 +3,8 @@
 	[
 		{
 			"path": "./",
-      "folder_exclude_patterns": ["tmp", ".jhw-cache"],
-      "file_exclude_patterns": ["*.lock", "*.png", "*.gif", "*.jpg", "*.jpeg", ".gitkeep", "*.sublime-project", "*.sublime-workspace"]
+      "folder_exclude_patterns": ["tmp", ".jhw-cache", "public/assets"],
+      "file_exclude_patterns": ["*.lock", "*.png", "*.gif", "*.jpg", "*.jpeg", ".gitkeep", "*.sublime-project", "*.sublime-workspace", "*.log"]
 		}
 	]
 }

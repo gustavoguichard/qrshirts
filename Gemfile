@@ -49,7 +49,7 @@ gem "rails_config"
 # gem 'rmagick',    require: 'RMagick'
 
 # Payment
-# gem "activemerchant", '~> 1.29.3'#, lib: 'active_merchant'
+gem "activemerchant", '~> 1.29.3'#, lib: 'active_merchant'
 # gem 'paypal-express'
 
 gem 'rake', '~> 0.9.2'
