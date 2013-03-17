@@ -24,7 +24,7 @@
         th
     - @products.each do |product|
       tr class=cycle("odd", "")
-        td= link_to "#{product.brand.name} - #{product.product_type.name} - #{product.name}", edit_admin_merchandise_product_path(product)
+        td= link_to product.display_name, edit_admin_merchandise_product_path(product)
         td= product.available? ? 'Sim' : 'Não'
         - if product.has_image?
           td

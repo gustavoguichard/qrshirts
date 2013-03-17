@@ -27,7 +27,7 @@ div
       - @shipment.order_items.each do |item|
         tr
           td
-            = "#{item.variant.product.brand.name} - #{item.variant.product.name} - #{item.variant.product_name} - #{item.variant.sku}"
+            = item.variant.product.display_name
           td= item.variant.sku
           td= item.price
       - @shipment.order.find_total

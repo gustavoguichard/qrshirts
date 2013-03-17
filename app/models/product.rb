@@ -120,6 +120,10 @@ class Product < ActiveRecord::Base
     price_range.join(j)
   end
 
+  def display_name
+    "#{brand.name} - #{product_type.name} - #{name}"
+  end
+
   # range of the product prices (Just teh low and high price) as an array
   #
   # @param [none]

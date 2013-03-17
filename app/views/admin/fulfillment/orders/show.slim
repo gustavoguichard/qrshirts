@@ -27,7 +27,7 @@ p
       - @order.order_items.each_with_index do |item,i|
         tr class="#{cycle('odd', 'even')}"
           td
-            = "#{item.variant.product.brand.name} - #{item.variant.product.name} - #{item.variant.product_name} - #{item.variant.sku}"
+            = item.variant.product.display_name
           td= item.variant.sku
           td= number_to_currency item.variant.price
       tr
