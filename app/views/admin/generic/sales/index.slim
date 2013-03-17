@@ -20,4 +20,4 @@ h1 Liquidações
           td= I18n.localize(sale.ends_at, format: :long_date)
           td= link_to "editar", edit_admin_generic_sale_path(sale)
 = will_paginate @sales
-p= link_to "New Sale", new_admin_generic_sale_path, :class => 'button'
+p= link_to "Nova Liquidação", new_admin_generic_sale_path, :class => 'button'
