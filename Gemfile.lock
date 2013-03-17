@@ -335,7 +335,7 @@ DEPENDENCIES
   rspec-rails (~> 2.12.2)
   rspec-rails-mocha
   sass (>= 3.2.3)
-  sass-rails (>= 3.2.4)
+  sass-rails (>= 3.2.6)
   semantic-mixins (= 0.1.5)
   simple_form
   slim
@@ -345,4 +345,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   will_paginate (~> 3.0.4)
   yard
-  zurb-foundation (~> 4.0.0)
+  zurb-foundation (~> 4.0.4)
