@@ -238,7 +238,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
-    semantic-mixins (0.1.4)
+    semantic-mixins (0.1.5)
       compass-rails
       rails (~> 3.1)
       sass (>= 3.2.3)
@@ -336,7 +336,7 @@ DEPENDENCIES
   rspec-rails-mocha
   sass (>= 3.2.3)
   sass-rails (>= 3.2.4)
-  semantic-mixins (= 0.1.4)
+  semantic-mixins (= 0.1.5)
   simple_form
   slim
   slim-rails
