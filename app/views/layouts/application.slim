@@ -1,29 +1,29 @@
-doctype
+doctype html
 html
   head
+    meta charset="utf-8"
+    /! Set the viewport width to device width for mobile
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
     title
       = "#{site_name}: #{yield :title}"
     link href="favicon.ico" rel="shortcut icon"
-    = stylesheet_link_tag "foundation.css"
-    = stylesheet_link_tag 'site/app.css'
+    = stylesheet_link_tag 'app.css'
     = csrf_meta_tag
+    = javascript_include_tag "vendor/custom.modernizr"
     = javascript_include_tag 'application'
-    = javascript_include_tag "foundation"
     = yield :head
-  body
+  body style="background: url(#{bg_brand.image(:original)}) repeat center fixed;"
     #body_wrapper
-      .row
-        - if notice
-          p.flash_notice = notice
-        - if alert
-          p.flash_error = alert
+      - if notice || alert
+        aside.flash_notice
+          - if notice
+            p= notice
+          - if alert
+            p= alert
       = render partial: '/shared/welcome_header'
-      #content_wrapper class="row #{"myaccount" if myaccount_tab}"
-        - if myaccount_tab
-          hr.first_double_hr
-            hr.second_double_hr
-              = render partial: '/shared/myaccount_subheader'
-        = yield
+      
+      = yield
+
       #prefooter_wrapper  
     = render 'shared/main_footer'
     = yield :bottom
@@ -35,4 +35,6 @@ html
         }
       );
 
+    = javascript_include_tag "foundation/app"
   = yield :below_body
+// jQuery('#featured').orbit({ fluid: '8x3', animation: 'horizontal-slide' });

@@ -1,13 +1,16 @@
 .row
-  .twelve.columns
-    nav.top-bar.contain-to-grid
-      ul
+  .large-12.columns
+    /! Navigation
+    nav.top-bar
+      ul.title-area
+        /! Title Area
         li.name
           h1
             = link_to site_name, root_path
-        li.toggle-topbar
+        li.toggle-topbar.menu-icon
           a href="#"
-      section
+            span menu
+      section.top-bar-section
         ul.left
           li.divider
           li.has-dropdown

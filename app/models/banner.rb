@@ -17,10 +17,10 @@ class Banner < ActiveRecord::Base
 
   scope :active, where("starts_at < ? AND ends_at > ?", Time.now, Time.now)
 
-  def image(size = :home)
+  def image(size = :slide)
     case size
       when :thumb   then FlickRaw.url_t(photo_info)
-      when :home    then FlickRaw.url_o(photo_info)
+      when :slide   then FlickRaw.url_b(photo_info)
       when :small   then FlickRaw.url_n(photo_info)
       else FlickRaw.url(photo_info)
     end

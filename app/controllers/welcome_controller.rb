@@ -1,7 +1,4 @@
 class WelcomeController < ApplicationController
-
-  layout 'welcome'
-
   def index
     @banners = Banner.active
     @featured_product = Product.featured

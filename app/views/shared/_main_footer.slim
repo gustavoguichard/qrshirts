@@ -1,7 +1,13 @@
-#footer_wrapper.row
-  .nine.columns
-    ul#main-footer-tabs.inline-list
-      li
-        = link_to_unless_current 'Termos & Condições', terms_path
-      li
-        = link_to_unless_current 'Sobre', about_path
+/! Footer
+footer.row
+  .large-12.columns
+    hr/
+    .row
+      .large-6.columns
+        p © Copyright #{site_name}
+      .large-6.columns
+        ul.inline-list.right
+          li
+            = link_to_unless_current 'Termos & Condições', terms_path
+          li
+            = link_to_unless_current 'Sobre', about_path
