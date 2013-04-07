@@ -3,9 +3,11 @@
     /! Desktop Slider
     .hide-for-small
       #featured
-        - @banners.each do | banner |
-          = link_to banner.link_url do
-            = image_tag banner.image(:slide)
+        ul[data-orbit]
+          - @banners.each do | banner |
+            li
+              = link_to banner.link_url do
+                = image_tag banner.image(:slide)
     /! End Desktop Slider
     /! Mobile Header
     .row

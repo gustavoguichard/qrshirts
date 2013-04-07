@@ -3,3 +3,5 @@
 //
 //= require_tree  ./jquery
 //= require_tree  ./layout
+//= require foundation
+$(document).foundation();

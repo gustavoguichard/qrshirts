@@ -1,7 +1,10 @@
 source 'http://rubygems.org'
 
+# For heroku
+ruby '2.0.0'
+
 ## Bundle rails:
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.13'
 gem 'pg'
 gem 'thin'
 
@@ -16,9 +19,9 @@ group :assets do
   gem 'sass-rails',   '>= 3.2.6'
   gem 'compass-rails'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'semantic-mixins', '0.1.5'
+  gem 'semantic-mixins', '0.2.0'
   gem 'uglifier', '>= 1.0.3'
-  # gem 'zurb-foundation', '~> 4.0.8'
+  gem 'zurb-foundation', '~> 4.0.0'
 end
 
 gem "american_date"

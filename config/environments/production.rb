@@ -16,29 +16,17 @@ Hadean::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.assets.precompile += %w( *.css *.js )
+  # config.assets.precompile += %w( *.css *.js )
 
-  # config.assets.precompile += %w( *.js )
-  # config.assets.precompile += [ 'admin.css',
-  #                               'admin/app.css',
-  #                               'admin/cart.css',
-  #                               'admin/foundation.css',
-  #                               'admin/help.css',
-  #                               'admin/ie.css',
-  #                               'autocomplete.css',
-  #                               'application.css',
-  #                               'home_page.css',
-  #                               'pikachoose_product.css',
-  #                               'product_page.css',
-  #                               'products_page.css',
-  #                               'shopping_cart_page.css',
-  #                               'site/app.css',
-  #                               'sprite.css',
-  #                               'tables.css',
-  #                               'cupertino/jquery-ui-1.8.12.custom.css',# in vendor
-  #                               'modstyles.css', # in vendor
-  #                               'scaffold.css' # in vendor
-  #                               ]
+  config.assets.precompile += %w( *.js )
+  config.assets.precompile += [ 'admin/*.css',
+                                'app.css',
+                                'pikachoose_product.css',
+                                'product_page.css',
+                                'cupertino/jquery-ui-1.8.12.custom.css',# in vendor
+                                'modstyles.css', # in vendor
+                                'scaffold.css' # in vendor
+                                ]
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
