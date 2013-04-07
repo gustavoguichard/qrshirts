@@ -7,6 +7,10 @@ Hadean::Application.routes.draw do
   match 'logout'  => 'user_sessions#destroy'
   match 'signup'  => 'customer/registrations#new'
   match 'admin/merchandise' => 'admin/merchandise/summary#index'
+
+  get '/qr-o-que' => 'high_voltage/pages#show', id: 'about'
+  get '/contato' => 'high_voltage/pages#show',     id: 'contact'
+
   resources :products, only: [:index, :show, :create]
 
   resources :wish_items,  only: [:index, :destroy]
