@@ -20,6 +20,10 @@ fieldset#admin-product-general-info
   .span-6.last
     = form.text_field :name
   .span-3
+    = form.label :name, 'Cor'
+  .span-6.last
+    input#product_color name="product[color]" type="color" value="#{@product.color if @product.present? and @product.color.present?}"
+  .span-3
     = form.label :permalink
   .span-6.last
     = form.text_field :permalink

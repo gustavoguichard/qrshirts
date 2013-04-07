@@ -1,0 +1,24 @@
+.orbit-slide-number
+  display: none
+.orbit-container
+  a.orbit-prev, .orbit-next
+    & > span
+      border-width: 40px
+  a.orbit-prev
+    left: -30px
+    top: 42%
+    & > span
+      border-right: 25px solid $pink
+      &:hover
+        border-right-color: lighten($pink, 10%)
+  a.orbit-next
+    right: 5px
+    top: 42%
+    & > span
+      border-left: 25px solid $pink
+      &:hover
+        border-left-color: lighten($pink, 10%)
+.orbit-bullets li
+  box-shadow: 0 0 0 2px white inset
+  border-radius: 0
+  cursor: pointer

@@ -1,6 +1,9 @@
 // Required global settings and mixins for Foundation
 @import "foundation/foundation-global";
 
+$pink: #d61dd0;
+$light-gray: #f8f8f8;
+
 // Settings file to override Foundation variables
 
 // You can find the variables for each component at the bottom of their
@@ -16,7 +19,7 @@
 
 // We use these to control various global styles
 // $body-bg: #fff;
-// $body-font-color: #222;
+$body-font-color: #111;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -607,15 +610,15 @@
 //
 
 // We use these to control the caption styles
-// $orbit-container-bg: #f5f5f5;
+$orbit-container-bg: white;
 // $orbit-caption-bg-old-browser: #000;
 // $orbit-caption-bg-old: rgb(0,0,0);
 // $orbit-caption-bg: rgba(0,0,0,0.6);
 // $orbit-caption-font-color: #fff;
 
 // We use these to control the left/right nav styles
-// $orbit-nav-bg-old: rgb(0,0,0);
-// $orbit-nav-bg: rgba(0,0,0,0.6);
+$orbit-nav-bg-old: none;
+$orbit-nav-bg: none;
 
 // We use these to control the timer styles
 // $orbit-timer-bg-old: rgb(0,0,0);
@@ -627,7 +630,7 @@
 
 // We use thes to controls the style of slide numbers
 // $orbit-slide-number-bg: rgb(0,0,0);
-// $orbit-slide-number-font-color: #fff;
+// $orbit-slide-number-font-color: transparent;
 // $orbit-slide-number-padding: emCalc(5px);
 
 // Margin for when Orbit is stacked on small screens
@@ -968,11 +971,11 @@
 //
 
 // Background color for the top bar
-// $topbar-bg: #111;
+$topbar-bg: white;
 
 // Height and margin
-// $topbar-height: 45px;
-// $topbar-margin-bottom: emCalc(30px);
+$topbar-height: auto;
+$topbar-margin-bottom: 0;
 
 // Control Input height for top bar
 // $topbar-input-height: 2.45em;
@@ -982,15 +985,15 @@
 // $topbar-title-font-size: emCalc(17px);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
+$topbar-link-color: $body-font-color;
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: emCalc(13px);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
+$topbar-dropdown-bg: white;
+$topbar-dropdown-link-color: $topbar-link-color;
 // $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-color: #222;
 // $topbar-dropdown-toggle-alpha: 0.5;
 // $dropdown-label-color: #555;
 

@@ -19,6 +19,9 @@ label Estampa
 p= @product.brand.name
 label Categoria de entrega
 p= @product.shipping_category.name
+label Cor
+span style="float:left;width:40px;height:30px;background:#{@product.color};margin-right: 10px; border: 1px solid #333"
+p= @product.color
 fieldset#admin-product-properties.span-12
   legend Tamanhos
   - if @product.variants.size == 0
