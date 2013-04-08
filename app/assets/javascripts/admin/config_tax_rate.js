@@ -1,13 +1,13 @@
-var Hadean = window.Hadean || {};
+var QRShirts = window.QRShirts || {};
 
 
-Hadean.Utility = {
+QRShirts.Utility = {
   registerOnLoadHandler : function(callback) {
     jQuery(window).ready(callback);
   }
 }
 
-Hadean.TaxRateForm = {
+QRShirts.TaxRateForm = {
   stateSelect : '#tax_rate_state_id',
 
   initialize : function() {
@@ -15,7 +15,7 @@ Hadean.TaxRateForm = {
     jQuery(select_country).
             bind('change',
               function() {
-                Hadean.TaxRateForm.getState(jQuery(select_country).val());
+                QRShirts.TaxRateForm.getState(jQuery(select_country).val());
               }
             );
   },
@@ -25,14 +25,14 @@ Hadean.TaxRateForm = {
          '/states',
          { country_id : id },
         function(json) {
-           Hadean.TaxRateForm.refreshStates(json);
+           QRShirts.TaxRateForm.refreshStates(json);
          }
       );
     }
   },
   refreshStates : function(json) {
     var newOptions = json;
-    var select = jQuery(Hadean.TaxRateForm.stateSelect);
+    var select = jQuery(QRShirts.TaxRateForm.stateSelect);
     var options = select.attr('options');
 
     jQuery('option', select).remove();// remove old options

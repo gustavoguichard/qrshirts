@@ -4,7 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-module ::Hadean
+module ::QRShirts
   class Application
     include Rake::DSL
   end
@@ -14,4 +14,4 @@ module ::RakeFileUtils
   extend Rake::FileUtilsExt
 end
 
-Hadean::Application.load_tasks
+QRShirts::Application.load_tasks

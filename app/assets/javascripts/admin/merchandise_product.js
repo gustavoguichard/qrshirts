@@ -1,14 +1,14 @@
-var Hadean = window.Hadean || {};
+var QRShirts = window.QRShirts || {};
 
 
-Hadean.Utility = {
+QRShirts.Utility = {
   registerOnLoadHandler : function(callback) {
     jQuery(window).ready(callback);
   }
 }
 
 
-Hadean.AdminMerchandiseProductForm = {
+QRShirts.AdminMerchandiseProductForm = {
 
     productCheckboxesDiv  : '#product_properties',
     prototypeSelectId     : '#product_prototype_id',
@@ -18,12 +18,12 @@ Hadean.AdminMerchandiseProductForm = {
     initialize : function(product_Id) {
 
       this.productId  = product_Id;
-      var prototype       = jQuery(Hadean.AdminMerchandiseProductForm.prototypeSelectId);
+      var prototype       = jQuery(QRShirts.AdminMerchandiseProductForm.prototypeSelectId);
       prototype.
               bind('change',
                 function() {
-                  Hadean.AdminMerchandiseProductForm.addProperties(
-                    jQuery(Hadean.AdminMerchandiseProductForm.prototypeSelectId + " option:selected").first().val()
+                  QRShirts.AdminMerchandiseProductForm.addProperties(
+                    jQuery(QRShirts.AdminMerchandiseProductForm.prototypeSelectId + " option:selected").first().val()
                   );
                 }
               );
@@ -32,16 +32,16 @@ Hadean.AdminMerchandiseProductForm = {
       if ( typeof id == 'undefined' || id == 0 ) {
         //  show all properties...
 $('#product_properties').children().fadeIn();
-        //jQuery(Hadean.AdminMerchandiseProductForm.productCheckboxesDiv).html('');
+        //jQuery(QRShirts.AdminMerchandiseProductForm.productCheckboxesDiv).html('');
       }
       else {
         jQuery.ajax( {
            type : "GET",
            url : MerchProductForm.formController+'/'+id+"/add_properties",
-           data : { product_id : Hadean.AdminMerchandiseProductForm.productId },
+           data : { product_id : QRShirts.AdminMerchandiseProductForm.productId },
            complete : function(json) {
              // open dialog with html
-             Hadean.AdminMerchandiseProductForm.refreshProductForm(json);
+             QRShirts.AdminMerchandiseProductForm.refreshProductForm(json);
             // STOP  WAIT INDICATOR...
            },
            dataType : 'json'
@@ -68,4 +68,4 @@ $('#product_properties').children().fadeIn();
     }
 };
 
-MerchProductForm = Hadean.AdminMerchandiseProductForm
+MerchProductForm = QRShirts.AdminMerchandiseProductForm

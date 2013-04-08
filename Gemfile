@@ -37,6 +37,7 @@ gem "dynamic_form"
 gem "friendly_id", "~> 3.3"
 gem "haml",  ">= 3.0.13"#, ">= 3.0.4"#, "2.2.21"#,
 gem "high_voltage"
+gem "initjs"
 gem "jquery-rails"
 gem "json", "~>1.7.7"
 

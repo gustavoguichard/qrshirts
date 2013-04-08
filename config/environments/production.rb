@@ -1,4 +1,4 @@
-Hadean::Application.configure do
+QRShirts::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
 
   config.force_ssl = true

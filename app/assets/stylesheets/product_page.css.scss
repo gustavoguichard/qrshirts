@@ -1,13 +1,13 @@
-$hadean_black            : #242729;
-$hadean_gray_background  : #e8e8e8;
-$hadean_orange            : #c6481a;
+$qrshirts_black            : #242729;
+$qrshirts_gray_background  : #e8e8e8;
+$qrshirts_orange            : #c6481a;
 
 $inline_error            : #8A1F11;
 $error_border            : #FBC2C4;
 $error_background         : #FBE3E4;
 
 #product {
-  color:$hadean_black;
+  color:$qrshirts_black;
   .product_title_name {
     font-size:2.25em;
   }
@@ -62,7 +62,7 @@ $error_background         : #FBE3E4;
     span{font-size:1.5em;margin-right:10px;}
   }
   #product_your_customizations {
-    background-color:$hadean_gray_background;
+    background-color:$qrshirts_gray_background;
     padding:10px;
   }
   .orange_custom_type_wrapper {
@@ -75,7 +75,7 @@ $error_background         : #FBE3E4;
       .orange_custom_type_title {
         display:inline-block;
         vertical-align: top;
-        color:$hadean_orange;
+        color:$qrshirts_orange;
       }
     }
   }

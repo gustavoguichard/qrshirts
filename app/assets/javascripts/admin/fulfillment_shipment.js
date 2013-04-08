@@ -1,6 +1,6 @@
-var Hadean = window.Hadean || {};
+var QRShirts = window.QRShirts || {};
 
-Hadean.FulfillmentNote = {
+QRShirts.FulfillmentNote = {
   orderId    : null,
   initialize : function() {
     $("#new_comment").submit(function(event) {
@@ -8,7 +8,7 @@ Hadean.FulfillmentNote = {
       $('.comment-submit-button').attr("disabled", "disabled");
 
       //var amount = 1000; //amount you want to charge in cents
-      Hadean.FulfillmentNote.submitForm();
+      QRShirts.FulfillmentNote.submitForm();
 
       // prevent the form from submitting with the default action
       return false;
@@ -31,5 +31,5 @@ Hadean.FulfillmentNote = {
 };
 
 jQuery(function() {
-  Hadean.FulfillmentNote.initialize();
+  QRShirts.FulfillmentNote.initialize();
 });

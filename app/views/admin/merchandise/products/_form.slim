@@ -2,7 +2,7 @@
   = javascript_include_tag 'admin/merchandise_product'
 - content_for :below_body do
   javascript:
-    Hadean.AdminMerchandiseProductForm.initialize( @product.id );
+    QRShirts.AdminMerchandiseProductForm.initialize( @product.id );
   = error_messages_for 'product'
 
 = form.hidden_field :shipping_category_id, value: @shipping_category.id

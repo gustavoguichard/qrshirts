@@ -10,16 +10,16 @@ jQuery(document).ready(function($) {
   });
 });
 
-var Hadean = window.Hadean || {};
+var QRShirts = window.QRShirts || {};
 
 
-Hadean.Utility = {
+QRShirts.Utility = {
   registerOnLoadHandler : function(callback) {
     jQuery(window).ready(callback);
   }
 }
 
-Hadean.Fulfillment = {
+QRShirts.Fulfillment = {
   captureInvoiceButton      : '#capture-invoice-button-',
   capturePartInvoiceButton  : '#capture-partial-invoice-button-',
   cancelInvoiceButton       : '#cancel-invoice-button-',
@@ -27,10 +27,10 @@ Hadean.Fulfillment = {
 
   initialize : function(invoiceId, order_id) {
 
-    var captureTag      = jQuery(Hadean.Fulfillment.captureInvoiceButton + invoiceId );
-    var capturePartTag  = jQuery(Hadean.Fulfillment.capturePartInvoiceButton + invoiceId);
-    var cancelTag       = jQuery(Hadean.Fulfillment.cancelInvoiceButton + invoiceId);
-    Hadean.Fulfillment.orderId = order_id;
+    var captureTag      = jQuery(QRShirts.Fulfillment.captureInvoiceButton + invoiceId );
+    var capturePartTag  = jQuery(QRShirts.Fulfillment.capturePartInvoiceButton + invoiceId);
+    var cancelTag       = jQuery(QRShirts.Fulfillment.cancelInvoiceButton + invoiceId);
+    QRShirts.Fulfillment.orderId = order_id;
 
     jQuery("#dialog").dialog({
       bgiframe: true,
@@ -44,7 +44,7 @@ Hadean.Fulfillment = {
             bind('click',
               function() {
                 // submit to collect all payments
-                Hadean.Fulfillment.captureInvoice(invoiceId);
+                QRShirts.Fulfillment.captureInvoice(invoiceId);
               }
             );
 
@@ -62,7 +62,7 @@ Hadean.Fulfillment = {
               function() {
                 // submit to go to cancel order and payment
 
-                Hadean.Fulfillment.cancelInvoice(invoiceId);
+                QRShirts.Fulfillment.cancelInvoice(invoiceId);
               }
             );
   },//END of INITIALIZE
@@ -76,7 +76,7 @@ Hadean.Fulfillment = {
                                     // Make an ajax request to cancel the invoice
                                     jQuery.ajax( {
                                       type : "PUT",
-                                      url : '/admin/fulfillment/orders/' + Hadean.Fulfillment.orderId ,
+                                      url : '/admin/fulfillment/orders/' + QRShirts.Fulfillment.orderId ,
                                       data : {invoice_id : invoiceId, amount : 'all' } ,
                                       complete : function(htmlText) {
                                         if (htmlText.status == 200) {
@@ -114,7 +114,7 @@ Hadean.Fulfillment = {
                                     // Make an ajax request to cancel the invoice
                                     jQuery.ajax( {
                                       type : "DELETE",
-                                      url : '/admin/fulfillment/orders/' + Hadean.Fulfillment.orderId ,
+                                      url : '/admin/fulfillment/orders/' + QRShirts.Fulfillment.orderId ,
                                       data : {invoice_id : invoiceId } ,
                                       complete : function(htmlText) {
                                         if (htmlText.status == 200) {

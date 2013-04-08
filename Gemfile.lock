@@ -154,6 +154,9 @@ GEM
     inherited_resources (1.3.1)
       has_scope (~> 0.5.0)
       responders (~> 0.6)
+    initjs (1.0.0)
+      jquery-rails
+      rails (>= 3.1)
     journey (1.0.4)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -332,6 +335,7 @@ DEPENDENCIES
   haml (>= 3.0.13)
   high_voltage
   inherited_resources
+  initjs
   jquery-rails
   json (~> 1.7.7)
   launchy

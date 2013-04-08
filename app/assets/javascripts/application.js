@@ -2,6 +2,9 @@
 // the compiled file.
 //
 //= require_tree  ./jquery
+//= require qrshirts/qrshirts.js
+//= require init.js
+//= require_tree ./qrshirts
 //= require_tree  ./layout
 //= require foundation
 $(document).foundation();

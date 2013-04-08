@@ -1,14 +1,14 @@
-var Hadean = window.Hadean || {};
+var QRShirts = window.QRShirts || {};
 
 // If we already have the Admin namespace don't override
-if (typeof Hadean.Admin == "undefined") {
-    Hadean.Admin = {};
+if (typeof QRShirts.Admin == "undefined") {
+    QRShirts.Admin = {};
 }
 var kk = null;
 // If we already have the purchaseOrder object don't override
-if (typeof Hadean.Admin.properties == "undefined") {
+if (typeof QRShirts.Admin.properties == "undefined") {
 
-    Hadean.Admin.properties = {
+    QRShirts.Admin.properties = {
         //test    : null,
         initialize      : function( ) {
           // jQuery(".chzn-select").chosen();
@@ -17,6 +17,6 @@ if (typeof Hadean.Admin.properties == "undefined") {
     };
 
     jQuery(function() {
-      Hadean.Admin.properties.initialize();
+      QRShirts.Admin.properties.initialize();
     });
 }

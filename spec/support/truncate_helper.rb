@@ -1,4 +1,4 @@
-module Hadean
+module QRShirts
   module TruncateHelper
 
     UNSEEDED_TABLES = [ "addresses",

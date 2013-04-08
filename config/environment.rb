@@ -13,8 +13,8 @@ end
 require File.expand_path('../../lib/printing/invoice_printer', __FILE__)
 
 # Initialize the rails application
-Hadean::Application.initialize!
-# Hadean::Application.configure do
+QRShirts::Application.initialize!
+# QRShirts::Application.configure do
 #   config.after_initialize do
 #     unless Settings.encryption_key
 #       raise "

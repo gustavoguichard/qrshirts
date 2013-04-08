@@ -15,8 +15,8 @@
     ul
       - @user.errors.full_messages.each do |msg|
         li= msg
-#login-wrapper.hadean-login
-  #login.hadean-login.four.offset-by-one
+#login-wrapper.qrshirts-login
+  #login.qrshirts-login.four.offset-by-one
     = form_for  @user_session, as: :user_session, url: user_sessions_path(@user_session), html: {class: 'span-12'} do |form|
       h3 Log in.
       fieldset

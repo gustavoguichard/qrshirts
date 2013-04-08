@@ -1,4 +1,4 @@
-Hadean::Application.configure do
+QRShirts::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
 
   # Raise exception on mass assignment protection for Active Record models

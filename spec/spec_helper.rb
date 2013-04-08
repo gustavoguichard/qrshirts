@@ -16,8 +16,8 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 # in spec/support/ and its subdirectories.
 #Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
-include Hadean::TruncateHelper
-include Hadean::TestHelpers
+include QRShirts::TruncateHelper
+include QRShirts::TestHelpers
 include Authlogic::TestCase
 include ActiveMerchant::Billing
 

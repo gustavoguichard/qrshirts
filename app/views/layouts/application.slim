@@ -26,5 +26,6 @@ html
     = yield :bottom
 
     = javascript_include_tag 'application'
-    = javascript_include_tag "custom/site"
+    = initjs_tag app_name: 'QRShirts'
+    / # = javascript_include_tag "custom/site"
   = yield :below_body
