@@ -1,0 +1,4 @@
+#product_list.row
+  .large-12.columns
+    - @products.each do |product|
+      = render partial: "products/product_box", locals: {product: product}

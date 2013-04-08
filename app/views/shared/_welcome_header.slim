@@ -44,6 +44,8 @@
               span.foundicon-search
 
         ul.text-menu
+          li
+            = link_to "QR o que?", page_path("qr-o-que")
           li.has-dropdown
             = link_to "Camisas", products_path, :class => 'active'
             ul.dropdown
@@ -53,3 +55,5 @@
               li.divider
               li
                 = link_to t(:all_products), products_path
+          li
+            = link_to "Contato", page_path("contato")
