@@ -22,28 +22,14 @@ br/
   .large-12.columns
     .row
       - @best_selling_products.each do |product|
-        .large-3.small-6.columns
-          = link_to image_tag(product.images.first.photo :normal), product_path(product)
-          h6.panel style="background:#{product.color}" Description
+        = render partial: "products/product_box", locals: {product: product}
 .row
   .large-12.columns
     .row
       /! Content
       .large-8.columns
-        .panel.radius
-          .row
-            .large-6.small-6.columns
-              h4 Header
-              hr/
-              h5.subheader
-                | Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
-              .show-for-small align="center"
-                a.small.radius.button href="#"
-                br/
-                a.small.radius.button href="#"
-            .large-6.small-6.columns
-              p
-                | Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
+        .flex-video
+          iframe{src="http://player.vimeo.com/video/63028405?title=0&amp;byline=0&amp;color=441386" width="660" height="350" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen}
       .large-4.columns.hide-for-small
         h4 Get In Touch!
         hr/

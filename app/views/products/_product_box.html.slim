@@ -1,0 +1,7 @@
+.large-3.small-6.columns.product_box
+  = link_to product_path(product) do
+    h4.product_title style="background:#{product.color}"= product.name
+    .product_image
+      = image_tag product.images.first.photo(:large), class: "cover_image"
+      = image_tag product.images[1].photo(:large), class: "second_image" if product.images.length > 1
+    p.description= strip_tags truncate(product.description, :length => 100)
