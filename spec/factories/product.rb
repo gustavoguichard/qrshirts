@@ -10,8 +10,6 @@ FactoryGirl.define do
     available_at         Time.now
     deleted_at           nil
     featured             true
-    meta_description     'Describe the variant'
-    meta_keywords        'Key One, Key Two'
   end
 
   factory :product_with_image, :parent => :product do

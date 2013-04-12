@@ -9,10 +9,6 @@ span style="color:#{@product.active ? "#3A3" : "#C33"}; float:right; margin-top:
 label
   | Descrição (#{link_to 'editar', edit_admin_merchandise_products_description_path(@product)})
 p= raw @product.description
-label Meta Keywords
-p= @product.meta_keywords
-label Meta Description
-p= @product.meta_description
 label Fit
 p= @product.product_type.name
 label Estampa

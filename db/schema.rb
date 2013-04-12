@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130407222016) do
+ActiveRecord::Schema.define(:version => 20130412200323) do
 
   create_table "accounting_adjustments", :force => true do |t|
     t.integer  "adjustable_id",                                 :null => false
@@ -358,8 +358,6 @@ ActiveRecord::Schema.define(:version => 20130407222016) do
     t.string   "permalink",                               :null => false
     t.datetime "available_at"
     t.datetime "deleted_at"
-    t.string   "meta_keywords"
-    t.string   "meta_description"
     t.boolean  "featured",             :default => false
     t.datetime "created_at",                              :null => false
     t.datetime "updated_at",                              :null => false

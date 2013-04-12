@@ -12,8 +12,6 @@
 #  permalink            :string(255)      not null
 #  available_at         :datetime
 #  deleted_at           :datetime
-#  meta_keywords        :string(255)
-#  meta_description     :string(255)
 #  featured             :boolean          default(FALSE)
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
@@ -180,14 +178,14 @@ describe Product, "class methods" do
 
   context "#standard_search(args)" do
     it "should search products" do
-      product1  = create(:product, :meta_keywords => 'no blah', :name => 'blah')
-      product2  = create(:product, :meta_keywords => 'tester blah')
+      product1  = create(:product, :name => 'blah')
+      product2  = create(:product)
       product1.activate!
       product2.activate!
-      args = 'tester'
+      args = 'blah'
       products = Product.standard_search(args)
-      products.include?(product1).should be_false
-      products.include?(product2).should be_true
+      products.include?(product2).should be_false
+      products.include?(product1).should be_true
     end
   end
 
