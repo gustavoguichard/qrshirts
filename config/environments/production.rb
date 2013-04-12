@@ -17,12 +17,13 @@ QRShirts::Application.configure do
   config.assets.digest = true
 
   # config.assets.precompile += %w( *.css *.js )
-
+  config.assets.precompile += %w( .svg .eot .woff .ttf )
   config.assets.precompile += %w( *.js )
   config.assets.precompile += [ 'admin/*.css',
                                 'app.css',
                                 'pikachoose_product.css',
                                 'product_page.css',
+                                'markitup/**/*.css',
                                 'cupertino/jquery-ui-1.8.12.custom.css',# in vendor
                                 'modstyles.css', # in vendor
                                 'scaffold.css' # in vendor
