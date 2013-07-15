@@ -60,7 +60,13 @@ class ApplicationController < ActionController::Base
   end
 
   def bg_brand
-    @bg_brand ||= Brand.bg_choosen.sample
+    if @products.present?
+      @bg_brand = @products.first.brand 
+    elsif @product.present?
+      @bg_brand = @product.brand 
+    else
+      @bg_brand = Brand.bg_choosen.sample
+    end
   end
 
   def store_return_location

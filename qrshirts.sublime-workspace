@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"bg",
+				"bg_brand"
+			],
+			[
 				"twi",
 				"twitter_url"
 			],
@@ -510,36 +514,16 @@
 			[
 				"RegExp",
 				"RegExp  (class)"
-			],
-			[
-				"ea",
-				"each  (function)"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/assets/stylesheets/app.css.scss",
-			"settings":
-			{
-				"buffer_size": 1779,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Gemfile",
-			"settings":
-			{
-				"buffer_size": 2300,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/views/layouts/application.slim",
 			"settings":
 			{
-				"buffer_size": 868,
+				"buffer_size": 1386,
 				"line_ending": "Unix"
 			}
 		}
@@ -547,9 +531,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 289.0,
 		"selected_items":
 		[
+			[
+				"clo",
+				"Project: Close"
+			],
+			[
+				"lates",
+				"Rails Latest Migration: Open latest Rails migration"
+			],
 			[
 				"rena",
 				"File: Rename"
@@ -577,10 +569,6 @@
 			[
 				"delet",
 				"File: Delete"
-			],
-			[
-				"lates",
-				"Rails Latest Migration: Open latest Rails migration"
 			],
 			[
 				"ren",
@@ -768,28 +756,51 @@
 	},
 	"file_history":
 	[
+		"/Users/Guga/Sites/qrshirts/app/controllers/application_controller.rb",
+		"/Users/Guga/Sites/qrshirts/app/views/welcome/index.slim",
+		"/Users/Guga/Sites/qrshirts/.git/config",
 		"/Users/Guga/Sites/qrshirts/app/views/products/_product_box.html.slim",
+		"/Users/Guga/Sites/qrshirts/app/helpers/application_helper.rb",
+		"/Users/Guga/Sites/qrshirts/app/views/shared/_welcome_header.slim",
+		"/Users/Guga/Sites/qrshirts/app/models/product.rb",
+		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/miv/_product.sass",
+		"/Users/Guga/Sites/qrshirts/app/controllers/welcome_controller.rb",
+		"/Users/Guga/Sites/qrshirts/app/views/layouts/application.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/_sub_header.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/edit.slim",
+		"/Users/Guga/Sites/qrshirts/Gemfile",
+		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/application.js",
+		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/qrshirts/welcome/index.js.coffee",
+		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/miv/qrshirts.sass",
+		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/admin/app.css.sass",
+		"/Users/Guga/Sites/qrshirts/app/models/brand.rb",
+		"/Users/Guga/Sites/qrshirts/app/controllers/products_controller.rb",
+		"/Users/Guga/Sites/qrshirts/db/migrate/20130412200323_remove_metas_from_products.rb",
+		"/Users/Guga/Sites/qrshirts/db/schema.rb",
+		"/Users/Guga/Sites/qrshirts/spec/models/product_spec.rb",
+		"/Users/Guga/Sites/qrshirts/spec/factories/product.rb",
+		"/Users/Guga/Sites/qrshirts/db/seed/config_admin.yml",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/products/_form.html.erb",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/show.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/_form.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/index.slim",
+		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/descriptions/edit.slim",
+		"/Users/Guga/Sites/qrshirts/config/environments/production.rb",
+		"/Users/Guga/Sites/qrshirts/.gitignore",
+		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/app.css.scss",
 		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/admin/app.js",
 		"/Users/Guga/Sites/qrshirts/app/models/image.rb",
-		"/Users/Guga/Sites/qrshirts/app/views/layouts/application.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/layouts/admin.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/layouts/admin_markup.slim",
-		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/application.js",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/miv/qrshirts.sass",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/miv/_product.sass",
 		"/Users/Guga/Sites/qrshirts/app/views/pages/contact.html.slim",
 		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/miv/_top_menu.sass",
-		"/Users/Guga/Sites/qrshirts/app/views/shared/_welcome_header.slim",
-		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/qrshirts/welcome/index.js.coffee",
 		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/miv/_static.sass",
-		"/Users/Guga/Sites/qrshirts/app/views/welcome/index.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/pages/about.html.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/products/index.html.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/products/index.html.erb",
 		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/foundation_and_overrides.scss",
 		"/Users/Guga/Sites/qrshirts/app/views/shared/_main_footer.slim",
 		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/product_page.css.scss",
-		"/Users/Guga/Sites/qrshirts/app/controllers/application_controller.rb",
 		"/Users/Guga/Sites/qrshirts/app/controllers/user_sessions_controller.rb",
 		"/Users/Guga/Sites/qrshirts/app/views/user_sessions/new.slim",
 		"/Users/Guga/Sites/qrshirts/config.ru",
@@ -806,27 +817,18 @@
 		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/shopping/cart.js",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/config/tax_rates/edit.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/config/tax_rates/new.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/_form.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/products/_form.html.erb",
 		"/Users/Guga/Sites/qrshirts/config/application.rb",
 		"/Users/Guga/Sites/qrshirts/config/environment.rb",
 		"/Users/Guga/Sites/qrshirts/config/routes.rb",
 		"/Users/Guga/Sites/qrshirts/config/environments/development.rb",
-		"/Users/Guga/Sites/qrshirts/config/environments/production.rb",
 		"/Users/Guga/Sites/qrshirts/config/environments/test.rb",
 		"/Users/Guga/Sites/qrshirts/config/initializers/secret_token.rb",
 		"/Users/Guga/Sites/qrshirts/config/initializers/session_store.rb",
 		"/Users/Guga/Sites/qrshirts/spec/spec_helper.rb",
 		"/Users/Guga/Sites/qrshirts/spec/support/hadean_test_helpers.rb",
 		"/Users/Guga/Sites/qrshirts/spec/support/truncate_helper.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/welcome_controller.rb",
 		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/custom/site.coffee",
 		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/layout/rails.js",
-		"/Users/Guga/Sites/qrshirts/Gemfile",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/show.slim",
-		"/Users/Guga/Sites/qrshirts/app/models/product.rb",
-		"/Users/Guga/Sites/qrshirts/db/schema.rb",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/app.css.scss",
 		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/miv/_orbit.sass",
 		"/Users/Guga/Sites/qrshirts/app/views/products/_product.html.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/products/_product",
@@ -834,13 +836,10 @@
 		"/Users/Guga/Sites/qrshirts/spec/controllers/abouts_controller_spec.rb",
 		"/Users/Guga/Sites/qrshirts/config/initializers/high_voltage.rb",
 		"/Users/Guga/Sites/qrshirts/db/migrate/20130407222016_add_color_to_products.rb",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/admin/app.css.sass",
 		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/miv/fonts.sass",
 		"/Users/Guga/Sites/qrshirts/app/assets/javascripts/foundation/app.js",
 		"/Users/Guga/Sites/qrshirts/app/views/layouts/application.html.haml",
-		"/Users/Guga/Sites/qrshirts/.gitignore",
 		"/Users/Guga/Sites/qrshirts/app/controllers/admin/fulfillment/orders_controller.rb",
-		"/Users/Guga/Sites/qrshirts/app/controllers/products_controller.rb",
 		"/Users/Guga/Sites/qrshirts/.rvmrc",
 		"/Users/Guga/Sites/qrshirts/app/views/shared/admin/_header_bar.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/index.slim",
@@ -878,24 +877,13 @@
 		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/index.html.erb",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/_form.html.erb",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/fulfillment/orders/show.slim",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/products/index.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/fulfillment/shipments/show.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/inventory/overviews/index.slim",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/config/tax_rates/index.slim",
 		"/Users/Guga/Sites/qrshirts/app/models/banner.rb",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/show.html.erb",
 		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/new.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/edit.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/config/shipping_categories/_form.slim",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/foundation/components/_orbit.scss",
-		"/Users/Guga/Sites/qrshirts/app/views/shared/_errors.slim",
-		"/Users/Guga/Sites/qrshirts/app/assets/stylesheets/admin/foundation.css",
-		"/Users/Guga/Sites/qrshirts/lib/templates/erb/scaffold/templates/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/myaccount/addresses/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/customer/password_resets/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/shipping_categories/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/product_types/_form.html.erb",
-		"/Users/Guga/Sites/qrshirts/app/views/admin/merchandise/wizards/brands/_form.html.erb"
+		"/Users/Guga/Sites/qrshirts/app/views/admin/generic/sales/edit.html.erb"
 	],
 	"find":
 	{
@@ -916,6 +904,15 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"image_url",
+			"best_selling_products",
+			"active",
+			"keywords",
+			"meta_keywords",
+			"meta_keyword",
+			"meta",
+			"mark",
+			"marki",
 			";",
 			"link",
 			"self.",
@@ -1034,16 +1031,7 @@
 			"image",
 			"home",
 			"cim",
-			"UserCim",
-			"user_c",
-			"memcac",
-			"static",
-			"asse",
-			"cache",
-			"assets",
-			"ribbons",
-			"1000",
-			"br"
+			"UserCim"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1072,253 +1060,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/assets/stylesheets/app.css.scss",
-					"settings":
-					{
-						"buffer_size": 1779,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1444,
-								1444
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_mark_style": "outline",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Gemfile",
-					"settings":
-					{
-						"buffer_size": 2300,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1475,
-								1428
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_mark_style": "outline",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1006.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "app/views/layouts/application.slim",
 					"settings":
 					{
-						"buffer_size": 868,
+						"buffer_size": 1386,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								98,
-								98
+								1078,
+								1072
 							]
 						],
 						"settings":
@@ -1470,8 +1228,116 @@
 		"selected_items":
 		[
 			[
+				"layout",
+				"app/views/layouts/application.slim"
+			],
+			[
+				"controller",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"slim",
+				"app/views/welcome/index.slim"
+			],
+			[
 				"gem",
 				"Gemfile"
+			],
+			[
+				".sass",
+				"app/assets/stylesheets/admin/app.css.sass"
+			],
+			[
+				"prodbox",
+				"app/views/products/_product_box.html.slim"
+			],
+			[
+				"bra",
+				"app/models/brand.rb"
+			],
+			[
+				"appcont",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"applhel",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"headersli",
+				"app/views/shared/_welcome_header.slim"
+			],
+			[
+				"produ",
+				"app/models/product.rb"
+			],
+			[
+				"probo",
+				"app/views/products/_product_box.html.slim"
+			],
+			[
+				"applconto",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"produccont",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"welcocon",
+				"app/controllers/welcome_controller.rb"
+			],
+			[
+				"prod",
+				"app/models/product.rb"
+			],
+			[
+				"welcomin",
+				"app/views/welcome/index.slim"
+			],
+			[
+				"sch",
+				"db/schema.rb"
+			],
+			[
+				"admin/mercha/producslim",
+				"app/views/admin/merchandise/products/_form.slim"
+			],
+			[
+				"applslim",
+				"app/views/layouts/application.slim"
+			],
+			[
+				"welcom",
+				"app/views/welcome/index.slim"
+			],
+			[
+				"produc",
+				"app/models/product.rb"
+			],
+			[
+				"adminmerchasubhea",
+				"app/views/admin/merchandise/_sub_header.slim"
+			],
+			[
+				"admin/producteditsli",
+				"app/views/admin/merchandise/products/edit.slim"
+			],
+			[
+				"appss",
+				"app/assets/stylesheets/app.css.scss"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"produio",
+				"config/environments/production.rb"
+			],
+			[
+				"descriptionedi",
+				"app/views/admin/merchandise/products/descriptions/edit.slim"
 			],
 			[
 				"applsli",
@@ -1562,10 +1428,6 @@
 				"app/assets/stylesheets/miv/_top_menu.sass"
 			],
 			[
-				"applslim",
-				"app/views/layouts/application.slim"
-			],
-			[
 				"imag",
 				"app/models/image.rb"
 			],
@@ -1588,18 +1450,6 @@
 			[
 				"route",
 				"config/routes.rb"
-			],
-			[
-				"welcomin",
-				"app/views/welcome/index.slim"
-			],
-			[
-				"produc",
-				"app/models/product.rb"
-			],
-			[
-				"sch",
-				"db/schema.rb"
 			],
 			[
 				"appscss",
@@ -1722,16 +1572,8 @@
 				"app/views/admin/generic/deals/show.html.erb"
 			],
 			[
-				"controller",
-				"app/controllers/products_controller.rb"
-			],
-			[
 				"indecont",
 				"app/controllers/admin/generic/deals_controller.rb"
-			],
-			[
-				"produ",
-				"app/models/product.rb"
 			],
 			[
 				"admingensal",
@@ -1834,10 +1676,6 @@
 				"app/controllers/admin/merchandise/brands_controller.rb"
 			],
 			[
-				"prod",
-				"app/models/product.rb"
-			],
-			[
 				"adminmerproduind",
 				"app/views/admin/merchandise/products/index.slim"
 			],
@@ -1856,10 +1694,6 @@
 			[
 				"adminfulfishiind",
 				"app/views/admin/fulfillment/shipments/index.slim"
-			],
-			[
-				"giti",
-				".gitignore"
 			],
 			[
 				"set",
@@ -1904,82 +1738,6 @@
 			[
 				"customfor",
 				"app/assets/stylesheets/foundation/components/_custom-forms.scss"
-			],
-			[
-				"blo",
-				"app/assets/stylesheets/foundation/components/_block-grid.scss"
-			],
-			[
-				"ale",
-				"app/assets/stylesheets/foundation/components/_alert-boxes.scss"
-			],
-			[
-				"appljs",
-				"app/assets/javascripts/application.js"
-			],
-			[
-				"applir",
-				"config/application.rb"
-			],
-			[
-				"setiscs",
-				"app/assets/stylesheets/_settings.css.scss"
-			],
-			[
-				"qr",
-				"app/assets/stylesheets/miv/qrshirts.sass"
-			],
-			[
-				"appcss",
-				"app/assets/stylesheets/app.css.scss"
-			],
-			[
-				"setsc",
-				"app/assets/stylesheets/_settings.css.scss"
-			],
-			[
-				"head",
-				"app/views/shared/_welcome_header.slim"
-			],
-			[
-				"produshow",
-				"app/views/products/show.html.erb"
-			],
-			[
-				"welcon",
-				"app/controllers/welcome_controller.rb"
-			],
-			[
-				"foundaapp",
-				"app/assets/javascripts/foundation/app.js"
-			],
-			[
-				"welhe",
-				"app/views/shared/_welcome_header.slim"
-			],
-			[
-				"layout",
-				"app/views/layouts/application.slim"
-			],
-			[
-				"productsind",
-				"app/views/products/index.html.erb"
-			],
-			[
-				"ban",
-				"app/models/banner.rb"
-			],
-			[
-				"bann",
-				"app/models/banner.rb"
-			],
-			[
-				"welcomco",
-				"app/controllers/welcome_controller.rb"
-			],
-			[
-				"sharedmain",
-				"app/views/shared/_main_footer.slim"
 			]
 		],
 		"width": 0.0
@@ -1990,8 +1748,20 @@
 		"selected_items":
 		[
 			[
+				"li",
+				"/Users/Guga/Sites/engage/littlebigmoney/littlebigmoney.sublime-project"
+			],
+			[
+				"sape",
+				"/Users/Guga/Sublime Projects/sapecapaz.sublime-project"
+			],
+			[
 				"lbm",
 				"/Users/Guga/Sites/engage/littlebigmoney/littlebigmoney.sublime-project"
+			],
+			[
+				"cri",
+				"/Users/Guga/Sublime Projects/criaideias.sublime-project"
 			],
 			[
 				"min",
@@ -2016,10 +1786,6 @@
 			[
 				"sim",
 				"/Users/Guga/Sublime Projects/sim.sublime-project"
-			],
-			[
-				"cri",
-				"/Users/Guga/Sublime Projects/criaideias.sublime-project"
 			],
 			[
 				"mangu",

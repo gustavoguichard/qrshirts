@@ -15,13 +15,13 @@
         br/
         - @banners.first do | banner |
           = link_to banner.link_url do
-            = image_tag banner.image(:slide)
+            = image_tag banner.image(:slide) rescue nil
     /! End Mobile Header
 br/
 .row
   .large-12.columns
     .row
-      - @best_selling_products.each do |product|
+      - @products.each do |product|
         = render partial: "products/product_box", locals: {product: product}
 .row
   .large-12.columns

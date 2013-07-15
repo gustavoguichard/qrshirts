@@ -11,6 +11,14 @@ EXAMPLE USAGE!!
   <p><%= add_child_link "New Property", :properties %></p>
   <%= new_child_fields_template(form, :properties, :partial => '/admin/merchandise/add_property')%>
 =end
+  
+  def site_title
+    if content_for? :title
+      "#{yield :title} | #{site_name}"
+    else
+      site_name
+    end
+  end
 
   def sortable(column, title = nil)
     title ||= column.titleize
